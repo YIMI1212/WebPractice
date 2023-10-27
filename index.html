@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入css时注意less的格式 及其引入类型 -->
+    <!-- 引入动画 -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- 引入bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 引入轮播插件 -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- 重置样式 -->
+    <link rel="stylesheet/less" href="css/reset.less">
+    <!-- 引入全局css -->
+    <link rel="stylesheet/less" href="css/common.less">
+
+
+    <!-- 引入当前页面的css -->
+    <link rel="stylesheet/less" href="css/index.less">
+
+    <!-- 注意导入相应的js文件  -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/less.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/wow.min.repeat.js"></script>
+
+
+
+</head>
+
+<body>
+    <!-- 头部导航栏 -->
+    <header id="header">
+        <!-- 在组件库选择相应的组件，并去掉 不需要的组件 -->
+        <nav class="navbar navbar-default navbar-inverse">
+            <!-- 更改样式时，可通过另加一个类来改变 -->
+            <div class="container-fluid warp">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <!--  -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- logo -->
+                    <a class="navbar-brand" href="#banner">Spirit8</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- 导航条 -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                    <!-- 右边 -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#banner">HOME</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">SERVICES</a></li>
+                        <li><a href="#clients">CLIENTS</a></li>
+                        <li><a href="#work">portfolio</a></li>
+                        <li><a href="#testimonials">testimonials</a></li>
+                        <li><a href="#contactUs">contact</a></li>
+
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <!-- 导航栏下方背景 -->
+    <div id="banner">
+        <h3>wELCOME on <span>spirit8</span></h3>
+        <h4>We are a digital agency with <span>years of experience</span> and with <span>extraordinary people</span>
+        </h4>
+        <a href="#about">
+            <img src="/images/scroll down.png" alt="">
+        </a>
+    </div>
+    <!-- “关于”部分 -->
+    <!-- about -->
+    <div id="about">
+        <div class="about-box">
+            <div class="left">
+                <img src="/images/QQ图片20231025170522.png" alt="">
+            </div>
+
+            <div class="right">
+                <div class="small-title">About us</div>
+                <div class="title">Some words <span>about us</span></div>
+                <div class="line"></div>
+                <div class="content">We love building and rebuilding brands through our specific skills. Using colour,
+                    fonts, and illustration, we brand
+                    companies in a way they will never forget.
+                </div>
+                <ul>
+                    <li><span>Mission - &nbsp;</span> We deliver uniqueness and quality</li>
+                    <li><span>Skills - &nbsp;</span> Delivering fast and excellent results</li>
+                    <li><span>Clients - &nbsp;</span> Satisfied clients thanks to our experience</li>
+
+                </ul>
+                <div class="about-btn">
+                    <img src="/images/Forma 1.png" alt="">
+                    Browse our work
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 注意不是dic  -->
+    <!-- team -->
+    <div id="team">
+        <div class="team-title common-title">Meet <span>our team</span></div>
+        <div class="team-line common-line"></div>
+        <div class="team-line2 common-line2"></div>
+
+
+        <div class="swiper">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+
+                    <div class="team-swiper">
+                        <div class="team-members wow fadeInLeft" data-wow-delay=".5s">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+                        <div class="team-members wow fadeInLeft" data-wow-delay=".2s">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+                        <div class="team-members wow fadeInRight" data-wow-delay=".2s">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+                        <div class="team-members wow fadeInRight" data-wow-delay=".5s">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+
+                    <div class="team-swiper">
+                        <div class="team-members">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+                        <div class="team-members">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+                        <div class="team-members">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+                        <div class="team-members">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+
+                    <div class="team-swiper">
+                        <div class="team-members">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+                        <div class="team-members">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+                        <div class="team-members">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+                        <div class="team-members">
+                            <div class="team-image ">
+
+                            </div>
+                            <!-- <img src="/images/replaceWithYourImage.png" alt=""> -->
+                            <p class="team-name">Jason Statham </p>
+                            <p class="team-signature">Knife designer</p>
+                            <p class="team-content">Do not seek to change what has come before. Seek to create that
+                                which has
+                                not.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </div>
+    <!-- services -->
+    <div id="services">
+        <div class="services-title common-title">take a look at <span>our services<span></div>
+        <div class="services-line common-line"></div>
+        <div class="services-line2 common-line2"></div>
+        <div class="services-detail">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+            Malorum" (The Extremes of Good and Evil)
+            by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+            Renaissance. The
+            first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        </div>
+        <div class="services-box">
+            <div class="services-item">
+                <div class="services-image"><img src="/images/servicesPhoto1.png" alt=""></div>
+                <div class="services-name">Mobile apps</div>
+                <div class="services-content">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
+                    a line in section 1.10.32.</div>
+            </div>
+            <div class="services-item">
+                <div class="services-image"><img src="/images/servicesPhoto2.png" alt=""></div>
+                <div class="services-name">Mobile apps</div>
+                <div class="services-content">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
+                    a line in
+                    section 1.10.32.</div>
+            </div>
+            <div class="services-item">
+                <div class="services-image"><img src="/images/servicesPhoto3.png" alt=""></div>
+                <div class="services-name">Mobile apps</div>
+                <div class="services-content">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
+                    a line in
+                    section 1.10.32.</div>
+            </div>
+            <div class="services-item">
+                <div class="services-image"><img src="/images/servicesPhoto4.png" alt=""></div>
+                <div class="services-name">Mobile apps</div>
+                <div class="services-content">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from
+                    a line in
+                    section 1.10.32.</div>
+            </div>
+        </div>
+
+    </div>
+    <!-- clients -->
+    <div id="clients">
+        <div class="clients-title common-title">some of our clients <span>our clients<span></div>
+        <div class="clients-line common-line"></div>
+        <div class="clients-line2 common-line2"></div>
+        <!-- <div class="clients-detail"></div> -->
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="clients-box">
+                        <div class="clients-swiper">
+                            <img src="/images/clients-logo1.png" alt="">
+                            <img src="/images/clients-logo2.png" alt="">
+                            <img src="/images/clients-logo3.png" alt="">
+                            <img src="/images/clients-logo4.png" alt="">
+                            <img src="/images/clients-logo5.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="clients-box">
+                        <div class="clients-swiper">
+                            <img src="/images/clients-logo1.png" alt="">
+                            <img src="/images/clients-logo2.png" alt="">
+                            <img src="/images/clients-logo3.png" alt="">
+                            <img src="/images/clients-logo4.png" alt="">
+                            <img src="/images/clients-logo5.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="clients-box">
+                        <div class="clients-swiper">
+                            <img src="/images/clients-logo1.png" alt="">
+                            <img src="/images/clients-logo2.png" alt="">
+                            <img src="/images/clients-logo3.png" alt="">
+                            <img src="/images/clients-logo4.png" alt="">
+                            <img src="/images/clients-logo5.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+
+    </div>
+
+    <div id="work">
+        <div class="work-title common-title">take a look at <span>our work<span></div>
+        <div class="work-line common-line"></div>
+        <div class="work-line2 common-line2"></div>
+        <div class="work-detail">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+            (The Extremes of Good and Evil)
+            by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+            Renaissance. The
+            first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</div>
+        <div class="work-type">
+            <div class="work-typeTi">Filter by type</div>
+            <div class="work-Nav">
+                <div class="Options">All</div>
+                <div class="Options">Web design</div>
+                <div class="Options">Mobile design</div>
+                <div class="Options">Photograpy</div>
+
+            </div>
+
+        </div>
+        <div class="work-imagesBox">
+            <img src="/images/workPhoto1.png" alt="">
+            <img src="/images/workPhoto1.png" alt="">
+            <img src="/images/workPhoto1.png" alt="">
+            <img src="/images/workPhoto1.png" alt="">
+            <img src="/images/workPhoto2.png" alt="">
+            <img src="/images/workPhoto2.png" alt="">
+            <img src="/images/workPhoto2.png" alt="">
+            <img src="/images/workPhoto2.png" alt="">
+            <img src="/images/workPhoto3.png" alt="">
+            <img src="/images/workPhoto3.png" alt="">
+            <img src="/images/workPhoto3.png" alt="">
+            <img src="/images/workPhoto3.png" alt="">
+
+        </div>
+    </div>
+
+    <div id="testimonials">
+        <div class="testimonials-title common-title"><span>our clients'</span> testimonials </div>
+        <div class="testimonials-line common-line"></div>
+        <div class="testimonials-line2 common-line2"></div>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonials-detail common-detail">This book is a treatise on the theory of ethics, very
+                        popular
+                        during the Renaissance. The first line of Lorem Ipsum,
+                        "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    </div>
+
+                    <div class="testimonials-author"><span>Dean Martin,</span> CEO Acme Inc.</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonials-detail common-detail">This book is a treatise on the theory of ethics, very
+                        popular
+                        during the Renaissance. The first line of Lorem Ipsum,
+                        "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    </div>
+
+                    <div class="testimonials-author"><span>Dean Martin,</span> CEO Acme Inc.</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonials-detail common-detail">This book is a treatise on the theory of ethics, very
+                        popular
+                        during the Renaissance. The first line of Lorem Ipsum,
+                        "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    </div>
+
+                    <div class="testimonials-author"><span>Dean Martin,</span> CEO Acme Inc.</div>
+                </div>
+
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+
+    </div>
+
+    <div id="contactUs">
+        <div class="contactUs-title common-title">feel free to <span>contact us<span></div>
+        <div class="contactUs-line common-line"></div>
+        <div class="contactUs-line2 common-line2"></div>
+        <div class="contactUs-detail common-detail">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+            Bonorum et Malorum" (The Extremes of Good and Evil)
+            by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+            Renaissance.</div>
+
+        <div class="textInputBox">
+            <div class="Input-name">
+                <p>name <span>*</span></p>
+                <input type="text" name="name" id="">
+
+            </div>
+
+            <div class="Input-Emall">
+                <p>Emall Address <span>*</span></p>
+                <input type="text" name="Emall" id="">
+
+            </div>
+            <div class="Input-Message">
+                <p>Message <span>*</span></p>
+                <!-- <input type="text" name="Message" id=""> -->
+                <textarea name="Message" id="" cols="30" rows="10"></textarea>
+
+            </div>
+
+
+            <input class="Input-send" type="button" value="SEND">
+        </div>
+
+
+    </div>
+
+    <div id="connection">
+        <p>ALL RIGHTS RESERVED. COPYRIGHT © 2014 <span>SPIRIT8</span></p>
+        <div class="connection-imageBox">
+            <img src="/images/facebook.png" alt="">
+            <img src="/images/twitter.png" alt="">
+            <img src="/images/google.png" alt="">
+            <img src="/images/linkedin.png" alt="">
+            <img src="/images/dribbble.png" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    // 对WOW的js进行实例化 注意大小写
+    new WOW().init();
+    var team_swiper = new Swiper('.swiper', {
+        loop: true, // 循环模式选项
+
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    })
+
+
+    // 锚点跳转滑动效果 
+    $('#bs-example-navbar-collapse-1 a[href],#banner a[href],#up a[href]').click(function () {
+        // location.pathname 返回当前URL的路径名(不包含域名)
+        // console.log(location.pathname) 系统的路径
+        // console.log(location.pathname.replace(/^\//,''))
+        // console.log(this.pathname.replace(/^\//, ''))  当前元素所跳转链接替换后的路径
+        // console.log(location.hostname)  //系统获取域名部分
+        // console.log(this.hostname)  //当前元素所跳转链接的域名部分
+
+        /* 
+            replace(需要搜索字符,替换内容)
+        */
+        // console.log(this.hostname)
+
+        //判断你跳转的链接 是不是在当前界面
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            //获取将要跳转的锚点位置
+            var $target = $(this.hash);
+            // 逻辑短路 #about name=about
+            $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+
+            //一定要当他找到锚点元素的时候，才跳转锚点
+            if ($target.length) {
+                //获取目标元素的位置
+                var targetOffset = $target.offset().top - 10;
+
+                //让页面的body和html 滚动到 targetOffset这个位置
+                $('html,body').animate({
+                    scrollTop: targetOffset
+                }, 1000);
+            }
+        }
+    });
+</script>

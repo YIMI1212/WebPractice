@@ -1,0 +1,118 @@
+#header {
+    //注意id的书写格式
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    .warp {
+        width: 80%;
+
+    }
+
+    // 嵌套样式 注意找到对应的类
+    .navbar-inverse {
+        background-color: #111;
+        border-color: transparent;
+
+        .navbar-nav>li {
+            // 设置底部边框为透明 改变时不增加高度
+            border-bottom: 3px solid transparent;
+
+            &>a {
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                border-bottom-color: red;
+            }
+        }
+
+    }
+
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    .navbar-brand {
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
+
+.swiper-pagination {
+    bottom: 0;
+
+    .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        background-color: #fff;
+        border-radius: 0;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #fcac45;
+    }
+
+}
+
+.common-title {
+    width: 100%;
+    font-size: 44px;
+    color: #f9f9f9;
+    font-family: OSLight;
+    text-align: center;
+    // margin-top: 100px;
+    line-height: 44px;
+    text-transform: uppercase;
+
+    &>span {
+        color: #fff;
+        // font-family: OSBold;
+        font-weight: bold;
+    }
+}
+
+.common-line {
+    width: 98px;
+    height: 4px;
+    background-color: #fcac45;
+    margin: 0px auto;
+    margin-top: 25px;
+}
+
+.common-line2 {
+    width: 66px;
+    height: 4px;
+    margin: 0px auto;
+    background-color: #fcac45;
+    opacity: 0.5;
+    margin-top: 10px;
+}
+
+.common-detail{
+    width: calc(100vw/1.2);
+        text-align: center;
+        margin: 0 auto;
+        color: #6c6c6c;
+        font-size: 16px;
+    
+        margin-top: 40px;
+}
+
+
+.common-pagination-box {
+    width: 53px;
+    display: flex;
+    margin: 0px auto;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    &>.common-pagination {
+        width: 9px;
+        height: 9px;
+        background-color: #fcac45;
+    }
+}
