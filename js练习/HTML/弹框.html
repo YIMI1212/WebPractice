@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #imgBtn {
+        width: 320px;
+        height: 200px;
+    }
+
+    #imgBox {
+        width: 100%;
+        height: 100%;
+        background-color: #000000cc;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* display: none; */
+        transform: scale(0);
+    }
+
+    #imgBox img {
+        width: 640px;
+        height: 400px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+
+    }
+
+    #imgBox p {
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 75%;
+        font-size: 20px;
+        transform: translate(-50%, -50%) translateY(5vw);
+
+    }
+
+    #imgBox #close {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 5%;
+        top: 5%;
+    }
+
+    #imgBox #close .line {
+        width: 50px;
+        height: 2px;
+        background-color: #ccc;
+        transform: translateY(24px) rotate(45deg);
+
+    }
+
+    #imgBox #close .line:last-child {
+        transform: translateY(24px) rotate(-45deg);
+    }
+
+    .imgBoxActive {
+        /* display: block !important; */
+        transform: scale(1) !important;
+        /* transition: .2s; */
+    }
+
+    .imgBoxImgActive {
+        transform: translate(-50%, -50%) scale(1) !important;
+        transition: .3s linear;
+    }
+
+    .imgBoxPActive {
+        transform: translate(-50%, -50%) translateY(0px) !important;
+        transition: .3s;
+
+    }
+</style>
+
+<body>
+    <img id="imgBtn" src="/images/富士山.jpg" alt="">
+    <div id="imgBox">
+        <img id="imgBoxImg" src="/images/富士山.jpg" alt="">
+        <p>富士山</p>
+        <div id="close">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let imgBtn = document.getElementById('imgBtn')
+    let imgBox = document.getElementById('imgBox')
+    let Pti = imgBox.getElementsByTagName('p')
+    console.log(Pti)
+    let imgBoxImg = document.getElementById('imgBoxImg')
+
+    let close = document.getElementById('close')
+
+
+    imgBtn.onclick = function () {
+        imgBox.classList.add('imgBoxActive')
+        imgBoxImg.classList.add('imgBoxImgActive')
+        Pti[0].classList.add('imgBoxPActive')
+
+    }
+    close.onclick = function () {
+        imgBox.classList.remove('imgBoxActive')
+        imgBoxImg.classList.remove('imgBoxImgActive')
+        Pti[0].classList.remove('imgBoxPActive')
+    }
+
+
+
+</script>

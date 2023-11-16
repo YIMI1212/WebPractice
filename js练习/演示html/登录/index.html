@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>首页</h1>
+
+    <ul>
+        <li id="home">首页</li>
+        <li id="user">我的</li>
+    </ul>
+</body>
+</html>
+<script>
+    var home = document.getElementById('home');
+    var user = document.getElementById('user');
+
+    home.onclick = function()
+    {
+        location.href = 'index.html';
+    }
+
+    user.onclick = function()
+    {
+        location.href = 'user.html';
+    }
+    // var user = {
+    //     id:1,
+    //     nickname:'demo',
+    //     mobile:13800000000
+    // }
+
+    // 设置本地存储
+    // localStorage.setItem('user',JSON.stringify(user));
+
+    // 获取本地存储
+    // var User = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {};
+
+    // console.log(User.id);
+
+    // 删除本地存储
+    // localStorage.removeItem('user');
+</script>

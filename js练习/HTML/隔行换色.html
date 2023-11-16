@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .color1 {
+        background-color: #a6daff;
+    }
+
+    .color2 {
+        background-color: #7851e4;
+    }
+
+    .active {
+        background-color: #68c0f0;
+    }
+
+    ul li {
+        background-color: #9dd0e5;
+    }
+</style>
+
+<body>
+    <ul>
+        <li>新闻</li>
+        <li>改革</li>
+        <li>开放</li>
+        <li>自主</li>
+        <li>外交</li>
+        <li>精神</li>
+    </ul>
+
+</body>
+
+</html>
+<script src="../js/jquery-3.7.1.min.js"></script>
+
+<script>
+    /*
+    let ul = document.getElementsByTagName('ul')
+
+    let li = document.getElementsByTagName('li')
+
+
+    for (let i = 0; i < li.length; i++) {
+
+        if (i % 2 == 0) {
+            li[i].classList.add('color1')
+        }else{
+            li[i].classList.add('color2')
+        }
+        
+        li[i].onmouseover = function () {
+            li[i].classList.add('active')
+        }
+        li[i].onmouseout = function () {
+            li[i].classList.remove('active')
+        }
+    }
+
+    ul[0].onmouseover = function () {
+        for (let i = 0; i < li.length; i++) {
+            li[i].classList.remove('color1','color2')
+
+        }
+    }
+    ul[0].onmouseout = function () {
+        for (let i = 0; i < li.length; i++) {
+
+            if (i % 2 == 0) {
+                li[i].classList.add('color1')
+            }else{
+                li[i].classList.add('color2')
+            }
+        }
+    }
+    */
+    //    console.log($('li'));
+    $('ul').mouseout(function () {
+        $('li').each(function (e) {
+            // console.log(e);
+            // console.log($(this));
+            if (e % 2 == 0) {
+                $(this).addClass('color1')
+
+            } else {
+                $(this).addClass('color2')
+            }
+        })
+    })
+    $('ul').mouseover(function () {
+        $('li').each(function () {
+            $(this).removeClass('color1')
+            $(this).removeClass('color2')
+        })
+    })
+    $('li').mouseover(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+    $('li').mouseout(function () {
+        $('li').removeClass()
+    })
+
+
+
+
+
+</script>

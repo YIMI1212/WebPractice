@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>我的</h1>
+
+    <ul>
+        <li id="home">首页</li>
+        <li id="user">我的</li>
+        <li id="logout">退出账号</li>
+    </ul>
+
+    <h3>昵称：<span id="nickname"></span></h3>
+    <h3>手机号：<span id="mobile"></span></h3>
+</body>
+</html>
+<script>
+    // 获取登录信息
+    var User = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : {};
+
+    if(!User || JSON.stringify(User) === '{}')
+    {
+        alert('请先登录');
+        location.href = 'login.html';
+    }
+
+    var home = document.getElementById('home');
+    var user = document.getElementById('user');
+    var nickname = document.getElementById('nickname');
+    var mobile = document.getElementById('mobile');
+    var logout = document.getElementById('logout');
+
+    nickname.innerText = User.nickname;
+    mobile.innerText = User.mobile;
+
+    home.onclick = function()
+    {
+        location.href = 'index.html';
+    }
+
+    user.onclick = function()
+    {
+        location.href = 'user.html';
+    }
+
+    logout.onclick = function()
+    {
+        if(window.confirm('确认退出当前账号？'))
+        {
+            localStorage.removeItem('user');
+
+            alert('退出成功');
+
+            location.href = 'login.html';
+        }
+    }
+</script>

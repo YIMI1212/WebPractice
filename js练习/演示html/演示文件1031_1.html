@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .A{
+        background-color: red;
+    }
+</style>
+<body>
+    <button id="btn">点击</button>
+
+    <ul id="ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>
+<script>
+    // function add(x,y)
+    // {
+    //     console.log(x+y);
+    // }
+
+    // add(2,8);
+
+    // 获取按钮元素
+    var btn = document.getElementById('btn');
+
+    var flag = false;
+
+    btn.onclick = function()
+    {
+        console.log(flag);
+
+        return;
+        if(flag === true)
+        {
+            flag = false;
+            // 提示并且跳转
+            showMsg('操作成功执行内容','https://www.baidu.com');
+        }else{
+            flag = true;
+            // 仅提示
+            showMsg('操作失败执行内容');
+        }
+        return;
+
+        alert(1);
+    }
+
+    // 提示信息并且跳转的函数(提示内容和跳转地址自定义)
+    function showMsg(msg,url = null)
+    {
+        if(url)
+        {
+            alert(msg);
+
+            location.href = url;
+
+            return;
+            
+        }else{
+            alert(msg);
+            return;
+        }
+    }
+
+    function showMsg()
+    {
+        alert('这个函数已经被重构');
+        return;
+    }
+
+    var add = (x,y) => console.log(x + y);
+
+    // add(5,6);
+
+    var demo = (x,y) => {
+        if(x > y)
+        {
+            console.log(x);
+        }else{
+            console.log(y);
+        }
+    }
+
+    // demo(11,10);
+
+    // 获取某个id的节点
+    var ul = document.getElementById('ul');
+
+    var li = ul.getElementsByTagName('li');
+
+    for(var i = 0;i < li.length;i++)
+    {
+        // li[i].onclick = function()
+        // {
+        //     // 获取节点的内容 => innerText
+        //     console.log(this.innerText);
+        // }
+
+        li[i].onclick = (e) => {
+            var target = e.target;
+            // console.log(e);
+
+            for(var j = 0; j < li.length; j++){
+                li[j].className="";
+            }
+
+            console.log(target.innerText);
+            target.className="A";
+        }
+    }
+
+    var a = 1;
+
+    function fn()
+    {
+        // a = 3;
+
+        var a = 10;
+        
+        // console.log(a)
+    }
+
+    fn();
+
+    console.log(a);
+
+
+</script>

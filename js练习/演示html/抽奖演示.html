@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .box{
+        width: 500px;
+        margin: 150px auto 0;
+        border: 1px solid #ccc;
+    }
+
+    .title{
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background: green;
+        color: #fff;
+    }
+
+    #content{
+        text-align: center;
+        height: 80px;
+        line-height: 80px;
+    }
+
+    #btn{
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        background: pink;
+        user-select: none;
+        cursor: pointer;
+        color: #fff;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="title">点名</div>
+        <div id="content">
+            ？
+        </div>
+        <div id="btn">开始点名</div>
+    </div>
+</body>
+</html>
+<script>
+    var btn = document.getElementById('btn');
+
+    var content = document.getElementById('content');
+
+    var arr = ['小于','小雨','小鱼','小玉','小白','小红','小黑'];
+
+    // 定义当前状态
+    var flag = false;
+
+    // 定义变量用于清除定时器
+    var T;
+
+    // 定义一个事件
+    btn.onclick = function()
+    {
+        if(flag === true)
+        {
+
+            flag = false
+
+            this.style.backgroundColor = 'pink';
+
+            this.innerText = '开始点名';
+
+            clearTimeout(T);
+        }else{
+
+            flag = true;
+
+            this.style.backgroundColor = 'red';
+
+            this.innerText = '停止点名';
+
+            fn();
+        }
+    }
+
+    function fn()
+    {
+        // 随机出的索引
+        var index = Math.floor(Math.random() * arr.length);
+
+        content.innerText = arr[index];
+
+        T = setTimeout('fn()',10);
+    }
+
+</script>

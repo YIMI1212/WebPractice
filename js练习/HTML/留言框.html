@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="input">
+    <input type="button" id="btn" value="提交">
+    <input type="button" id="clean" value="清除">
+    <ul id="result">
+
+    </ul>
+
+</body>
+
+</html>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script>
+
+    var arr = [];
+    //读取本地储存
+    arr = localStorage.getItem('content') ? JSON.parse(localStorage.getItem('content')) : [];
+
+    // 有内容时 把内容加到html
+    if (arr.length > 0) {
+        let li = '';
+        for (let item of arr) {
+            //设置模板加入HTML
+            li += `<li>${item}</li>`;
+        }
+        //将模板加入此id下
+        $('#result').html(li);
+    }
+
+
+    $('#btn').click(function () {
+        // console.log($('#input').val())
+        let val = $('#input').val()//获取input的值
+
+        if (!$.trim(val)) {//判断是否为空
+            alert('请输入')
+            return;//记得跳出
+        }
+
+        arr.unshift(val)//将val值加入arr数组
+        $('#result').prepend(`<li>${val}</li>`)//打印在html
+        localStorage.setItem('content', JSON.stringify(arr))//将数组储存成JSON字符串
+        // localStorage.setItem('content', arr)//这样只会存一个对象，不好获取
+
+        $('#input').val('');//输入框置空
+    })
+
+    // $('#clean').click(function () {
+    //     $('result').remove()
+    // })
+
+    // $('#result li')
+    $('#result').on('click', 'li', function () {//动态加载li的click的事件，
+
+        let index = arr.indexOf($(this).text())//根据li的文本返回索引 
+        if (index === -1) {//不存在返回-1
+            alert('删除元素不存在')
+            return;
+        }
+        // 替换模式为1 ,根据index进行替换 ,替换内容为空(第三个参数)
+        arr.splice(index, 1)
+        localStorage.setItem('content', JSON.stringify(arr))
+
+        $(this).remove('li')
+    })
+
+</script>

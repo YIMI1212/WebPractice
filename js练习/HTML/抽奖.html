@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ti {
+        width: 50vw;
+        height: 10vw;
+        background-color: #d2d2d2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+    }
+
+    #content {
+        width: 50vw;
+        height: 30vw;
+        font-size: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btnBox {
+        width: 50vw;
+        height: 10vw;
+    }
+
+    button {
+        width: 100%;
+        height: 100%;
+        border-style: none;
+        color: white;
+    }
+
+    #start,
+    #stop {
+        font-size: 24px;
+    }
+
+    #start {
+        background-color: #a3ddf5;
+        display: none;
+    }
+
+    #stop {
+        background-color: #e51615;
+        display: none;
+    }
+
+    .active {
+        display: block !important;
+    }
+</style>
+
+<body>
+    <div>
+        <div class="ti">抽奖</div>
+        <div id="content">aaa</div>
+        <div class="btnBox">
+            <button id="start">开始抽奖</button>
+            <button id="stop">停止抽奖</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script>
+    //---------------------------------------------------------------------------
+    // let content = document.getElementById('content')
+    // let start = document.getElementById("start")
+    // let stop = document.getElementById("stop")
+
+    // let arr = ['aaa', 'bbb', 'ccc', 'ddd', 'fff', 'eee']
+
+    // // console.log(content)
+    // var index = 0;
+    // function autoPlay() {
+    //     if (index >= arr.length) {
+    //         index = 0;
+    //     }
+    //     content.innerText = arr[index];
+    //     index++;
+
+    // }
+    // // setInterval(autoPlay, 500)
+    // // T = setInterval(autoPlay, 500);
+
+    // // T = setInterval(autoPlay, 50);
+    // start.classList.add('active')
+
+    // start.onclick = () => {
+    //     T = setInterval(autoPlay, 100);
+    //     start.classList.remove('active')
+    //     stop.classList.add('active')
+    // }
+    // stop.onclick = () => {
+    //     clearInterval(T)
+    //     start.classList.add('active')
+    //     stop.classList.remove('active')
+
+    // }
+    //-----------------------------------js写法----------------------------------------
+    let arr = ['aaa', 'bbb', 'ccc', 'ddd', 'fff', 'eee']
+    var T;
+    $('#start').addClass('active');
+
+
+    $('#start').click(function () {
+        $('#stop').addClass('active');
+        $('#start').removeClass('active');
+        fn();
+
+    })
+    $('#stop').click(function () {
+
+        $('#start').addClass('active');
+        $('#stop').removeClass('active');
+        clearTimeout(T);
+
+    })
+
+    function fn() {
+        var index = Math.floor(Math.random() * arr.length)
+        $('#content').text(arr[index]);
+        T = setTimeout('fn()', 10);
+    }
+
+
+</script>

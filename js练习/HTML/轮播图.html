@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box {
+        width: 40vw;
+        height: 40vw;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        position: relative;
+
+    }
+
+    .imagesBox {
+        position: relative;
+    }
+
+    img {
+        width: 40vw;
+        height: 40vw;
+        position: absolute;
+        z-index: 1;
+        /* transition: .5s; */
+    }
+
+    button {
+        width: 3vw;
+        height: 3vw;
+        border-style: none;
+        background-color: #cccccc66;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .active {
+        z-index: 2;
+    }
+
+    #btnL {
+        left: 0;
+        /* transform: translateX(-100%); */
+
+    }
+
+    #btnR {
+        right: 0;
+
+    }
+
+    #pagination {
+        width: 100%;
+        position: absolute;
+        bottom: 10px;
+        z-index: 10;
+        text-align: center;
+
+    }
+
+    #pagination span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 5px;
+        background-color: #fff;
+        /* overflow-y: ; */
+    }
+
+    #pagination span.active {
+        background-color: #f3b5c0;
+    }
+</style>
+
+<body>
+    <div id="box">
+        <div class="imagesBox">
+            <button id="btnL">左</button>
+            <img src="/images/富士山.jpg" alt="">
+            <img src="/images/富士山2.jpg" alt="">
+            <img src="/images/富士山3.jpg" alt="">
+            <img src="/images/富士山4.jpg" alt="">
+            <button id="btnR">右</button>
+        </div>
+        <div id="pagination"></div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    let box = document.getElementById('box')
+    let btnL = document.getElementById('btnL')
+    let btnR = document.getElementById('btnR')
+    let Img = document.getElementsByTagName('img')
+    let pagination = document.getElementById('pagination')
+    let span = pagination.getElementsByTagName('span')
+
+    pagination.onclick = function (e) {
+        // console.log(e)
+
+        let target = e.target;
+        let index = 0;
+        if (target.dataset.index) {
+            index = target.dataset.index;
+        }
+
+        for (let i = 0; i < Img.length; i++) {
+            for (let j = 0; j < Img.length; j++) {
+                span[j].classList.remove('active');
+                Img[i].classList.remove('active');
+            }
+            span[index].classList.add('active');
+            Img[index].classList.add('active');
+
+
+        }
+    }
+
+    // console.log(Img)
+    // 向左的按钮
+    btnL.onclick = function () {
+        // 查找所有图片
+        for (let i = 0; i < Img.length; i++) {
+            //查找出在顶层的图片
+            if (Img[i].className == 'active') {
+                let index = i;
+                // 清除所有active的属性
+                for (let j = 0; j < Img.length; j++) {
+                    span[j].classList.remove('active');
+                    Img[i].classList.remove('active');
+                }
+                if (index == 0) {//超出时 将索引值调为最大值
+                    index = Img.length - 1;
+                } else {//其余情况减一
+                    index--;
+                }
+                // 将下一个属性设置active
+                span[index].classList.add('active');
+                Img[index].classList.add('active');
+
+                // console.log(index)
+                // 要进行跳出 否则后几轮循环会继续循环
+                return;
+
+            }
+        }
+    }
+
+    btnR.onclick = function () {
+        for (let i = 0; i < Img.length; i++) {
+            // console.log(Img[i])
+            if (Img[i].className == 'active') {
+                let index = i;
+                for (let j = 0; j < Img.length; j++) {
+                    span[j].classList.remove('active');
+                    Img[i].classList.remove('active');
+                }
+                if (index == Img.length-1) {
+                    index = 0;
+                } else {
+                    index++;
+                }
+                span[index].classList.add('active');
+                Img[index].classList.add('active');
+
+                // console.log(index)
+                return;
+
+            }
+        }
+    }
+
+    // 循环
+    index = 0;
+    // console.log(Img.length)
+
+    function autoPlay() {
+        if (index > (Img.length - 1)) {
+            index = 0;
+        }
+        for (let i = 0; i < Img.length; i++) {
+            Img[i].classList.remove('active');
+            span[i].classList.remove('active');
+
+        }
+        Img[index].classList.add('active');
+        span[index].classList.add('active');
+
+
+        index++;
+    }
+    // 定时器
+    T = setInterval(autoPlay, 500)
+
+    box.onmouseover = function () {
+        clearInterval(T);
+    }
+
+    box.onmouseout = function () {
+        T = setInterval(autoPlay, 500)
+
+    }
+    let temp = '';
+
+    for (let i = 0; i < Img.length; i++) {
+        temp += `<span data-index = "${i}" class= "${i == 0 ? 'active' : ''}"></span>`;
+    }
+    pagination.innerHTML = temp;
+
+
+
+</script>

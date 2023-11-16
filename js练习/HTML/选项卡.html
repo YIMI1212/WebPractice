@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        width: 40vw;
+        height: 45vw;
+        /* background-color: #ccc; */
+        border: 2px solid #ccc;
+        margin: 5vw;
+    }
+
+    .choiceBox {
+        display: flex;
+        width: 40vw;
+        height: 5vw;
+    }
+
+    .choice {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:calc(10vw - 2px);
+        height: calc(5vw - 2px);
+        background-color: #6c6c6c;
+        border: 1px solid transparent;
+        user-select: none;
+        cursor: pointer;
+       
+    }
+
+    .choiceClick {
+
+        color: #333;
+        background-color: #fff;
+        /* border: 1px solid #999; */
+        /* border-bottom-color: transparent; */
+
+
+
+
+    }
+
+    .choiceItem {
+        width: 40vw;
+        height: 40vw;
+        display: flex;
+        font-size: 32px;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #fff;
+        display: none;
+    }
+
+    .choiceItemDisplay {
+        display: flex;
+
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="choiceBox">
+            <div class="choice">国内新闻</div>
+            <div class="choice">国际新闻</div>
+            <div class="choice">体育新闻</div>
+            <div class="choice">娱乐新闻</div>
+
+        </div>
+        <div class="choiceItem">国内新闻</div>
+        <div class="choiceItem">国际新闻</div>
+        <div class="choiceItem">体育新闻</div>
+        <div class="choiceItem">娱乐新闻</div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    let choice = document.getElementsByClassName('choice')
+    let item = document.getElementsByClassName('choiceItem')
+
+    // 初始化
+    choice[0].classList.add('choiceClick');
+    item[0].classList.add('choiceItemDisplay');
+    for (let i = 0; i < choice.length; i++) {
+
+        choice[i].onclick = function () {
+            // 清除样式
+            for (let j = 0; j < choice.length; j++) {
+                item[j].classList.remove('choiceItemDisplay');
+                choice[j].classList.remove('choiceClick');
+
+            }
+            //添加样式
+            item[i].classList.add('choiceItemDisplay');
+            choice[i].classList.add('choiceClick');
+
+
+        }
+    }
+
+
+</script>

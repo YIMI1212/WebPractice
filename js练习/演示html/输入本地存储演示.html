@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="content" id="content">
+    <button id="btn">提交</button>
+
+    <ul id="ul"></ul>
+</body>
+
+</html>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script>
+    // 设置内容数组
+    var arr = [];
+    // 设置arr数组 获取本地存储的内容
+    arr = localStorage.getItem('content') ? JSON.parse(localStorage.getItem('content')) : [];//使用三元判断 防止空数组的报错
+    // 插入已经保留的内容
+    if (arr.length > 0) {
+        let li = '';
+
+        for (let item of arr) {
+            // 在arr写入本地存储的内容
+            li += `<li>${item}</li>`;
+        }
+
+        // 写入html
+        $('#ul').html(li);
+    }
+
+    $('#btn').click(function () {
+        // 获取内容
+        let val = $('#content').val();
+
+        if (!$.trim(val)) {
+            alert('请输入内容');
+            return;
+        }
+        // 在头部插入文本
+        $('#ul').prepend(`<li>${val}</li>`);
+
+        // 在头部插入val的内容
+        arr.unshift(val);
+        // 保存content
+        localStorage.setItem('content', JSON.stringify(arr));
+
+        $('#content').val('');
+    });
+
+    // $('#ul li').click(function(){
+    //     $(this).remove();
+    // })
+
+    $('#ul').on('click', 'li', function () {
+        // this.remove();
+        // 找到点击的文本的索引
+        let index = arr.indexOf($(this).text());
+        //判断索引是否存在
+        if (index === -1) {
+            alert('删除元素不存在');
+            return;
+        }
+        // arr数组替换空
+        arr.splice(index, 1);
+        // 设置本地存储的内容
+        localStorage.setItem('content', JSON.stringify(arr));
+        // 删除本身
+        $(this).remove();
+    });
+</script>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    li.active{
+        background: red;
+        color: #fff;
+    }
+</style>
+<body>
+    <ul id="ul">
+        <li class="item">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <button id="btn">放大</button>
+    <button id="btn2">缩小</button>
+    <button id="btn3">还原</button>
+
+    <div style="font-size: 16px;" id="div">Font</div>
+
+</body>
+</html>
+<script>
+    // 第一步：获取元素
+    let btn = document.getElementById('btn');
+    let btn2 = document.getElementById('btn2');
+    let btn3 = document.getElementById('btn3');
+    let div = document.getElementById('div');
+
+    let size = parseFloat(div.style.fontSize);
+
+    // 放大
+    btn.onclick = function()
+    {
+        size += 5;
+
+        div.style.fontSize = size + 'px';
+    }
+
+    // 缩小
+    btn2.onclick = function()
+    {
+        size -= 5;
+        
+        div.style.fontSize = size + 'px';
+    }
+
+    // 还原
+    btn3.onclick = function()
+    {
+        size = 16;
+
+        div.style.fontSize = size + 'px';
+    }
+    
+    let ul = document.getElementById('ul');
+
+    let liList = ul.getElementsByTagName('li');
+
+    for(let i = 0;i < liList.length;i++)
+    {
+        liList[i].onclick = function()
+        {
+            for(let j = 0;j < liList.length;j++)
+            {
+                // liList[j].className = 'item';
+                liList[j].classList.remove('active');
+            }
+            // this.className += ' active';
+            // 使用classlist添加属性
+            this.classList.add('active')
+        }
+    }
+
+    // let li = `<li>1</li>`;
+
+    // 对文本操作 进行修改
+    // ul.innerText = li;
+
+    // 获取内容
+    // console.log(ul.innerText);
+
+    // ul.innerHTML = li;
+
+    // console.log(ul.innerHTML);
+</script>

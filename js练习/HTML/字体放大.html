@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <button id="btnBig">放大</button>
+    <button id="btnSmall">缩小</button>
+    <button id="btnReset">还原</button>
+
+    <div id="title" style="font-size: 16px;">这是一段文字</div>
+</body>
+
+</html>
+<script>
+
+    var btnBig = document.getElementById('btnBig');
+    var btnSmall = document.getElementById('btnSmall');
+    var btnReset = document.getElementById('btnReset');
+
+    var title = document.getElementById('title');4
+
+
+    var size = 16;
+    // size = title.style.fontSize;
+    // console.log(title)
+
+
+    
+    btnBig.onclick = function () {
+        size += 4;
+        title.style.fontSize = size + "px";
+    }
+
+    btnSmall.onclick = function () {
+        size -= 4;
+        title.style.fontSize = size + "px";
+    }
+    btnReset.onclick = function () {
+        size = 16;
+        title.style.fontSize = size + "px";
+    }
+
+
+
+
+</script>

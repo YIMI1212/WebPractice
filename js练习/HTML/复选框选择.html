@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <input type="checkbox" name="chk" id="">aaa
+        <input type="checkbox" name="chk" id="">bbb
+        <input type="checkbox" name="chk" id="">ccc
+        <input type="checkbox" name="chk" id="">ddd
+        <input type="checkbox" name="chk" id="">fff
+        <br>
+        <button id="all">全选</button>
+        <button id="reverse">反选</button>
+        <button id="cancel">取消</button>
+    </div>
+
+</body>
+
+</html>
+<script src="../js/jquery-3.7.1.min.js"></script>
+<script>
+    //----------------------------------------js-----------------------------------
+
+    // let all = document.getElementById('all');
+    // let reverse = document.getElementById('reverse');
+    // let cancel = document.getElementById('cancel');
+
+    // let chk = document.getElementsByName('chk')
+
+    // console.log(chk)
+    // all.onclick = function () {
+    //     for (let i = 0; i < chk.length; i++) {
+    //         chk[i].checked = true;
+
+    //     }
+
+    // }
+    // reverse.onclick = function () {
+    //     for (let i = 0; i < chk.length; i++) {
+    //         chk[i].checked = !chk[i].checked;
+
+
+    //     }
+    // }
+    // cancel.onclick = function () {
+    //     for (let i = 0; i < chk.length; i++) {
+    //         chk[i].checked = false;
+
+    //     }
+    // }
+    //---------------------------------------------jq------------------------------
+    $('#all').click(function () {
+        $(':checkbox').each(function () {
+            this.checked = true
+        })
+        // $(':checkbox').checked = true
+    })
+    $('#reverse').click(function () {
+        $(':checkbox').each(function () {
+            this.checked = !this.checked
+        })
+    })
+    $('#cancel').click(function () {
+        $(':checkbox').each(function () {
+            this.checked = false
+        })
+    })
+
+
+
+</script>

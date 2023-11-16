@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #imgBox img{
+        width: 50vw;
+        height: 50vw;
+
+    }
+    #imgBox{
+        width: 50vw;
+        height: 50vw;
+        transition: 1s;
+    }
+    .active{
+        overflow: hidden;
+        height: 0px !important;
+    }
+</style>
+
+<body>
+    <div id="imgBox">
+        <img src="/images/富士山.jpg" alt="">
+    </div>
+    <button id="btn">收起</button>
+</body>
+
+</html>
+
+<script>
+    let btn = document.getElementById('btn')
+    let imgBox = document.getElementById('imgBox')
+
+    btn.onclick =()=>{
+        let flag
+        if(flag === true){
+            imgBox.classList.add('active')
+
+        }else{
+            imgBox.classList.remove('active')
+
+        }
+
+
+    }
+
+
+
+
+</script>

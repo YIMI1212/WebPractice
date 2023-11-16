@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        width: 100px;
+        /* display: none; */
+    }
+</style>
+
+<body>
+    <button id="upload">上传</button>
+    <input type="file" name="file" id="file" hidden>
+
+    <img src="" alt="" id="images">
+
+</body>
+
+</html>
+
+<script>
+    // document.getElementById 是获取 id名称的元素（单个） 
+    // getclass获取的是数组 ，使用时要拆开
+    var button = document.getElementById("upload");
+    var File_f = document.getElementById("file");
+    var image = document.getElementById("images")
+
+
+    // file.onclick();
+    // butten按下时 触发事件
+    button.onclick = function () {
+        // 文档的onclick不存在 // 模拟触发按键
+        File_f.click();
+    }
+    // onchange 是 File_f 有改变时触发 之后的函数
+    File_f.onchange = function () {
+        // 获取文档的信息，是一个数组，需要拆开（包含多个文档内容和长度）
+        // 文件上传可以上传多个文件 ， [0]来选择第一图片
+        let Files = this.files[0];
+        // console.log(Files)
+
+        // files[0]可能不存在 返回undefine
+        if (Files) {
+            //新建一个文档读取器 实例化
+            var Reader = new FileReader();
+            // 读取文件的url，返回一个bace64编码的结果
+            Reader.readAsDataURL(Files);
+            // 给img的src赋值来显示图片
+            Reader.onload = function () {
+                //使用set... 来更改图片的src
+                image.setAttribute('src', Reader.result);
+                // console.log(Reader.result)
+            }
+        }
+    }
+
+    var demo = document;
+
+    console.log(demo);
+
+</script>

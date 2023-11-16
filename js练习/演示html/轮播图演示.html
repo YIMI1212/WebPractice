@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #box{
+        width: 400px;
+        height: 550px;
+        margin: 150px auto 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #box .item{
+        display: none;
+    }
+
+    #box .active{
+        display: block;
+    }
+
+    #box #pagination{
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    #box #pagination span{
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-right: 5px;
+        display: inline-block;
+    }
+
+    #box #pagination span.active{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div id="box">
+        <div class="item active">
+            <img src="images/1.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/2.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/3.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/4.jpg" alt="">
+        </div>
+        <div id="pagination"></div>
+    </div>
+
+</body>
+</html>
+<script>
+    var box = document.getElementById('box');
+
+    var item = box.getElementsByClassName('item');
+
+    var index = 0;
+
+    var T;
+
+    var pagination = document.getElementById('pagination');
+
+    var span = pagination.getElementsByTagName('span');
+
+    // 分页器点击事件
+    pagination.onclick = function(e)
+    {
+        var target = e.target;
+        var idx = target.dataset.index;
+
+        for(var i = 0;i < item.length;i++)
+        {
+            item[i].classList.remove('active');
+            span[i].classList.remove('active');
+        }
+
+        index = idx;
+
+        item[index].classList.add('active');
+        span[index].classList.add('active');
+
+    }
+
+    function autoPlay()
+    {
+        if(index > 3)
+        {
+            index = 0;
+        }
+
+        for(var i = 0;i < item.length;i++)
+        {
+            item[i].classList.remove('active');
+            span[i].classList.remove('active');
+        }
+
+        item[index].classList.add('active');
+        span[index].classList.add('active');
+
+        index++;
+    }
+
+    // 设置循环定时器，让图片隔一秒换一张图片
+    //T = setInterval(autoPlay,2000);
+
+    // 鼠标在box元素里的事件
+    // box.onmouseover = function()
+    // {
+    //     // 清除循环定时器
+    //     clearInterval(T);
+    // }
+
+    // box.onmouseout = function()
+    // {
+    //     T = setInterval(autoPlay,1000);
+    // }
+
+    var temp = '';
+
+    // 追加分页器
+    for(var i = 0;i < item.length;i++)
+    {
+        temp += `<span data-index="${i}" class="${i == 0 ? 'active' : ''}"></span>`;
+    }
+
+    pagination.innerHTML = temp;
+</script>
