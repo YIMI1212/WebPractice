@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			.box {
+				width: 640px;
+				/* height: 1136px; */
+				display: flex;
+				align-items: center;
+				justify-content: baseline;
+				flex-direction: column;
+			}
+
+			/* -------------------------box1------------------------------- */
+			.box1 {
+				width: 640px;
+				height: 40px;
+				display: flex;
+				justify-content: space-between;
+
+
+			}
+
+			.message,
+			.time,
+			.electricity {
+				width: 200px;
+				height: 40px;
+				display: flex;
+				align-items: center;
+			}
+
+			.message {
+				/* width: 150px; */
+
+				box-sizing: border-box;
+				padding-right: 50px;
+				font-size: 23px;
+				justify-content: space-around;
+
+			}
+
+			.time {
+				font-size: 25px;
+				font-weight: bold;
+				justify-content: center;
+			}
+
+			.electricity {
+				font-size: 24px;
+				justify-content: end;
+				/* margin-right: 30px; */
+
+				box-sizing: border-box;
+				padding-right: 55px;
+				position: relative;
+			}
+
+			.electricity img:last-child {
+				position: absolute;
+				right: 2px;
+			}
+
+			.electricity img:nth-child(2) {
+				position: absolute;
+				right: 6px;
+			}
+
+			.electricity img:nth-child(3) {
+				position: absolute;
+				right: 8px;
+			}
+
+			/* -------------------------box2------------------------------- */
+			.box2 {
+				width: 640px;
+				height: 88px;
+
+				font-size: 36px;
+
+				color: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #bf0003;
+			}
+
+			/* -------------------------box3------------------------------- */
+			.box3 {
+				width: 640px;
+				height: 264px;
+
+				display: flex;
+				/* align-items: center; */
+				flex-wrap: wrap;
+				background: url(./images/Passion.png) no-repeat center;
+				align-content: center;
+				justify-content: center;
+			}
+
+			.H1,
+			.H2 {
+				display: flex;
+
+				align-items: baseline;
+
+				color: white;
+			}
+
+			.H1 {
+				width: 640px;
+				font-size: 45px;
+				justify-content: center;
+				align-items: flex-end;
+				/* margin-right: 45px; */
+			}
+
+			.H1 span:nth-child(1) {
+				font-size: 35px;
+			}
+
+			.H1 span:nth-child(2) {
+				font-size: 53px;
+			}
+
+			.Hbox {
+				width: 505px;
+				height: 66px;
+				border-top: 1px solid #f3abac;
+				border-bottom: 1px solid #f3abac;
+
+				display: flex;
+				flex-direction: row;
+				justify-content: start;
+				flex-wrap: wrap;
+				align-content: space-around;
+			}
+
+			.H2 {
+				width: 640px;
+				font-size: 17px;
+				/* flex-wrap: nowrap; */
+				justify-content: start;
+				margin-left: 1em;
+			}
+
+			.H2 span {
+				font-size: 23px;
+			}
+
+			.ButtonSum {
+				width: 116px;
+				height: 29px;
+				background-color: #ea3232;
+				color: white;
+				border-radius: 4px;
+
+				border-style: none;
+				border: 2px solid #f48e8c;
+
+				margin-right: 354px;
+				margin-top: 22px;
+			}
+
+			/* -------------------------box4------------------------------- */
+			.box4 {
+				width: 640px;
+				height: 348px;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: center;
+				justify-content: center;
+			}
+
+			.item {
+				width: 100px;
+				height: 150px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				font-size: 18px;
+
+				margin: 0px 24px;
+			}
+
+			.itemS {
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				background-color: #fb8472;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.itm2 {
+				background-color: #6c5bec;
+			}
+
+			.itm3 {
+				background-color: #df4242;
+			}
+
+			.itm4 {
+				background-color: #5bb1ec;
+			}
+
+			.itm5 {
+				background-color: #c672fb;
+			}
+
+			.itm6 {
+				background-color: #ec5b9f;
+			}
+
+			.itm7 {
+				background-color: #ecaa5b;
+			}
+
+			.itm8 {
+				background-color: #46bc61;
+			}
+
+			/* -------------------------box5------------------------------- */
+			.box5 {
+				width: 600px;
+				height: 280px;
+				background-color: #fafafa;
+			}
+
+			.titleT {
+				width: 600px;
+				height: 63px;
+				border-bottom: 1px solid #dd9495;
+				font-size: 28px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.cont {
+				width: 600px;
+				height: 217px;
+				display: flex;
+				/* flex-wrap: wrap; */
+				flex-direction: column;
+				/* align-content: center; */
+				align-items: center;
+				justify-content: space-evenly;
+
+			}
+
+			.conP1 {
+				font-size: 30px;
+			}
+
+			.conP1 span {
+				color: #de3235;
+			}
+
+			.P1Box,
+			.P2Box {
+
+				width: 640px;
+				display: flex;
+				justify-content: center;
+			}
+
+			.P1L,
+			.P1R,
+			.P2L,
+			.P2R {
+				width: 50%;
+			}
+
+			.P1L {
+				text-align: right;
+			}
+
+			.P1R {
+				display: flex;
+				align-items: flex-end;
+				text-align: left;
+			}
+
+			.conP1 span:nth-child(1) {
+				font-size: 60px;
+			}
+
+			.conP2 {
+				width: 50%;
+				font-size: 24px;
+			}
+
+			.conP2 span {
+				color: #de3235;
+			}
+
+			.P2L {
+				border-right: 2px solid #bbbbbb;
+				text-align: right;
+			}
+
+			.ButtonTB {
+				width: 303px;
+				height: 44px;
+				border-radius: 22px;
+				border-style: none;
+				color: white;
+				background-color: #de3235;
+				font-size: 24px;
+			}
+
+			.conP3 {
+				font-size: 18px;
+				color: #737373;
+			}
+
+			/* -------------------------box6------------------------------- */
+			.box6 {
+				width: 640px;
+				height: 98px;
+				background-color: #f7f7f7;
+
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+
+				position: fixed;
+				bottom: 0px;
+			}
+
+			.Nav {
+				width: 50px;
+				font-size: 18px;
+				display: flex;
+				/* flex-direction: column; */
+				flex-wrap: wrap;
+				/* align-items: center; */
+				align-content: center;
+				justify-content: center;
+			}
+
+			.nav {
+				width: 50px;
+				height: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.Nav:nth-child(1) span {
+				color: #bf0003;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1">
+				<div class="message">
+					<img src="./images/Ellipse 1-1.png" alt="">
+					<img src="./images/Ellipse 1-1.png" alt="">
+					<img src="./images/Ellipse 1-1.png" alt="">
+					<img src="./images/Ellipse 1.png" alt="">
+					<img src="./images/Ellipse 1.png" alt="">
+					<span>BELL</span>
+					<img src="./images/wifi.png" alt="">
+
+				</div>
+				<div class="time">
+					4:21 PM
+				</div>
+				<div class="electricity">
+					<img src="./images/Bluetooth.png" alt="">
+					&nbsp;100%
+					<img src="./images/battery.png" alt="">
+					<img src="./images/Charge.png" alt="">
+					<img src="./images/+.png" alt="">
+				</div>
+			</div>
+			<!-- -------------------box2-------------------------------------------------- -->
+			<div class="box2">
+				首页
+			</div>
+			<!-- -------------------box3-------------------------------------------------- -->
+			<div class="box3">
+				<div class="H1">
+					天天
+					<span>OK</span>&nbsp;最多&nbsp;
+					<span>15</span>倍收益
+				</div>
+				<div class="Hbox">
+					<div class="H2">
+						OK金融网出<span>实盘资金</span>
+					</div>
+					<div class="H2">
+						您来操盘买卖 短期内<span>放大</span>你的<span>收益</span>
+					</div>
+				</div>
+				<input type="button" class="ButtonSum" value="申请配资">
+			</div>
+			<!-- -------------------box4-------------------------------------------------- -->
+			<div class="box4">
+				<div class="item">
+					<div class="itemS itm1">
+						<img src="./images/矢量智能对象-7.png" alt="">
+					</div>
+					<span>免费体验</span>
+				</div>
+				<div class="item">
+					<div class="itemS  itm2">
+						<img src="./images/矢量智能对象-6.png" alt="">
+					</div>
+					<span>天天OK</span>
+				</div>
+				<div class="item">
+					<div class="itemS  itm3">
+						<img src="./images/矢量智能对象-5.png" alt="">
+					</div>
+					<span>月月OK</span>
+				</div>
+				<div class="item">
+					<div class="itemS  itm4">
+						<img src="./images/矢量智能对象-4.png" alt="">
+					</div>
+					<span>实盘大赛</span>
+				</div>
+				<div class="item">
+					<div class="itemS itm5">
+						<img src="./images/矢量智能对象-3.png" alt="">
+					</div>
+					<span>OK宝</span>
+				</div>
+				<div class="item">
+					<div class="itemS itm6">
+						<img src="./images/矢量智能对象-2.png" alt="">
+					</div>
+					<span>交易中心</span>
+				</div>
+				<div class="item">
+					<div class="itemS itm7">
+						<img src="./images/矢量智能对象-1.png" alt="">
+					</div>
+					<span>立即充值</span>
+				</div>
+				<div class="item">
+					<div class="itemS itm8">
+						<img src="./images/矢量智能对象.png" alt="">
+					</div>
+					<span>更多</span>
+				</div>
+
+			</div>
+
+			<!-- -------------------box5-------------------------------------------------- -->
+			<div class="box5">
+				<div class="titleT">
+					股票投资 | 借款12万
+				</div>
+				<div class="cont">
+					<div class="P1Box">
+						<span class="conP1 P1L"><span>10.80</span><span>% </span></span>
+						<span class="conP1 P1R">&nbsp;年华收益</span>
+					</div>
+
+					<div class="P2Box">
+						<span class="conP2 P2L">已完成：<span>78.80% &nbsp;&nbsp;&nbsp;</span></span>
+						<span class="conP2 P2R">&nbsp;&nbsp;&nbsp; 剩余： <span>94000</span> 元</span>
+
+					</div>
+
+					<input class="ButtonTB" type="button" value="立即投标">
+					<p class="conP3">已有9人投资</p>
+				</div>
+			</div>
+
+			<!-- -------------------box6-------------------------------------------------- -->
+			<div class="box6">
+				<div class="Nav">
+					<div class="nav">
+						<img src="./images/导航1.png" alt="">
+					</div>
+					<span>首页</span>
+				</div>
+				<div class="Nav">
+					<div class="nav">
+						<img src="./images/导航2.png" alt="">
+					</div>
+					<span>行情</span>
+				</div>
+				<div class="Nav">
+					<div class="nav">
+						<img src="./images/导航3.png" alt="">
+					</div>
+					<span>咨询</span>
+				</div>
+				<div class="Nav">
+					<div class="nav">
+						<img src="./images/导航4.png" alt="">
+					</div>
+					<span>个人</span>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

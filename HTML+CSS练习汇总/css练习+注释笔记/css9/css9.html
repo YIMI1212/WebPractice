@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.box {
+				width: 1158px;
+				height: 253px;
+				background: #323232;
+				/* 塌陷问题 box2的margintop 加到了父级元素 */
+				/* 加超出隐藏 去除塌陷 */
+				overflow: hidden;
+			}
+
+			.box2 {
+				width: 682px;
+				height: 76px;
+				margin: 0 auto;
+				margin-top: 67px;
+				background-color: #fefefe;
+
+				box-sizing: border-box;
+			}
+
+			.item {
+				width: 122px;
+				height: 88px;
+				/* margin: 0 25px; */
+				float: left;
+				text-align: center;
+				line-height: 76px;
+				font-size: 18px;
+
+				box-sizing: border-box;
+			}
+
+			.item2 {
+				height: 12px;
+				width: 122px;
+				font-size: 18px;
+				/* margin: 0 25px; */
+				float: left;
+				/* box-sizing: border-box; */
+			}
+
+			/* 使用伪元素放到前置的小盒子 */
+			.item2::before {
+				content: "";
+				border: 6px solid #323232;
+				float: left;
+			}
+
+			.item2::after {
+				content: "";
+				border: 6px solid #323232;
+				float: right;
+			}
+
+			.item:hover {
+				margin-top: -12px;
+				background-color: #fed206;
+			}
+
+			.item:hover .item2 {
+				background-color: #323232;
+				/* 显示效果开关 */
+				/* display: none; */
+			}
+
+			.item:hover .item2::before {
+				content: "";
+
+				border: 6px solid #323232;
+				float: left;
+				border-right-color: #9b8651;
+				border-top-color: #9b8651;
+
+				border-bottom-color: #fefefe;
+				border-left-color: #fefefe;
+			}
+
+			.item:hover .item2::after {
+				content: "";
+				border: 6px solid #323232;
+				float: right;
+				border-right-color: #fefefe;
+				border-top-color: #9b8651;
+
+				border-bottom-color: #fefefe;
+				border-left-color: #9b8651;
+			}
+
+			.box2::before {
+				content: "";
+				/* 边框占满高度  */
+				border: 38px solid #fefefe;
+				float: left;
+				/* 选边展示时 显示三角形 */
+				border-left-color: #323232;
+				/* border-right-color: red; */
+			}
+
+			.box2::after {
+				content: "";
+				border: 38px solid #fefefe;
+				/* 记得向右浮动 */
+				float: right;
+				border-right-color: #323232;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box2">
+				<div class="item">
+					<span>Home</span>
+					<div class="item2"></div>
+				</div>
+				<div class="item">
+					<span>About</span>
+					<div class="item2"></div>
+				</div>
+				<div class="item">
+					<span>Services</span>
+					<div class="item2"></div>
+				</div>
+				<div class="item">
+					<span>Contact</span>
+					<div class="item2"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

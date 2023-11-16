@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.box {
+				width: 386px;
+				height: 580px;
+				background-color: #f85050;
+				/* 塌陷问题 */
+				overflow: hidden;
+			}
+
+			.box2 {
+				/* 使用相对定位 */
+				position: relative;
+				width: 314px;
+				height: 560px;
+				background-color: #ffffff;
+				margin: 0 auto;
+				margin-top: 6px;
+				border-radius: 38px;
+
+				box-sizing: border-box;
+				padding-left: 28px;
+
+				overflow: hidden;
+			}
+
+			.line {
+				width: 80px;
+				height: 7px;
+				margin: 0 auto;
+				margin-top: 21px;
+
+			}
+
+			.line1 {
+				width: 70px;
+				height: 7px;
+				background-color: #d0d0d0;
+				border-radius: 7px;
+				float: left;
+			}
+
+			.dot {
+				width: 7px;
+				height: 7px;
+				margin-left: 3px;
+				background-color: #d0d0d0;
+				border-radius: 7px;
+				float: left;
+			}
+
+			.p1 {
+				font-size: 11px;
+				line-height: 39px;
+				color: #7c7c7c;
+				margin-top: 30px;
+			}
+
+			.item {
+				width: 257px;
+				height: 93px;
+
+				border: 1px solid white;
+				border-bottom-color: #f5f5f5;
+
+				float: left;
+			}
+
+			.con1 {
+				font-size: 12px;
+				color: #c9c9c9;
+				margin-top: 14px;
+
+				transition: 0.5s;
+			}
+
+			.con1:nth-child(3) {
+				margin-top: 39px;
+			}
+
+			.con2 {
+				float: left;
+				font-size: 20px;
+				line-height: 20px;
+				font-weight: bold;
+				color: #c9c9c9;
+				margin-top: 10px;
+
+				transition: 0.5s;
+			}
+
+
+
+			.switch1 {
+				/* 浮动使之成为行内块 不再出现塌陷问题 */
+				float: right;
+
+				width: 38px;
+				height: 14px;
+
+				margin-top: -42px;
+				/* padding-top: 5px; */
+				background-color: #efefef;
+				border-radius: 10px;
+
+				/* overflow: hidden; */
+			}
+
+			.s_dot {
+				width: 19px;
+				height: 19px;
+				border-radius: 10px;
+
+				background-color: #ffffff;
+				box-shadow: 2px 2px 3px #ccc;
+
+
+				margin-top: -2px;
+				transition: 0.5s;
+			}
+
+			.nav {
+				/* 使用绝对定位 */
+				position: absolute;
+				bottom: 21px;
+
+				width: 258px;
+				height: 25px;
+				text-align: center;
+				/* float: ; */
+			}
+
+			.nav11 {
+				width: 74px;
+				height: 25px;
+				color: #eeeeee;
+				border-bottom: 2px solid #eeeeee;
+				float: left;
+			}
+
+			.rad2 .nav11 {
+				margin: 0 12px;
+			}
+
+			/* 
+			.switch:active .s_dot {
+				margin-left: 19px;
+				background-color: #ffffff;
+				box-shadow: 2px 2px 3px #ccc;
+			}
+
+			.switch:active .con1 {
+				color: #c8c8c8;
+			} */
+			input {
+				display: none;
+			}
+
+			/* [选择符] ~符选择兄弟元素 */
+			input[name="chk"]:checked~.switch1 .s_dot {
+				margin-left: 20px;
+				background-color: #565656;
+			}
+
+			input[name="chk"]:checked~.con * {
+				color: #565656;
+				transition: 0.5s;
+			}
+
+			input[name="chk_2"]:checked~.switch1 .s_dot {
+				margin-left: 20px;
+				background-color: #565656;
+			}
+
+			input[name="chk_2"]:checked~.con * {
+				color: #565656;
+				transition: 0.5s;
+			}
+
+			input[name="chk_3"]:checked~.switch1 .s_dot {
+				margin-left: 20px;
+				background-color: #565656;
+			}
+
+			input[name="chk_3"]:checked~.con * {
+				color: #565656;
+				transition: 0.5s;
+			}
+
+			/* 输入框关联 +加号关联最近的label */
+			input[name="rad"]:checked+label .nav11 {
+				color: #808080;
+				border-bottom-color: #808080;
+			}
+
+			/* 			input[id ="rad2"]:checked~.rad2 .nav11 {
+				color: #808080;
+				border-bottom-color: #808080;
+			}
+			input[id ="rad3"]:checked~.rad3 .nav11 {
+				color: #808080;
+				border-bottom-color: #808080;
+			} */
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box2">
+				<div class="line">
+					<div class="line1"></div>
+					<div class="dot">
+					</div>
+				</div>
+				<p class="p1">你的闹钟</p>
+				<div class="item">
+					<input type="checkbox" name="chk" id="chk1">
+					<div class="con">
+						<p class="con1">睡觉</p>
+						<p class="con2">08:00</p>
+						<p class="con1">日，一，二，三，四</p>
+					</div>
+					<label for="chk1" class="switch1">
+						<div class="s_dot"></div>
+					</label>
+				</div>
+				<div class="item">
+					<input type="checkbox" name="chk_2" id="chk2">
+					<div class="con">
+						<p class="con1">吃饭时间</p>
+						<p class="con2">13:00</p>
+						<p class="con1">每一天</p>
+					</div>
+					<label for="chk2" class="switch1">
+						<div class="s_dot"></div>
+					</label>
+				</div>
+
+				<div class="item">
+					<input type="checkbox" name="chk_3" id="chk3">
+					<div class="con">
+						<p class="con1">工作</p>
+						<p class="con2">16:30</p>
+						<p class="con1">五，六</p>
+					</div>
+					<label for="chk3" class="switch1">
+						<div class="s_dot"></div>
+					</label>
+				</div>
+
+
+
+				<div class="nav">
+					<input type="radio" name="rad" id="rad1">
+					<label for="rad1" class="rad1">
+						<div class="nav11">提醒</div>
+					</label>
+					<input type="radio" name="rad" id="rad2">
+					<label for="rad2" class="rad2">
+						<div class="nav11">时钟</div>
+					</label>
+					<input type="radio" name="rad" id="rad3">
+					<label for="rad3" class="rad3">
+						<div class="nav11">定时器</div>
+					</label>
+
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+</html>

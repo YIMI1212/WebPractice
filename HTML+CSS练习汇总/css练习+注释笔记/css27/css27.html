@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			@font-face {
+				font-family: 'iconfont';
+				src: url('iconfont.woff2?t=1697444703679') format('woff2'),
+					url('iconfont.woff?t=1697444703679') format('woff'),
+					url('iconfont.ttf?t=1697444703679') format('truetype');
+			}
+
+			.iconfont {
+				font-family: "iconfont" !important;
+				/* font-size: 22px; */
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			.box {
+				width: 1354px;
+				height: 598px;
+				background-color: #81a2d7;
+				overflow: hidden;
+			}
+
+			.box2 {
+				width: 1200px;
+				height: 562px;
+				background-color: #e6eaf5;
+				box-shadow: 10px 10px 0px #b7cce7,
+					-10px -10px 0px #b7cce7,
+					10px -10px 0px #b7cce7,
+					-10px 10px 0px #b7cce7;
+				border-radius: 10px;
+
+				margin-top: 18px;
+				margin-left: 65px;
+			}
+
+			.box3_1 {
+				width: 127px;
+				height: 562px;
+				background-color: #fdfdfd;
+
+				float: left;
+				text-align: center;
+
+				font-size: 24px;
+
+			}
+
+
+
+
+			.box3_2 {
+				width: 773px;
+				height: 562px;
+				background-color: #f2f6ff;
+				float: left;
+				box-sizing: border-box;
+				padding-left: 32px;
+
+				overflow-y: auto;
+				overflow-x: hidden;
+			}
+
+			.box3_3 {
+				width: 300px;
+				height: 562px;
+				background-color: #e3e8fb;
+				float: left;
+
+				box-sizing: border-box;
+				padding-left: 24px;
+
+			}
+
+			.P1 {
+				font-size: 20px;
+				line-height: 20px;
+				margin: 0px auto;
+				margin-top: 38px;
+			}
+
+
+			.nav {
+				display: block;
+
+				height: 24px;
+				line-height: 24px;
+				margin: 40px auto;
+			}
+
+			.nav:last-child {
+				margin-top: 190px;
+			}
+
+			input[name="rad"]:checked+label {
+				font-weight: bold;
+				/* transform: scale(1.2); */
+			}
+
+			input[name="rad"] {
+				display: none;
+			}
+
+			/* --------------------------------box3_2----------------------------------------- */
+			.Search {
+				width: 676px;
+				height: 40px;
+				background-color: #ffffff;
+				border-radius: 4px;
+				box-shadow: 0px 2px 4px #ccc;
+				/* 粘性 */
+				position: sticky;
+				top: 24px;
+
+				z-index: 2;
+			}
+
+			.Search1 {
+				width: 640px;
+				height: 40px;
+
+				border-style: none;
+				outline: none;
+
+				float: left;
+			}
+
+			.Search span {
+				line-height: 40px;
+				font-size: 24px;
+				text-align: right;
+			}
+
+			.Search1::placeholder {
+				text-indent: 1em;
+			}
+
+			.Quack {
+				width: 773px;
+				height: 180px;
+
+				margin-top: 83px;
+			}
+
+			.Qp1 {
+				font-size: 20px;
+				font-weight: bold;
+				line-height: 78px;
+				margin-left: 9px;
+			}
+
+			.item2 {
+				width: 76px;
+				height: 103px;
+				float: left;
+				margin: 0px 22px;
+				float: left;
+			}
+
+			.item3 {
+				width: 76px;
+				height: 76px;
+				background-color: #5d68ff;
+				border-radius: 10px;
+				text-align: center;
+				color: white;
+				line-height: 76px;
+				font-size: 28px;
+			}
+
+			.item2:nth-child(2) {
+				margin-left: 8px;
+			}
+
+			.item2:nth-child(4) .item3,
+			.item2:nth-child(5) .item3 {
+				background-color: #2a76fd;
+			}
+
+			.item2:nth-child(6) .item3,
+			.item2:nth-child(7) .item3 {
+				background-color: #20264b;
+			}
+
+
+			.ico2 {
+				font-size: 28px;
+				/* color: white;
+				margin-top: 27px;
+				line-height: 76px; */
+			}
+
+			.name {
+				width: 76px;
+				height: 27px;
+				line-height: 27px;
+				font-size: 12px;
+				float: left;
+				color: #a0a3a8;
+				text-align: center;
+			}
+
+			.Pp1 {
+				width: 773px;
+				height: 62px;
+				line-height: 62px;
+
+
+			}
+
+			.preview {
+				width: 773px;
+				height: 315px;
+				margin-top: 39px;
+			}
+
+			.Pp1 {
+				width: 673px;
+				height: 20px;
+				line-height: 20px;
+			}
+
+			.PreP1 {
+				font-size: 20px;
+				font-weight: bold;
+				margin-left: 9px;
+			}
+
+			.PreP2 {
+				font-size: 12px;
+				float: right;
+				/* margin-right: 57px; */
+				color: #cbccea;
+			}
+
+			.vidio1 {
+				width: 339px;
+				height: 253px;
+				background-color: #fff;
+				margin-top: 21px;
+				border-radius: 10px;
+				float: left;
+			}
+
+			.vidio1 img {
+				width: 339px;
+				height: 253px;
+				border-radius: 10px;
+
+				transition: .3s;
+			}
+
+			.vidio2,
+			.vidio3 {
+				width: 163px;
+				height: 253px;
+				border-radius: 10px;
+				background-color: #fff;
+				float: left;
+				margin-top: 21px;
+				margin-left: 13px;
+			}
+
+			.vidio2 img,
+			.vidio3 img {
+				width: 163px;
+				height: 253px;
+				border-radius: 10px;
+
+				transition: .3s;
+			}
+
+			.vidio1 img:hover,
+			.vidio2 img:hover,
+			.vidio3 img:hover {
+				transform: scale(1.2);
+			}
+
+
+			.vidio1,
+			.vidio2,
+			.vidio3 {
+				position: relative;
+				overflow: hidden;
+
+			}
+
+			.vidioT {
+				width: 50px;
+				height: 23px;
+				background-color: #9eabb3;
+				border-radius: 12px;
+
+				color: white;
+				font-size: 12px;
+				line-height: 23px;
+				text-align: center;
+
+				position: absolute;
+				right: 12px;
+				top: 12px;
+			}
+
+			.vidioName {
+				font-size: 14px;
+				color: white;
+
+				position: absolute;
+				bottom: 40px;
+				left: 12px;
+			}
+
+			.vidioSize {
+				font-size: 10px;
+				color: #cfd3db;
+
+				position: absolute;
+				bottom: 16px;
+				left: 12px;
+			}
+
+			.vidioPlay {
+				width: 40px;
+				height: 40px;
+				border-radius: 20px;
+				background-color: white;
+				text-align: center;
+				line-height: 40px;
+
+				position: absolute;
+				bottom: 20px;
+				right: 12px;
+			}
+
+
+			/* --------------------------------box3_3----------------------------------------- */
+
+			.RecentFiles {
+				height: 200px;
+				width: 678px;
+
+				margin-top: 55px;
+			}
+
+			.RecentTi {
+				width: 673px;
+				height: 20px;
+				line-height: 20px;
+			}
+
+			.ReTi {
+				font-size: 20px;
+				float: left;
+			}
+
+			.ReSti {
+				font-size: 12px;
+				color: #9ea3d0;
+				float: right;
+			}
+
+			.Recent {
+				width: 676px;
+				height: 136px;
+
+				background-color: white;
+				border-radius: 10px;
+				margin-top: 21px;
+
+				box-sizing: border-box;
+				padding-left: 20px;
+				padding-top: 14px;
+			}
+
+			.ReName,
+			.ReSize,
+			.ReLastModified,
+			.ReAction {
+				height: 136px;
+				float: left;
+				line-height: 36px;
+			}
+
+			.ReName {
+				width: 261px;
+			}
+
+			.ReSize {
+				width: 129px;
+			}
+
+			.ReLastModified {
+				width: 166px;
+			}
+
+			.ReAction {
+				width: 99px;
+			}
+
+			.ReTitle {
+				color: #9ca7c0;
+			}
+
+
+
+
+
+			.download {
+				width: 250px;
+				height: 24px;
+				line-height: 24px;
+				font-size: 15px;
+				margin-top: 43px;
+				/* margin-left: 24px; */
+				text-align: right;
+			}
+
+			.download .iconfont {
+				font-size: 24px;
+			}
+
+			.download p {
+				float: left;
+			}
+
+
+			.download1 {
+				margin-top: 35px;
+			}
+
+			.downP1 {
+				color: #81a2d7;
+			}
+
+
+			.down,
+			.down2 {
+				width: 252px;
+				height: 54px;
+
+			}
+
+			.down {
+				background-color: #eceefb;
+				border-radius: 10px;
+				margin-top: 13px;
+				margin-left: 7px;
+
+				position: relative;
+			}
+
+			.down img {
+				width: 32px;
+				height: 32px;
+				background-color: #4a58d3;
+				border-radius: 16px;
+				float: left;
+				margin-left: 7px;
+				margin-top: 11px;
+
+			}
+
+			.downNmae {
+				float: left;
+				font-size: 12px;
+				margin-top: 13px;
+				margin-left: 13px;
+				margin-right: 90px;
+			}
+
+			.downDet {
+				width: 130px;
+				height: 12px;
+				float: left;
+				line-height: 12px;
+
+				margin-top: 6px;
+				margin-left: 13px;
+				font-size: 12px;
+
+
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.down .iconfont {
+				line-height: 54px;
+				text-align: right;
+				/* margin-top: 12px; */
+				font-size: 24px;
+				color: #6eccba;
+
+				position: absolute;
+				left: 214px;
+			}
+
+
+			.download2 {
+				margin-top: 26px;
+			}
+
+			.dwn2 img {
+				background-color: #3bc9d7;
+			}
+
+			.Progress {
+				width: 150px;
+				height: 4px;
+				background-color: #dbdcf1;
+				border-radius: 2px;
+
+				position: absolute;
+				top: 32px;
+				left: 51px;
+			}
+
+			.ProgressF {
+				width: 60px;
+				height: 4px;
+				background-color: #47c2d4;
+				border-radius: 2px;
+			}
+
+			.download3 {
+				width: 275px;
+				height: 260px;
+				margin-top: 30px;
+			}
+
+			.fileRe {
+				width: 252px;
+				/* margin-left: 20px; */
+				margin-top: 30px;
+
+				position: relative;
+				border-left: 2px solid #25283e;
+
+				box-sizing: border-box;
+				padding: 14px 0px;
+				padding-left: 10px;
+
+
+				position: relative;
+
+			}
+
+			.fileRe::before {
+				/* float: left; */
+				content: "";
+				width: 10px;
+				height: 10px;
+				background-color: #25283e;
+				border-radius: 5px;
+
+				position: absolute;
+				top: -3px;
+				left: -6px;
+			}
+
+			.fileRe::after {
+				/* float: left; */
+				content: "";
+				width: 10px;
+				height: 10px;
+				background-color: #25283e;
+				border-radius: 5px;
+
+				/* z-index: 3; */
+				position: absolute;
+				bottom: -3px;
+				left: -6px;
+			}
+
+			.fileReImg {
+				width: 70px;
+				height: 63px;
+				border-radius: 10px;
+				overflow: hidden;
+				margin: 3px 3px;
+				float: left;
+			}
+
+
+			/* .fileReImg:nth-child(2),
+			.fileReImg:nth-child(3) {
+				margin-left: 6px;
+			} */
+
+			.fileRe img {
+				width: 70px;
+				height: 63px;
+				border-radius: 10px;
+				transition: .3s;
+			}
+
+			.fileRe img:hover {
+				width: 70px;
+				height: 63px;
+				transform: scale(1.2);
+
+
+			}
+
+			.Pdetail {
+				font-size: 12px;
+				line-height: 12px;
+				height: 12px;
+				margin-top: 14px;
+				margin-left: 7px;
+			}
+
+			.Pdetail span {
+				color: #7b80a0;
+			}
+
+			.DImgBox {
+				width: 230px;
+				/* height: 63px; */
+				margin-left: 5px;
+			}
+
+			.DImgBox::after {
+				content: "";
+				width: 0;
+				height: 0;
+				line-height: 0;
+				display: block;
+				visibility: hidden;
+				clear: both;
+			}
+
+			.Dtime {
+				font-size: 12px;
+				line-height: 12px;
+				color: #868998;
+
+				position: absolute;
+				left: 16px;
+			}
+
+			.Stim {
+
+				top: -5px;
+			}
+
+			.Etim {
+				bottom: -5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box2">
+				<div class="box3_1">
+					<p class="P1">MyDocs</p>
+
+					<input type="radio" name="rad" id="rad1">
+					<label for="rad1" class="nav">
+						<span class="iconfont" class="ico">&#xe792;</span>
+					</label>
+
+					<input type="radio" name="rad" id="rad2">
+					<label for="rad2" class="nav">
+						<span class="iconfont" class="ico">&#xe600;</span>
+					</label>
+
+					<input type="radio" name="rad" id="rad3">
+					<label for="rad3" class="nav">
+						<span class="iconfont" class="ico">&#xe633;</span>
+					</label>
+
+					<input type="radio" name="rad" id="rad4">
+					<label for="rad4" class="nav">
+						<span class="iconfont" class="ico">&#xe8b7;</span>
+					</label>
+
+					<div class="nav">
+						<span class="iconfont" class="ico">&#xe638;</span>
+					</div>
+
+				</div>
+
+
+
+				<div class="box3_2">
+					<div class="Search">
+						<input class="Search1" type="text" id="" placeholder="e.g. files.doc" />
+						<span class="iconfont">&#xe651;</span>
+					</div>
+
+					<div class="Quack">
+						<p class="Qp1">Quack Access</p>
+
+						<div class="item2">
+							<div class="item3">
+								<span class="iconfont" class="ico2">&#xe8ba;</span>
+							</div>
+
+
+							<span class="name">Image</span>
+						</div>
+
+
+						<div class="item2">
+
+							<div class="item3">
+								<span class="iconfont" class="ico2">&#xe602;</span>
+							</div>
+							<span class="name">Music</span>
+						</div>
+
+						<div class="item2">
+							<div class="item3">
+								<span class="iconfont" class="ico2">&#xe63d;</span>
+							</div>
+							<span class="name">Video</span>
+						</div>
+
+						<div class="item2">
+
+							<div class="item3">
+								<span class="iconfont" class="ico2">&#xe6cb;</span>
+							</div>
+							<span class="name">Docs</span>
+						</div>
+
+						<div class="item2">
+							<div class="item3">
+								<span class="iconfont" class="ico2">&#xe676;</span>
+							</div>
+							<span class="name">apps</span>
+						</div>
+						<div class="item2">
+							<div class="item3">
+								<span class="iconfont" class="ico2">&#xe856;</span>
+							</div>
+							<span class="name">Download</span>
+						</div>
+					</div>
+
+					<div class="preview">
+						<div class="Pp1">
+							<span class="PreP1">Preview</span>
+							<span class="PreP2">View in folders</span>
+						</div>
+						<div class="vidio1">
+							<img src="./images/Snipaste_2023-10-11_14-03-08.png" alt="">
+							<div class="vidioT Time1">10:32</div>
+							<div class="vidioName">Happiness & Tears</div>
+							<div class="vidioSize">45.5MB</div>
+							<div class="vidioPlay">
+								<span class="iconfont">&#xe63d;</span>
+							</div>
+						</div>
+						<div class="vidio2">
+							<img src="./images/Snipaste_2023-10-11_14-34-32.png" alt="">
+							<div class="vidioT Time2">02:35</div>
+							<div class="vidioName">High Hopes</div>
+							<div class="vidioSize">50MB</div>
+						</div>
+						<div class="vidio3">
+							<img src="./images/Snipaste_2023-10-11_14-34-53.png" alt="">
+							<div class="vidioT Time3">04:15</div>
+							<div class="vidioName">Imaginery you</div>
+							<div class="vidioSize">210.2MB</div>
+						</div>
+					</div>
+
+					<div class="RecentFiles">
+						<div class="RecentTi">
+							<p class="ReTi">Recent Files</p>
+							<p class="ReSti">view all files</p>
+						</div>
+
+						<div class="Recent">
+							<div class="ReName">
+								<p class="ReTitle">Name</p>
+								<p>Brandenburg.pdf</p>
+								<p>ThelionRoar.jpg</p>
+							</div>
+							<div class="ReSize">
+								<p class="ReTitle">Size</p>
+								<p>42MB</p>
+								<p>500KB</p>
+							</div>
+							<div class="ReLastModified">
+								<p class="ReTitle">ReLastModified</p>
+								<p>Aug 26,2020</p>
+								<p>Aug 26,2020</p>
+							</div>
+							<div class="ReAction">
+								<p class="ReTitle">Action</p>
+								<p class="iconfont">&#xe719;</p>
+								<p class="iconfont">&#xe719;</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="box3_3">
+					<div class="download">
+						<p>Downloads</p>
+						<span class="iconfont" class="downloadIco">&#xe719;</span>
+					</div>
+
+
+					<div class="download1">
+						<p class="downP1">Today</p>
+						<div class="down">
+							<img src="./images/logo.png" alt="">
+							<p class="downNmae">Glitter.mp4</p>
+							<span class="iconfont">&#xe856;</span>
+							<p class="downDet">34.45MB waiting for do </p>
+						</div>
+					</div>
+
+
+					<div class="download2">
+						<p class="downP1">Yesterday</p>
+						<div class="down dwn2">
+							<img src="./images/logo.png" alt="">
+							<p class="downNmae">Glitter.mp4</p>
+							<span class="iconfont">&#xe629;</span>
+							<div class="Progress">
+								<div class="ProgressF">
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="download3">
+
+
+						<p>File Received</p>
+
+						<div class="fileRe">
+							<p class="Dtime Stim">15:30</p>
+
+							<div class="DImgBox">
+								<div class="fileReImg">
+									<img src="./images/Snipaste_2023-10-11_14-03-08.png" alt="">
+								</div>
+								<div class="fileReImg">
+									<img src="./images/Snipaste_2023-10-11_14-34-32.png" alt="">
+								</div>
+								<div class="fileReImg">
+									<img src="./images/Snipaste_2023-10-11_14-34-53.png" alt="">
+								</div>
+								<div class="fileReImg">
+									<img src="./images/Snipaste_2023-10-11_14-34-53.png" alt="">
+								</div>
+							</div>
+
+							<div class="Pdetail">
+								Received <span>3 images</span> total <span>50.3MB</span>
+							</div>
+
+							<p class="Dtime Etim">18:30</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		</div>
+	</body>
+</html>

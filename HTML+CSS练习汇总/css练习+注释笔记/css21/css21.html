@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			.box {
+				width: 1360px;
+				height: 624px;
+				background-color: #81c9ed;
+
+				position: relative;
+			}
+
+			.mud {
+				width: 1360px;
+				height: 34px;
+				background-color: #463028;
+				position: absolute;
+				bottom: -34px;
+				z-index: 1;
+			}
+
+			.box2_1,
+			.box2_3 {
+				width: 0px;
+				height: 0px;
+				/* 全边框颜色 透明 */
+				border: 135px solid transparent;
+				/* border-bottom-color:#4c5165 ;
+				border-right-color:#4c5165 ; */
+				transform: scaleY(1.25);
+				box-sizing: border-box;
+				position: absolute;
+				/* top:350px; */
+				bottom: 0px;
+				z-index: 2;
+			}
+
+			.box2_2 {
+				width: 0px;
+				height: 0;
+				border: 170px solid transparent;
+				position: absolute;
+				bottom: 25px;
+				transform: scaleY(1.35);
+				z-index: 2;
+			}
+
+			.box2_1.left,
+			.box2_2.left,
+			.box2_3.left {
+				border-bottom-color: #4c5165;
+				border-right-color: #4c5165;
+			}
+
+			.box2_1.right,
+			.box2_2.right,
+			.box2_3.right {
+				border-bottom-color: #586072;
+				border-left-color: #586072;
+
+			}
+
+			.box2_1.left {
+				left: 0px;
+			}
+
+			.box2_1.right {
+				left: 270px;
+			}
+
+			.box2_2.left {
+				right: 680px;
+			}
+
+			.box2_2.right {
+				left: 680px;
+			}
+
+			.box2_3.left {
+				right: 270px;
+			}
+
+			.box2_3.right {
+				right: 0px;
+			}
+
+			.box3_1 {
+				width: 0;
+				height: 0;
+				border: 90px solid transparent;
+				/* transform: scaleY(1.25); */
+				box-sizing: border-box;
+
+				position: absolute;
+
+				top: -135px;
+				z-index: 2;
+
+				/* float: right; */
+			}
+
+			.box3_2 {
+				width: 0;
+				height: 0;
+				border: 90px solid transparent;
+				/* transform: scaleY(1.25); */
+				/* box-sizing: border-box; */
+				position: absolute;
+
+				top: -170px;
+				z-index: 2;
+
+				/* float: right; */
+			}
+
+			.box3_1.left,
+			.box3_2.left {
+				border-right-color: #fefefe;
+			}
+
+			.box3_1.left {
+				right: -135px;
+			}
+
+			.box3_2.left {
+				left: -10px;
+			}
+
+			.box3_1.right,
+			.box3_2.right {
+				border-left-color: #e6ebec;
+			}
+
+			.box3_1.right {
+				left: -135px;
+			}
+
+			.box3_2.right {
+				right: -10px;
+			}
+
+			.item {
+				width: 0;
+				height: 0;
+				border: 60px solid transparent;
+				border-bottom-color: #427304;
+				position: absolute;
+				bottom: -34px;
+				z-index: 3;
+			}
+
+			.item:nth-child(8) {
+				left: 120px;
+			}
+
+			.item:nth-child(9) {
+				left: 240px;
+			}
+
+			.item:nth-child(10) {
+				left: 360px;
+			}
+
+			.item:nth-child(11) {
+				left: 480px;
+			}
+
+			.item:nth-child(12) {
+				left: 600px;
+			}
+
+			.item:nth-child(13) {
+				left: 720px;
+			}
+
+			.item:nth-child(14) {
+				left: 840px;
+			}
+
+			.item:nth-child(15) {
+				left: 960px;
+			}
+
+			.item:nth-child(16) {
+				left: 1080px;
+			}
+
+			.item:nth-child(17) {
+				left: 1200px;
+			}
+
+			.item:nth-child(18) {
+				left: 1320px;
+			}
+
+			.sun {
+				width: 320px;
+				height: 320px;
+				background-color: #ffd014;
+				border-radius: 160px;
+				position: absolute;
+				left: 520px;
+				z-index: 1;
+
+				animation: sun 6s linear infinite both;
+			}
+
+			.sun:active {
+				/* animation: sun 2s linear infinite both; */
+			}
+
+
+			@keyframes sun {
+				0% {
+					transform: translateY(0);
+				}
+
+				50% {
+					transform: translateY(340px);
+					background-color: #222222;
+				}
+
+				100% {
+					transform: translateY(0);
+				}
+			}
+
+			.left {
+				animation: leftbuttomborderColor 6s infinite linear;
+			}
+
+			.right {
+				animation: rightbuttomborderColor 6s infinite linear;
+			}
+
+			.box3_1.left,
+			.box3_2.left {
+				animation: leftborderColor 6s infinite linear;
+			}
+			.box3_1.right,
+			.box3_2.right{
+				animation: rightborderColor 6s infinite linear;
+			}
+
+			.item {
+				animation: buttomborderColor 6s infinite linear;
+			}
+
+			.box {
+				animation: bgcColor 6s infinite linear;
+			}
+
+			@keyframes leftbuttomborderColor {
+				0% {}
+
+				50% {
+					border-right-color: #222222;
+					border-bottom-color: #222222;
+				}
+
+				100% {}
+			}
+
+			@keyframes rightbuttomborderColor {
+				0% {}
+
+				50% {
+					border-left-color: #222222;
+					border-bottom-color: #222222;
+				}
+
+				100% {}
+			}
+
+			@keyframes leftborderColor {
+				0% {}
+
+				50% {
+					border-right-color: #222222;
+				}
+
+				100% {}
+			}
+
+			@keyframes rightborderColor {
+				0% {}
+
+				50% {
+					border-left-color: #222222;
+				}
+
+				100% {}
+			}
+
+			@keyframes leftborderColor {
+				0% {}
+
+				50% {
+					border-right-color: #222222;
+				}
+
+				100% {}
+			}
+
+			@keyframes buttomborderColor {
+				0% {}
+
+				50% {
+					border-bottom-color: #222222;
+				}
+
+				100% {}
+			}
+
+			@keyframes bgcColor {
+				0% {}
+
+				50% {
+					background-color: #222222;
+				}
+
+				100% {}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box2_1 left">
+				<div class="box3_1 left"></div>
+			</div>
+			<div class="box2_1 right">
+				<div class="box3_1 right"></div>
+			</div>
+			<div class="box2_2 left">
+				<div class="box3_2 left"></div>
+			</div>
+			<div class="box2_2 right">
+				<div class="box3_2 right"></div>
+			</div>
+			<div class="box2_3 left">
+				<div class="box3_1 left"></div>
+			</div>
+			<div class="box2_3 right">
+				<div class="box3_1 right"></div>
+			</div>
+
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<!-- <div class="item"></div> -->
+
+			<div class="sun">
+
+			</div>
+			<div class="mud">
+
+			</div>
+		</div>
+	</body>
+</html>

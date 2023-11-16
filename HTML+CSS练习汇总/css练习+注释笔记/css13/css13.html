@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 128px;
+				height: 128px;
+			}
+			img{
+				width: 128px;
+				height: 128px;
+			}
+			/* .box:hover{
+				transform: rotate(360deg);
+				transition: 3s ;
+			} */
+			.image:hover{
+				/* transform: rotate(360deg);
+				transition: 3s ; */
+				
+				/* 动画演示 演示a帧 1秒完成 无限次 线性播放 */
+				animation: a 2s infinite linear;
+			}
+			/* 关键帧 a*/
+			@keyframes a{
+				/* 0%的状态 */
+				0%{
+					transform: rotate(0deg);
+				}
+				/* 100%的状态 */
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="./musicDisk.png" alt="" class="image">
+		</div>
+	</body>
+</html>

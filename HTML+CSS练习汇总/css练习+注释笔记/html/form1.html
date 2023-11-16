@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form neme="form1" action="" method="">
+			用户名：<input type="text" name="uname" id="" value="" required/>
+			密码：<input type="password" name="passwd" id="" value="" />
+			
+			<hr>
+			<input type="button" name="普通按钮" id="" value="" />
+			<input type="checkbox" name="多选框" id="" value="" />
+			<input type="color" name="拾色器" id="" value="" />
+			<hr>
+			<input type="date" name="" id="" value="" />
+			<input type="month" name="" id="" value="" />选择月份
+			<input type="week" name="" id="" value="" />选择周
+			<input type="time" name="" id="" value="" />选择时间
+			<hr>
+			<input type="email" name="" id="" value="" />email
+			<input type="file" name="" id="" value="" />文件类型
+			<input type="hidden" name="" id="" value="" />隐藏域
+			<hr>
+			<input type="image" name="" id="" value="" />选择图片
+			<input type="number" name="" id="" value="" />数字选择
+			<input type="password" name="" />输入密码
+			<hr>
+			<input type="radio" name="" id="" value="" />单选按钮
+			<input type="range" name="" id="" value="" />选择范围
+			<hr>
+			<input type="reset" name="" id="" value="" />重置按钮
+			<input type="search" name="" id="" value="" />搜索
+			<input type="submit" name="" id="" value="" />提交按钮
+			<hr>
+			<input type="tel" name="" id="" value="" />电话号码
+			<input type="text" name="" id="" value="" />输入框
+			<input type="url" name="" />输入连接
+		</form>
+		<hr><hr>
+		<input type="text" name="" id="" value="" readonly="" />
+		<input type="text" name="" id="" value=""  maxlength="5"/>
+		<input type="text" name="" id="" value="" disabled=""/>
+		<input type="text" name="" id="" value="" autofocus="" />
+		<hr><hr>
+		<form action="demoForm" method="" id="form1">
+			姓：<input type="text" name="fname" id="" value="" /><br>
+			<input type="submit" name="submit" id="" value="提交" />
+		</form>
+		名：<input type="text" name="lname" id="" value="" form="form1"/>
+		<hr>
+		<form action="demoForm" method="">
+			城市代码：<input type="text" name="country_code" pattern="[A-Za-z]{3}" id="" value="" title="三位的城市代码" />
+			<input type="submit" name="" id="" value="提交" />
+		</form>
+		<hr><hr>
+		
+		<form action="demo_form.php" method="get">
+			<input list="browers" name="brower"/>
+			<datalist id="browers">
+				<option value ="Internet Explorer"></option>
+				<option value ="firebox"></option>
+				<option value ="chrome"></option>
+				<option value ="opera"></option>
+				<option value ="safari"></option>
+			</datalist>
+			<input type="submit" id="" name="" />
+		</form>
+		<input type="number" name="" id="" value="" step="2" min="1" max="10"/><br>
+		<input type="file" name="img"  multiple=""/>
+		<input type="text" name="username" id="" required>
+		
+		<textarea anme="concent" rows="5" cols="50">
+			
+		</textarea>
+		<br>
+		<select name="city">
+			<option value ="0">请选择</option>
+			<optgroup label="主要城市">
+				<option value ="bj">北京</option>
+				<option value ="gz">广州</option>
+			</optgroup>
+		</select><br>
+		
+		<fieldset id="">
+			<legend>基本资料</legend>
+			<form action="" method="">
+				
+			</form>
+			
+		</fieldset>
+		<br>
+		<input type="radio" name="sex" id="male"/>
+		<label for="male">男</label>
+		<input type="radio" name="sex" id="female"/>
+		<label for="female">女</label>
+		
+		
+	</body>
+</html>

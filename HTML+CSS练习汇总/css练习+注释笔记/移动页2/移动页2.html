@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			body {
+				background-color: #f6f6f6;
+			}
+
+			.box {
+				background-color: #f6f6f6;
+			}
+
+			/* ------------------------------------------------box1-------------------------------------- */
+			.box1 {
+
+				display: flex;
+				justify-content: space-between;
+				/* align-items: center; */
+				background-color: #fff;
+			}
+
+			.time,
+			.elec {
+				height: 120px;
+				display: flex;
+				align-items: center;
+			}
+
+			.elec {
+				margin-right: 30px;
+			}
+
+			.elec img {
+				margin: 0px 8px;
+			}
+
+			.time {
+				margin-left: 3em;
+				font-size: 30px;
+				/* text-indent: 3em; */
+			}
+
+			/* ------------------------------------------------box2-------------------------------------- */
+			.box2 {
+
+				border-bottom: 1px solid #f6f6f6;
+				display: flex;
+				justify-content: space-between;
+				/* margin: 0px 2em; */
+				background-color: #fff;
+			}
+
+			.emity2,
+			.title,
+			.back {
+				height: 140px;
+				display: flex;
+				align-items: center;
+				width: 33%;
+			}
+
+			.back {
+				justify-content: flex-start;
+				margin-left: 2em;
+			}
+
+			.title {
+
+				justify-content: center;
+				font-size: 40px;
+			}
+
+			/* ------------------------------------------------box3-------------------------------------- */
+			.box3 {
+
+				display: flex;
+
+				border-bottom: 2px solid #eaeaea;
+				background-color: #fff;
+			}
+
+			.home,
+			.list {
+				height: 120px;
+				width: 50%;
+				/* margin: 0px auto; */
+
+				display: flex;
+				flex-direction: column;
+				/* flex-wrap: wrap; */
+				/* align-content: center; */
+				justify-content: space-between;
+				align-items: center;
+
+				color: #999999;
+				font-size: 42px;
+			}
+
+			.line {
+				width: 48px;
+				height: 10px;
+				background-color: transparent;
+				border-radius: 5px;
+				/* margin-top: auto; */
+				/* margin: 0px auto; */
+			}
+
+			input[name="rad_1"] {
+				display: none;
+			}
+
+			input[name="rad_1"]:checked~label {
+				color: #000;
+			}
+
+			input[name="rad_1"]:checked~.line {
+				background-color: #ff4646;
+			}
+
+			/* ------------------------------------------------box4-------------------------------------- */
+			.box4 {
+				margin-top: 40px;
+				display: flex;
+				/* justify-content: space-between; */
+				justify-content: flex-start;
+			}
+
+			.choose {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				font-size: 34px;
+				color: #888888;
+				width: 270px;
+				height: 80px;
+				border: 1px solid #c1c1c1;
+				border-radius: 40px;
+
+				margin: 0px 20px;
+			}
+
+			input[name="rad"] {
+				display: none;
+			}
+
+			input[name="rad"]:checked+label {
+				color: white;
+				background-color: #2e75ff;
+				border: 1px solid transparent;
+			}
+
+
+			/* ------------------------------------------------box5-------------------------------------- */
+
+			.box5 {
+				display: flex;
+				/* justify-content: center; */
+				align-items: center;
+				margin-top: 40px;
+			}
+
+			.item {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				height: 210px;
+				width: 100%;
+				background-color: #fff;
+
+			}
+
+			.num {
+				width: 40px;
+				height: 40px;
+				line-height: 32px;
+				font-size: 32px;
+				margin: 0px 60px;
+			}
+
+			.photo {}
+
+			.Myself .myselfSign {
+				width: 102px;
+				height: 48px;
+				border: 2px solid #c1c1c1;
+				border-radius: 8px;
+
+				margin-right: auto;
+				margin-left: 30px;
+				font-size: 30px;
+				color: #999999;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+			}
+
+			.Myself .name {
+				margin-right: 0px;
+			}
+
+			.name {
+				font-size: 38px;
+				margin-left: 50px;
+				margin-right: auto;
+			}
+
+			.Integral {
+				margin-right: 50px;
+				color: #f16c66;
+			}
+
+			.Integral span:nth-child(1) {
+				font-size: 40px;
+			}
+
+			.Integral span:nth-child(2) {
+				font-size: 32px;
+			}
+
+			/* ------------------------------------------------box6-------------------------------------- */
+			.box6 {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+
+				margin-top: 40px;
+				margin-bottom: 40px;
+			}
+
+			.num1 {
+				width: 40px;
+				height: 40px;
+				margin: 0px 60px;
+				position: relative;
+			}
+
+			.num1 img {
+				position: absolute;
+
+			}
+
+			.num1 img:nth-child(1) {
+				top: -20px;
+				left: -1px;
+			}
+
+			.num1 img:nth-child(2) {
+				top: -11px;
+				left: -10px;
+			}
+
+			.num1 img:nth-child(3) {
+				top: -8px;
+				left: 1px;
+			}
+
+			.num1 img:nth-child(4) {
+				top: -3px;
+				left: -2px;
+			}
+
+			.num1 img:nth-child(5) {
+				top: 6px;
+				left: 12px;
+			}
+			
+			.fir .photo,
+			.sec .photo,
+			.thr .photo{
+				position: relative;
+				z-index: 2;
+			}
+			.fir .photo img:nth-child(2),
+			.sec .photo img:nth-child(2),
+			.thr .photo img:nth-child(2){
+				position: relative;
+				z-index: 2;
+			}
+			
+			.fir .photo img:nth-child(1),
+			.sec .photo img:nth-child(1),
+			.thr .photo img:nth-child(1){
+				
+				position: absolute;
+				left: -157px;
+				top: -6px;
+				z-index: 1;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!-- ----------------------------------------box1-------------------------------------------------- -->
+			<div class="box1">
+				<div class="time">
+					9:41
+				</div>
+				<div class="emity">
+
+				</div>
+				<div class="elec">
+					<img src="./img/SketchPnge6ff8f8e36f08718b479c82da00d7083ba2d1605dc669a17c50702c8f6321c27.png"
+						alt="">
+					<img src="./img/SketchPng67f26c839bae614bea4451cd446c3dc23ef1c09e4a790efd929362dd19bccab5.png"
+						alt="">
+					<img src="./img/SketchPng95f52ac007d32e1d7f4603ab0ab260e66ae2e1c7d7ac959840f2ee0dcae60353.png"
+						alt="">
+				</div>
+			</div>
+			<!-- ----------------------------------------box2-------------------------------------------------- -->
+			<div class="box2">
+				<div class="back">
+					<img src="./img/SketchPng6a11cc49eecc14ec9de2fb08b3e9611a524b528bcec00be4b4d62364a7f3cf82.png"
+						alt="">
+				</div>
+				<div class="title">
+					Title
+				</div>
+				<div class="emity2">
+
+				</div>
+			</div>
+			<!-- ----------------------------------------box3-------------------------------------------------- -->
+			<div class="box3">
+				<div class="home">
+					<input type="radio" name="rad_1" id="rad3_1">
+					<div class="emityline"></div>
+					<label for="rad3_1">首页</label>
+					<div class="line"></div>
+				</div>
+
+				<div class="list">
+					<input type="radio" name="rad_1" id="rad3_2">
+					<div class="emityline"></div>
+					<label for="rad3_2">排行榜</label>
+					<div class="line"></div>
+				</div>
+			</div>
+			<!-- ----------------------------------------box4-------------------------------------------------- -->
+			<div class="box4">
+				<input type="radio" name="rad" id="rad1">
+				<label for="rad1" class="choose chs1">一星好市民</label>
+				<input type="radio" name="rad" id="rad2">
+				<label for="rad2" class="choose chs2">二星好市民</label>
+				<input type="radio" name="rad" id="rad3">
+				<label for="rad3" class="choose chs3">三星好市民</label>
+
+
+			</div>
+			<!-- ----------------------------------------box5-------------------------------------------------- -->
+			<div class="box5">
+				<div class="item Myself">
+					<div class="num">88</div>
+					<div class="photo">
+						<img src="./img/1c59fedb841745e589580f0f8a93aa9f_mergeImage.png" alt="">
+					</div>
+					<div class="name">张三</div>
+					<div class="myselfSign">
+						本人
+					</div>
+					<div class="Integral">
+						<span>9</span>
+						<span>积分</span>
+					</div>
+				</div>
+			</div>
+			<!-- ----------------------------------------box6-------------------------------------------------- -->
+			<div class="box6">
+				<div class="item fir">
+					<div class="num1">
+						<img src="./img/金.png" alt="">
+						<img src="./img/SketchPnga70e4fdb3dfbaffa27713d6aa5948f1e61580a1abc12240aab4d6baf88db4e02.png"
+							alt="">
+						<img src="./img/SketchPnga272597dc0c82d33ac2f8685a92b5f4d9e8e2c5098eb4358b0297afab8789030.png"
+							alt="">
+						<img src="./img/金圈.png" alt="">
+						<img src="./img/SketchPng1bc57a811e30a699791c8a0b6e31b7a2b1e54379276dc3f65325a21d7c7293e2.png"
+							alt="">
+					</div>
+					<div class="photo">
+						<img src="./img/SketchPngdfbf4accb7fcf79d38273dce2fae0f5bd80d7065d12f26432e722ac360638a6f.png" alt="">
+						<img src="./img/1c59fedb841745e589580f0f8a93aa9f_mergeImage.png" alt="">
+						
+					</div>
+					<div class="name">李小雷
+					
+					</div>
+
+					<div class="Integral">
+						<span>199</span>
+						<span>积分</span>
+					</div>
+				</div>
+				<div class="item sec">
+
+					<div class="num1">
+						<img src="./img/SketchPng1b56e50bf7ad0dee039a11e9164061fbf610d7628c361d127d55b1e171194bf8.png"
+							alt="">
+						<img src="./img/SketchPng80023834c05f7ced7c883c206d1c04900bcc28638457ef6d931a65babb22eead.png" alt="">
+						<img src="./img/SketchPnga272597dc0c82d33ac2f8685a92b5f4d9e8e2c5098eb4358b0297afab8789030.png"
+							alt="">
+						<img src="./img/SketchPngda6cf2824d2ceee66fdc21a50e5a17d2d3766df344c50dfb3924bbd81e3025e6.png" alt="">
+						<img src="./img/SketchPngbd42990cd323e0737fb4aa74950d646fc9e75f561d43f18bb49210203e13f13d.png"
+							alt="">
+					</div>
+					<div class="photo">
+						<img src="./img/SketchPng7117ed4e0937405b3fa66e33e6855ebbb6fa1cb6dbf6068b7a51ad8a4c98682e.png" alt="">
+						<img src="./img/1c59fedb841745e589580f0f8a93aa9f_mergeImage.png" alt="">
+					</div>
+					<div class="name">李四</div>
+
+					<div class="Integral">
+						<span>99</span>
+						<span>积分</span>
+					</div>
+
+				</div>
+				<div class="item thr">
+
+					<div class="num1">
+						<img src="./img/SketchPngd5d84b9dbb0d5e939f2f8962a2a688f3f95e09c5879abe8ba3af1486e99df695.png" alt="">
+						<img src="./img/SketchPngf2c86d3dac3a84cbc3bcec1ae0c67403cb8b4922fe2a967b49f0c3d1423e158e.png"
+							alt="">
+						<img src="./img/SketchPnga272597dc0c82d33ac2f8685a92b5f4d9e8e2c5098eb4358b0297afab8789030.png"
+							alt="">
+						<img src="./img/SketchPng6add0b8968355fd7759f439ccdb5f396c10b6b9659c61f96bb8130fbc7938af8.png" alt="">
+						<img src="./img/SketchPng3311978d1103fb91b3f4de2618bdf8a3dcfdaf0b551d295c933554727b88404f.png"
+							alt="">
+					</div>
+					<div class="photo">
+						<img src="./img/SketchPng3a7bdfdb0178359f053c92e0cd3e62d9d76e857f3c890d1d0ee0414dea797ec7.png" alt="">
+						<img src="./img/1c59fedb841745e589580f0f8a93aa9f_mergeImage.png" alt="">
+					</div>
+					<div class="name">韩梅梅</div>
+
+					<div class="Integral">
+						<span>99</span>
+						<span>积分</span>
+					</div>
+
+				</div>
+				<div class="item">
+					
+					<div class="num">4</div>
+					<div class="photo">
+						<img src="./img/1c59fedb841745e589580f0f8a93aa9f_mergeImage.png" alt="">
+					</div>
+					<div class="name">李雷</div>
+					<div class="Integral">
+						<span>90</span>
+						<span>积分</span>
+					</div>
+				</div>
+				<div class="item">
+					
+					<div class="num">5</div>
+					<div class="photo">
+						<img src="./img/1c59fedb841745e589580f0f8a93aa9f_mergeImage.png" alt="">
+					</div>
+					<div class="name">李雷</div>
+					<div class="Integral">
+						<span>90</span>
+						<span>积分</span>
+					</div>
+				</div>
+				<div class="item">
+					
+					<div class="num">6</div>
+					<div class="photo">
+						<img src="./img/1c59fedb841745e589580f0f8a93aa9f_mergeImage.png" alt="">
+					</div>
+					<div class="name">李雷</div>
+					<div class="Integral">
+						<span>90</span>
+						<span>积分</span>
+					</div>
+				</div>
+				<div class="item">
+					
+					<div class="num">7</div>
+					<div class="photo">
+						<img src="./img/1c59fedb841745e589580f0f8a93aa9f_mergeImage.png" alt="">
+					</div>
+					<div class="name">李雷</div>
+					<div class="Integral">
+						<span>90</span>
+						<span>积分</span>
+					</div>
+				</div>
+				<div class="item">
+					
+					<div class="num">8</div>
+					<div class="photo">
+						<img src="./img/1c59fedb841745e589580f0f8a93aa9f_mergeImage.png" alt="">
+					</div>
+					<div class="name">李雷</div>
+					<div class="Integral">
+						<span>90</span>
+						<span>积分</span>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			<!-- ----------------------------------------box7-------------------------------------------------- -->
+			<div class="box7">
+
+
+			</div>
+		</div>
+
+		</div>
+	</body>
+</html>

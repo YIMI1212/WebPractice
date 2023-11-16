@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 全局的内外边距置为零 */
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/* 外部的大盒子的大小尺寸 */
+			.box{
+				width: 327px;
+				height: 284px;
+			}
+			.box2{
+				width: 130px;
+				height: 111px;
+				/* border-width: 8px;
+				border-color:#dadfe7;
+				border-style: solid; */
+				/* 小盒子的边距的功能复写 */
+				border: 8px solid #dadfe7; 
+				/* 小盒子靠左浮动，不占整列 */
+				float: left;
+				/* 背景的图片的地址 */
+				background-image: url(招聘介绍1.gif);
+				/* 背景图片取消平铺 */
+				background-repeat: no-repeat;
+				/* 背景位置靠右 靠下 */
+				background-position: right bottom; 
+				/* 小盒子的外边框的距离 */
+				margin: 5px;
+			}
+			/* 选择小盒子的第二个子元素 */
+			.box2:nth-child(2){
+				background-image:url(招聘介绍2.gif) ;
+			}
+			/* 选择小盒子的第三个子元素 */
+			.box2:nth-child(3){
+				background-image:url(招聘介绍3.gif) ;
+			}
+			/* 选择小盒子的第四个子元素 */
+			.box2:nth-child(4){
+				background-image:url(招聘介绍4_10.gif) ;
+			}
+			/* 选择小盒子的h3标题进行格式规范*/
+			.box2 h3{
+				font-size: 14px;
+				color:#111111;
+				margin-top: 10px;
+				margin-left: 10px;
+			}
+			/* 选择小盒子的p段落进行格式规范*/
+			.box p{
+				font-size: 12px;
+				color:#8f8f8f;
+				margin-top: 10px;
+				margin-left: 10px;
+				width: 6em;
+			}
+			/* .box2 img{
+				width: 40px;
+				height: 40px;
+			} */
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box2">
+				<h3>采购</h3>
+				<p>有创意的想法和充满欲望的开创未来联合聘用人才。</p>
+				<!-- <img src="./招聘介绍副本.gif" > -->
+			</div>
+			<div class="box2">
+				<h3>招聘信息</h3>
+				<p>基于多年的社区能力的经验，充分发挥聘请人才。</p>
+			</div>
+			<div class="box2">
+				<h3>文员</h3>
+				<p>所有营的工作人员总是在一起，可以是一个招聘称职的员工。</p>
+			</div>
+			<div class="box2">
+				<h3>呼叫中心坐席</h3>
+				<p>客户需要伸出援助之手，每当你使用一个代理来。</p>
+			</div>
+		</div>
+	</body>
+</html>

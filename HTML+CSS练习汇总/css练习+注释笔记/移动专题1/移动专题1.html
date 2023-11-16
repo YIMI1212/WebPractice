@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0;
+			}
+
+			body {}
+
+			.box {
+				width: 100%;
+				background: url(images/背景.png) no-repeat;
+				background-size: cover;
+			}
+
+			/* --------------------------------------------box2-------------------------- */
+			.box2 {
+				/* width: 100%; */
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				/* background: url(images/头部背景.png) no-repeat center; */
+				/* background-size: cover; */
+
+				flex-wrap: wrap;
+			}
+
+			.box2 .bxTitle {
+				margin: 0px 64px;
+				margin-top: 128px;
+				margin-bottom: 750px;
+			}
+
+			.bx2ImgBox {
+				margin-top: 155px;
+			}
+
+			/* --------------------------------------------box3-------------------------- */
+			.box3 {
+				display: flex;
+				justify-content: center;
+				/* background-color: rgba(158, 211, 246, 0.1); */
+				background-color: transparent;
+
+			}
+
+			.bx3ImgTitle {
+				width: 108px;
+				height: 108px;
+				display: flex;
+				/* width: 2em; */
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				background: url(images/头条图标.png) no-repeat;
+			}
+
+			.bx3ImgTitle span {
+				width: 2em;
+				color: white;
+				font-size: 30px;
+				line-height: 32px;
+			}
+
+			.box3 .bx3Detail {
+				font-size: 40px;
+				color: #3b83cd;
+				font-weight: 600;
+				width: 12em;
+				margin-left: 43px;
+			}
+
+			/* --------------------------------------------box4-------------------------- */
+			.box4 {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+
+			}
+
+			.bx4Tit {
+				display: flex;
+				justify-content: center;
+				margin: 60px auto;
+			}
+
+			.bx4Tit img {
+				margin: 0px 4px;
+			}
+
+			.bx4Detail {
+				display: flex;
+				justify-content: center;
+				align-items: baseline;
+				color: #3784cc;
+
+
+
+			}
+
+			.bx4Detail span {
+				margin: 0px 4px;
+			}
+
+			.bx4Detail span:nth-child(1) {
+				font-size: 60px;
+			}
+
+			.bx4Detail span:nth-child(2) {
+
+				font-size: 12px;
+			}
+
+			.Nav {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			.nav {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #3784cc;
+
+				border-top-left-radius: 15px;
+				border-top-right-radius: 15px;
+
+				width: 150px;
+				height: 50px;
+				margin: 0px 6px;
+				margin-bottom: -2px;
+				color: white;
+				font-size: 24px;
+
+				position: relative;
+
+			}
+
+			.nav::after {
+				content: "";
+				width: 0;
+				height: 0;
+				border: 13px solid transparent;
+				border-top-color: transparent;
+
+
+				position: absolute;
+				bottom: -25px;
+			}
+
+
+			.imgBox {
+				/* width: 686px; */
+				margin: 0px 25px;
+				margin-top: 30px;
+				position: relative;
+			}
+
+			.imgDetail {
+				width: 637px;
+				height: 53px;
+				background-color: rgba(71, 132, 203, 0.8);
+				position: absolute;
+				bottom: 4px;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				font-size: 26px;
+				color: white;
+			}
+
+			.itemBox {
+				border-radius: 15px;
+				border: 2px solid #5b9ad9;
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.item {
+				width: 654px;
+				height: 214px;
+
+				border-bottom: 2px solid #ccc;
+				/* margin-bottom: -2px; */
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.item:last-child {
+				border-bottom: 2px solid transparent;
+			}
+
+			.item span {
+				margin-left: 30px;
+				width: 12em;
+				font-size: 34px;
+			}
+
+
+			/* --------------------------------------------box5-------------------------- */
+			.box5 {
+				height: 268px;
+				background: url(images/底部.png) no-repeat;
+				background-size: cover;
+			}
+
+			input[name="rad"]:checked+label {
+				background-color: #ff992d;
+			}
+
+			input[name="rad"]:checked+.nav::after {
+				border-top-color: #ff992d;
+			}
+
+			input[name="rad"] {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!-- -------------------------box1------------------------------------- -->
+			<!-- <div class="box1">
+				<img src="" alt="">
+			</div> -->
+			<!-- -------------------------box2------------------------------------- -->
+			<div class="box2">
+
+				<img class="bxTitle" src="./images/共享陆海新通道新机遇  共建中国一东盟命运共同体.png" alt="">
+
+
+
+				<!-- -------------------------box3------------------------------------- -->
+				<div class="box3">
+					<div class="bx3ImgTitle">
+						<span>头条报道</span>
+					</div>
+
+					<span class="bx3Detail">东盟持续居广西第一大贸易伙伴地位</span>
+				</div>
+			</div>
+			<!-- -------------------------box4------------------------------------- -->
+			<div class="box4">
+
+				<div class="bx4Tit">
+					<img src="./images/1-标题.png" alt="">
+					<div class="bx4Detail">
+						<span>要闻聚焦</span>
+						<span>MORE+</span>
+					</div>
+				</div>
+
+				<div class="Nav">
+					<input type="radio" name="rad" id="rad1">
+					<label for="rad1" class="nav">动态播报</label>
+
+
+					<input type="radio" name="rad" id="rad2">
+					<label for="rad2" class="nav">系列论坛</label>
+
+
+					<input type="radio" name="rad" id="rad3">
+					<label for="rad3" class="nav">高端访谈</label>
+
+
+					<input type="radio" name="rad" id="rad4">
+					<label for="rad4" class="nav">对话商客</label>
+				</div>
+
+				<div class="itemBox">
+
+					<div class="imgBox">
+						<img src="./images/图层 1.png" alt="">
+						<div class="imgDetail">
+							要闻聚焦博览会
+						</div>
+					</div>
+
+					<div class="item">
+						<img src="./images/图层 526.png" alt="">
+						<span class="itemDetail">总投资超3000亿！东博会广西各市都签了哪些大单？</span>
+					</div>
+					<div class="item">
+						<img src="./images/图层 527.png" alt="">
+						<span class="itemDetail">移动新媒体东博会开幕！一组高清图带你玩转东博会</span>
+					</div>
+					<div class="item">
+						<img src="./images/图层 528.png" alt="">
+						<span class="itemDetail">从服务中国-东盟自贸区建设到推动"一带一路"倡议在东盟国家落地生根</span>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- -------------------------box5------------------------------------- -->
+			<div class="box5">
+				<!-- <img src="./images/底部.png" alt=""> -->
+			</div>
+
+		</div>
+	</body>
+</html>

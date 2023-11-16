@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			.box {
+				width: 1258px;
+				height: 578px;
+			}
+
+			.box2 {
+				width: 78px;
+				height: 78px;
+				background-color: #f9403d;
+				border-radius: 78px;
+				box-sizing: border-box;
+				padding: 19px 19px;
+
+				position: absolute;
+				top: 110px;
+				left: 110px;
+
+				transition: 0.3s;
+			}
+			.box2 img {
+				width: 40px;
+				height: 40px;
+			}
+			
+			input{
+				display: none;
+			}
+
+			.nav1 {
+				z-index: 5;
+			}
+
+			input[name="chk_1"]:checked~.fir:nth-child(3) {
+				transform: translate(-73px, -73px);
+			}
+
+			input[name="chk_1"]:checked~.fir:nth-child(4) {
+				transform: translate(73px, -73px);
+			}
+
+			input[name="chk_1"]:checked~.fir:nth-child(5) {
+				transform: translate(-73px, 73px);
+			}
+
+			input[name="chk_1"]:checked~.fir:nth-child(6) {
+				transform: translate(73px, 73px);
+			}
+
+			input[name="chk_1"]:checked~.nav1 {
+				transform: scale(0.8) rotate(135deg);
+			}
+
+			.nav1:hover {
+				transform: scale(1.2);
+			}
+
+			.nav2 {
+				left: 465px;
+				z-index: 7;
+			}
+
+			.sed {
+				left: 465px;
+			}
+
+			.nav2:hover {
+				transform: scale(1.2);
+			}
+
+			input[name="chk_2"]:checked~.nav2 {
+				transform: scale(0.8) rotate(135deg);
+			}
+
+			input[name="chk_2"]:checked~.sed:nth-child(3) {
+				transform: translate(0px, 93px);
+			}
+
+			input[name="chk_2"]:checked~.sed:nth-child(4) {
+				transform: translate(0px, -93px);
+			}
+
+			input[name="chk_2"]:checked~.sed:nth-child(5) {
+				transform: translate(83px, -43px);
+			}
+
+			input[name="chk_2"]:checked~.sed:nth-child(6) {
+				transform: translate(83px, 43px);
+			}
+
+			input[name="chk_2"]:checked~.sed:nth-child(7) {
+				transform: translate(-83px, -43px);
+			}
+
+			input[name="chk_2"]:checked~.sed:nth-child(8) {
+				transform: translate(-83px, 43px);
+			}
+
+			.nav3 {
+				left: 849px;
+				z-index: 7;
+			}
+
+			.thr {
+				left: 849px;
+			}
+
+			.nav3:hover {
+				transform: scale(1.2);
+			}
+
+			input[name="chk_3"]:checked~.nav3 {
+				transform: scale(0.8) rotate(135deg);
+			}
+
+			input[name="chk_3"]:checked~.thr:nth-child(3) {
+				animation: a 1s both;
+			}
+
+			input[name="chk_3"]:checked~.thr:nth-child(4) {
+				animation: a2 1s both;
+			}
+
+			input[name="chk_3"]:checked~.thr:nth-child(5) {
+				animation: a3 1s both;
+			}
+
+			input[name="chk_3"]:checked~.thr:nth-child(6) {
+				animation: a4 1s both;
+			}
+
+			input[name="chk_3"]:checked~.thr:nth-child(7) {
+				animation: a5 1s both;
+			}
+
+			input[name="chk_3"]:checked~.thr:nth-child(8) {
+				animation: a6 1s both;
+			}
+
+			/* .thr:nth-child(3){
+				transform: rotate(-60deg);
+			} */
+			@keyframes a {
+				0% {
+					transform: translateY(-100px) rotate(0deg);
+					transform-origin: 39px 139px;
+				}
+
+				100% {
+					transform: translateY(-100px) rotate(60deg);
+					transform-origin: 39px 139px;
+				}
+			}
+
+			@keyframes a2 {
+				0% {
+					transform: translateY(-100px) rotate(0deg);
+					transform-origin: 39px 139px;
+				}
+
+				100% {
+					transform: translateY(-100px) rotate(120deg);
+					transform-origin: 39px 139px;
+				}
+			}
+
+			@keyframes a3 {
+				0% {
+					transform: translateY(-100px) rotate(0deg);
+					transform-origin: 39px 139px;
+				}
+
+				100% {
+					transform: translateY(-100px) rotate(180deg);
+					transform-origin: 39px 139px;
+				}
+			}
+
+			@keyframes a4 {
+				0% {
+					transform: translateY(-100px) rotate(0deg);
+					transform-origin: 39px 139px;
+				}
+
+				100% {
+					transform: translateY(-100px) rotate(240deg);
+					transform-origin: 39px 139px;
+				}
+			}
+
+			@keyframes a5 {
+				0% {
+					transform: translateY(-100px) rotate(0deg);
+					transform-origin: 39px 139px;
+				}
+
+				100% {
+					transform: translateY(-100px) rotate(300deg);
+					transform-origin: 39px 139px;
+				}
+			}
+
+			@keyframes a6 {
+				0% {
+					transform: translateY(-100px) rotate(0deg);
+				}
+
+				100% {
+					transform: translateY(-100px)
+				}
+			}
+
+			.nav4 {
+				left: 110px;
+				top: 400px;
+				z-index: 7;
+			}
+
+			.fou {
+				top: 400px;
+				left: 110px;
+			}
+
+			.nav4:hover {
+				transform: scale(1.2);
+			}
+
+			input[name="chk_4"]:checked~.nav4 {
+				transform: scale(0.8) rotate(135deg);
+			}
+
+			input[name="chk_4"]:checked~.fou:nth-child(3) {
+				transform: translate(40px, -70px)
+			}
+
+			input[name="chk_4"]:checked~.fou:nth-child(4) {
+				transform: translate(-40px, -70px);
+			}
+
+			input[name="chk_4"]:checked~.fou:nth-child(5) {
+				transform: translate(120px, -70px);
+			}
+
+			input[name="chk_4"]:checked~.fou:nth-child(6) {
+				transform: translate(-120px, -70px);
+			}
+			
+			.nav5 {
+				left: 465px;
+				top: 400px;
+				z-index: 7;
+			}
+			
+			.fiv {
+				top: 400px;
+				left: 465px;
+			}
+			
+			.nav4:hover {
+				transform: scale(1.2);
+			}
+			
+			input[name="chk_5"]:checked~.nav5 {
+				transform: scale(0.8) rotate(135deg);
+			}
+			
+			input[name="chk_5"]:checked~.fiv:nth-child(3) {
+				transform: translate(80px, 0px)
+			}
+			
+			input[name="chk_5"]:checked~.fiv:nth-child(4) {
+				transform: translate(-80px, 0px);
+			}
+			
+			input[name="chk_5"]:checked~.fiv:nth-child(5) {
+				transform: translate(160px, 0px);
+			}
+			
+			input[name="chk_5"]:checked~.fiv:nth-child(6) {
+				transform: translate(-160px, 0px);
+			}
+			.fiv:nth-child(5) ,.fiv:nth-child(6) {
+				transition-delay: 0.5s;
+			}
+			.nav6 {
+				left: 849px;
+				top: 400px;
+				z-index: 7;
+			}
+			
+			.six {
+				top: 400px;
+				left: 849px;
+			}
+			
+			.nav6:hover {
+				transform: scale(1.2);
+			}
+			
+			input[name="chk_6"]:checked~.nav6 {
+				transform: scale(0.8) rotate(135deg);
+			}
+			
+			input[name="chk_6"]:checked~.six:nth-child(3) {
+				transform: translate(80px, 0px)
+			}
+			
+			input[name="chk_6"]:checked~.six:nth-child(4) {
+				transform: translate(-80px, 0px)
+			}
+			
+			input[name="chk_6"]:checked~.six:nth-child(5) {
+				transform: translate(160px, 0px);
+			}
+			
+			input[name="chk_6"]:checked~.six:nth-child(6) {
+				transform: translate(-160px, 0px);
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div>
+				<input type="checkbox" name="chk_1" id="chk1">
+				<label for="chk1" class="box2 nav1">
+					<img src="./imgs/plus.png" alt="">
+				</label>
+				<div class="box2 fir"><img src="./imgs/phone.png" alt=""></div>
+				<div class="box2 fir"><img src="./imgs/share.png" alt=""></div>
+				<div class="box2 fir"><img src="./imgs/message.png" alt=""></div>
+				<div class="box2 fir"><img src="./imgs/location.png" alt=""></div>
+			</div>
+
+			<div>
+				<input type="checkbox" name="chk_2" id="chk2">
+				<label for="chk2" class="box2 nav2">
+					<img src="./imgs/plus.png" alt="">
+				</label>
+				<div class="box2 sed"><img src="./imgs/phone.png" alt=""></div>
+				<div class="box2 sed"><img src="./imgs/share.png" alt=""></div>
+				<div class="box2 sed"><img src="./imgs/message.png" alt=""></div>
+				<div class="box2 sed"><img src="./imgs/location.png" alt=""></div>
+				<div class="box2 sed"><img src="./imgs/location.png" alt=""></div>
+				<div class="box2 sed"><img src="./imgs/location.png" alt=""></div>
+
+			</div>
+
+			<div>
+				<input type="checkbox" name="chk_3" id="chk3">
+				<label for="chk3" class="box2 nav3">
+					<img src="./imgs/plus.png" alt="">
+				</label>
+				<div class="box2 thr"><img src="./imgs/phone.png" alt=""></div>
+				<div class="box2 thr"><img src="./imgs/share.png" alt=""></div>
+				<div class="box2 thr"><img src="./imgs/message.png" alt=""></div>
+				<div class="box2 thr"><img src="./imgs/location.png" alt=""></div>
+				<div class="box2 thr"><img src="./imgs/location.png" alt=""></div>
+				<div class="box2 thr"><img src="./imgs/location.png" alt=""></div>
+			</div>
+
+			<div>
+				<input type="checkbox" name="chk_4" id="chk4">
+				<label for="chk4" class="box2 nav4">
+					<img src="./imgs/plus.png" alt="">
+				</label>
+				<div class="box2 fou"><img src="./imgs/phone.png" alt=""></div>
+				<div class="box2 fou"><img src="./imgs/share.png" alt=""></div>
+				<div class="box2 fou"><img src="./imgs/message.png" alt=""></div>
+				<div class="box2 fou"><img src="./imgs/location.png" alt=""></div>
+			</div>
+
+			<div>
+				<input type="checkbox" name="chk_5" id="chk5">
+				<label for="chk5" class="box2 nav5">
+					<img src="./imgs/plus.png" alt="">
+				</label>
+				<div class="box2 fiv"><img src="./imgs/phone.png" alt=""></div>
+				<div class="box2 fiv"><img src="./imgs/share.png" alt=""></div>
+				<div class="box2 fiv"><img src="./imgs/message.png" alt=""></div>
+				<div class="box2 fiv"><img src="./imgs/location.png" alt=""></div>
+			</div>
+
+			<div>
+				<input type="checkbox" name="chk_6" id="chk6">
+				<label for="chk6" class="box2 nav6">
+					<img src="./imgs/plus.png" alt="">
+				</label>
+				<div class="box2 six"><img src="./imgs/phone.png" alt=""></div>
+				<div class="box2 six"><img src="./imgs/share.png" alt=""></div>
+				<div class="box2 six"><img src="./imgs/message.png" alt=""></div>
+				<div class="box2 six"><img src="./imgs/location.png" alt=""></div>
+			</div>
+
+		</div>
+	</body>
+</html>

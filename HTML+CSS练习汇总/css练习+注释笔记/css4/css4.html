@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				/* 大背景使用body覆盖 */
+				background-image: url(./images/back.jpg);
+				/* 使用背景覆盖 缩放不影响背景 */
+				background-size: cover;
+			}
+			.box2{
+				width: 300px;
+				height: 401px;
+				background-color: rgba(255,255,255,0.2);
+				border-radius: 10px;
+				margin: 0 auto;
+				
+				text-align: center;
+				margin-top: 17px;
+				
+				box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+			}
+			.p1{
+				font-size: 27px;
+				text-align: center;
+				color: #ffffff;
+				
+				/* margin-top: 31px; */
+				line-height: 89px;
+				/* 文本阴影   右 下   扩散 颜色*/
+				text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+			}
+			.box2 img{
+				width: 100px;
+				height: 100px;
+				margin-top: 30px;
+				border-radius: 50px;
+			}
+			.item{
+				width: 220px;
+				height: 26px;
+				font-size: 9px;
+				color: #757575;
+				
+				/* 取消平铺 */
+				background-repeat: no-repeat;
+				/* 背景图片位置享有5px 上下居中 */
+				background-position: 5px center;
+				
+				border: 1px solid #a9a9a9;
+				border-radius: 5px;
+				
+				margin-top: 20px;
+				
+				background-image: url(./images/user.png);
+				/* 内边距不算在宽度 */
+				/* padding-left: 25px; */
+				/* 将内边距计算在宽度内 */
+				/* box-sizing: border-box; */
+				
+				/* 首行缩进 */
+				text-indent: 25px;
+			}
+			/* 子元素从父级开始计算，忽略类型 */
+			.item:nth-child(3){
+				background-image: url(./images/lock.png);
+				/* white-space: nowrap;这个是换行 */
+			}
+			.Button{
+				color: #ffffff;
+				font-size: 13px;
+				width: 220px;
+				height: 31px;
+				background-color: #9acd32;
+				border: 0px;
+				
+				margin-top: 20px;
+				border-radius: 5px;
+			}
+			.Button2{
+				color: #ffffff;
+				font-size: 13px;
+				width: 220px;
+				height: 31px;
+				background-color: #dc143c;
+				border: 0px;
+				
+				margin-top: 20px;
+				border-radius: 5px;
+			}
+			.p2{
+				font-size: 14px;
+				color: #333333;
+				
+				float: right;
+				margin-right: 40px;
+				margin-top: 24px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!-- 使用大标题 -->
+			<h1 class="p1">Hello! Welcome to DouZhi-IT!</h1>
+			<div class="box2">
+				<img src="./images/Boy.jpg" alt="">
+				<input class="item" type="text" placeholder="Username">
+				<input class="item" type="password" placeholder="Password">
+				<input class="Button" type="submit" value="Submit">
+				<input class="Button2" type="button" value="Register">
+				<!-- a标签使用链接 必须带href #号为空标签 -->
+				<a href="#" class="p2">Forget Password?</a>
+			</div>
+		</div>
+	</body>
+</html>

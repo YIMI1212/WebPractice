@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			.box {
+				width: 1147px;
+				height: 531px;
+				background-color: #e4ebf5;
+				overflow: hidden;
+			}
+
+			.box2 {
+				width: 900px;
+				height: 481px;
+				background-color: #e4ebf5;
+				/* float: left; */
+				margin: 0 auto;
+				margin-top: 21px;
+				border-radius: 30px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+			}
+
+			.box3 {
+				width: 300px;
+				height: 481px;
+				float: left;
+			}
+
+			label {
+				display: block;
+			}
+
+			.box3 {
+				box-sizing: border-box;
+				padding-top: 60px;
+			}
+
+			.bx1 {
+				padding: 60px 60px;
+			}
+
+			.bx3 {
+				/* padding-right: 60px; */
+			}
+
+			.switch {
+				width: 75px;
+				height: 36px;
+				background-color: #e4ebf5;
+				border-radius: 18px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+				box-sizing: border-box;
+				padding: 6px 6px;
+				float: left;
+
+				transition: .5s;
+			}
+
+			.s2 {
+				float: right;
+			}
+
+			.dot {
+				width: 24px;
+				height: 24px;
+				background-color: #9baad1;
+				border-radius: 12px;
+
+				transition: .5s;
+			}
+
+			input[name="switch_1"]:checked~.s1 {
+				background-color: #6a51f7;
+			}
+
+			input[name="switch_1"]:checked~.s1 .dt1 {
+				transform: translateX(39px);
+				background-color: white;
+			}
+
+			input[name="switch_2"]:checked~.s2 {
+				background-color: #6a51f7;
+			}
+
+			input[name="switch_2"]:checked~.s2 .dt2 {
+				transform: translateX(39px);
+				background-color: white;
+			}
+
+			.checkbox {
+				width: 34px;
+				height: 34px;
+				background-color: #e4ebf5;
+				border-radius: 4px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+
+				float: left;
+				margin-left: 22px;
+				margin-top: 53px;
+			}
+
+			.c2 {
+				/* margin-right: 20px; */
+				margin-left: 74px;
+			}
+
+			.tr {
+				width: 20px;
+				height: 10px;
+				border-bottom: 4px solid #9baad1;
+				border-left: 4px solid #9baad1;
+				transform: rotate(-45deg);
+				margin-left: 6px;
+				margin-top: 6px;
+			}
+
+			input[name="checkbox_1"]:checked~.c1 {
+				box-shadow: 5px 5px 10px #ccc inset,
+					-5px -5px 10px white inset;
+			}
+
+			input[name="checkbox_1"]:checked~.c1 .tr {
+				border-bottom: 4px solid #6a51f7;
+				border-left: 4px solid #6a51f7;
+			}
+
+
+			input[name="checkbox_2"]:checked~.c2 {
+				box-shadow: 5px 5px 10px #ccc inset,
+					-5px -5px 10px white inset;
+			}
+
+			input[name="checkbox_2"]:checked~.c2 .tr {
+				border-bottom: 4px solid #6a51f7;
+				border-left: 4px solid #6a51f7;
+			}
+
+			.radio {
+				width: 34px;
+				height: 34px;
+				background-color: #e4ebf5;
+				border-radius: 17px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+
+				margin-left: 22px;
+				margin-top: 49px;
+				float: left;
+			}
+
+			.r2 {
+				margin-left: 74px;
+			}
+
+			.Rdot {
+				width: 18px;
+				height: 18px;
+				background-color: #9baad1;
+				border-radius: 8px;
+				margin: 8px auto;
+			}
+
+			input[id="radio1"]:checked~.r1 {
+				box-shadow: 5px 5px 10px #ccc inset,
+					-5px -5px 10px white inset;
+			}
+
+			.r1:hover .Rdt1 {
+				background-color: #6a51f7;
+			}
+
+			input[id="radio1"]:checked~.r1 .Rdt1 {
+				background-color: #6a51f7;
+			}
+
+			input[id="radio2"]:checked~.r2 {
+				box-shadow: 5px 5px 10px #ccc inset,
+					-5px -5px 10px white inset;
+			}
+
+			.r2:hover .Rdt2 {
+				background-color: #6a51f7;
+			}
+
+			input[id="radio2"]:checked~.r2 .Rdt2 {
+				background-color: #6a51f7;
+			}
+
+
+			.button {
+				display: block;
+				width: 180px;
+				height: 48px;
+
+				background-color: #e4ebf5;
+				border-radius: 17px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+
+				margin-left: 3px;
+				margin-top: 39px;
+				float: left;
+
+				border-style: none;
+				color: #9ca1be;
+			}
+
+			.btn2 {
+				margin-top: 31px;
+			}
+
+			.btn1:active {
+				color: white;
+				background-color: #6a51f7;
+				box-shadow: 5px 5px 10px white,
+					-5px -5px 10px #ccc;
+			}
+
+			.btn2:active {
+				color: white;
+				background-color: #6a51f7;
+				box-shadow: 5px 5px 10px white,
+					-5px -5px 10px #ccc;
+			}
+
+			.clock {
+				width: 144px;
+				height: 144px;
+				background-color: #e4ebf5;
+				border-radius: 72px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+
+				/* margin: -10px auto; */
+				margin-top: -10px;
+				margin-left: 60px;
+			}
+
+			.clock2 {
+				width: 136px;
+				height: 136px;
+				background-color: #e4ebf5;
+				border-radius: 68px;
+				box-shadow: 5px 5px 10px #ccc inset,
+					-5px -5px 10px white inset;
+				float: left;
+				margin: 4px 4px;
+			}
+
+			.clock3 {
+				width: 84px;
+				height: 84px;
+				background-color: #e4ebf5;
+				border-radius: 42px;
+				box-shadow: 5px 5px 10px #ccc inset,
+					-5px -5px 10px white inset;
+				float: left;
+				margin: 26px 26px;
+
+				position: relative;
+			}
+
+			.clockDot {
+				width: 10px;
+				height: 10px;
+				background-color: #6e5eff;
+				border-radius: 5px;
+				/* margin: 0 -2px; */
+
+				position: absolute;
+				top: 37px;
+				left: 37px;
+
+				/* margin: 0 37px;
+				margin-top: 37px; */
+				float: left;
+				z-index: 2;
+			}
+
+			.Mh {
+				width: 6px;
+				height: 50px;
+				background-color: #9ca9cb;
+				border-radius: 3px;
+				float: left;
+
+				position: absolute;
+				top: 39px;
+				left: 39px;
+				/* margin: 0 39px;
+				margin-top: 39px; */
+				animation: Mhclock 20s linear infinite;
+			}
+
+			.Hh {
+				width: 6px;
+				height: 40px;
+				background-color: #c4cbe5;
+				border-radius: 3px;
+				float: left;
+				position: absolute;
+				top: 39px;
+				left: 39px;
+
+				animation: Mhclock 30s linear infinite;
+			}
+
+			.Sh {
+				width: 4px;
+				height: 60px;
+				background-color: #6e5eff;
+				border-radius: 2px;
+				float: left;
+				position: absolute;
+				top: 40px;
+				left: 40px;
+
+				animation: Shclock 10s linear infinite;
+			}
+
+			.sign {
+				width: 10px;
+				height: 2px;
+				box-shadow: 1px 1px 2px #ccc inset,
+					-1px -1px 2px white inset;
+				position: absolute;
+				top: 41px;
+				left: -20px;
+			}
+
+			.si2 {
+				transform-origin: 63px;
+				transform: rotate(-90deg);
+			}
+
+			.si3 {
+				transform-origin: 63px;
+				transform: rotate(-180deg);
+			}
+
+			.si4 {
+				transform-origin: 63px;
+				transform: rotate(90deg);
+			}
+
+			.block {
+				width: 204px;
+				height: 48px;
+				background-color: #e4ebf5;
+				border-radius: 17px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+
+				float: left;
+
+				text-align: left;
+				text-indent: 5px;
+
+				line-height: 48px;
+				color: #9ca9cb;
+				margin-left: 30px;
+				margin-top: 30px;
+
+				font-size: 12px;
+			}
+
+			.block img {
+				float: left;
+				margin-left: 13px;
+			}
+
+			.block img:nth-child(2) {
+				float: right;
+				margin-right: 10px;
+			}
+
+
+			.Play {
+				width: 72px;
+				height: 72px;
+				float: left;
+				margin-left: 98px;
+				margin-top: 60px;
+
+				position: relative;
+				z-index: 2;
+			}
+
+			.Play1 {
+				width: 72px;
+				height: 72px;
+				background-color: #e4ebf5;
+				border-radius: 36px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+
+				float: left;
+
+				position: relative;
+				z-index: 2;
+			}
+
+			.stop {
+				width: 8px;
+				height: 26px;
+
+				border-left: 6px solid #6a51f7;
+				border-right: 6px solid #6a51f7;
+				position: absolute;
+				left: 26px;
+				top: 23px;
+				z-index: 3;
+			}
+
+			.wave {
+				width: 72px;
+				height: 72px;
+				background-color: #e4ebf5;
+				border-radius: 36px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white, 5px 5px 10px #ccc inset,
+					-5px -5px 10px white inset;
+
+				position: absolute;
+				left: 0;
+				top: 0;
+
+				z-index: 1;
+				/* float: left; */
+				animation: play 4s linear infinite;
+			}
+
+			.wave2 {
+				animation: play 4s 2s linear infinite;
+			}
+
+			.Play:hover .wave1 {}
+
+			@keyframes play {
+				0% {
+					transform: scale(1);
+				}
+
+				100% {
+					transform: scale(2);
+					opacity: 0;
+				}
+			}
+
+			@keyframes Shclock {
+				0% {
+					transform-origin: 2px 2px;
+					transform: rotate(180deg);
+				}
+
+				100% {
+					transform-origin: 2px 2px;
+					transform: rotate(540deg);
+				}
+			}
+
+			@keyframes Mhclock {
+				0% {
+					transform-origin: 3px 3px;
+					transform: rotate(180deg);
+				}
+
+				100% {
+					transform-origin: 3px 3px;
+					transform: rotate(540deg);
+				}
+			}
+
+			.Nav {
+				width: 244px;
+				height: 48px;
+				background-color: #e4ebf5;
+				border-radius: 10px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+				text-align: center;
+				position: relative;
+			}
+
+			.boxSh {
+				width: 74px;
+				height: 40px;
+				float: left;
+				border-radius: 10px;
+
+				position: absolute;
+				top: 4px;
+				left: 6px;
+				/* margin-top: 4px; */
+
+				transition: .2s;
+				box-shadow: 5px 5px 10px #ccc inset,
+					-5px -5px 10px white inset;
+			}
+
+			.nav {
+				width: 74px;
+				height: 40px;
+				float: left;
+				border-radius: 10px;
+				color: #b9bfcf;
+
+				position: absolute;
+				top: 4px;
+
+				text-align: center;
+				line-height: 44px;
+				transition: .1s;
+				z-index: 2;
+			}
+
+			.n1 {
+				left: 6px;
+			}
+
+			.n2 {
+				left: 85px;
+				/* margin: 4px 5px; */
+			}
+
+			.n3 {
+				/* float: right; */
+				/* margin-right: 6px; */
+				left: 159px;
+			}
+
+			input[id="nav1"]:checked~.Nav .n1 {
+				color: #6e5eff;
+			}
+
+			input[id="nav1"]:checked~.Nav .boxSh {
+				transform: translateX(0);
+			}
+
+			input[id="nav2"]:checked~.Nav .n2 {
+				color: #6e5eff;
+			}
+
+			input[id="nav2"]:checked~.Nav .boxSh {
+				transform: translateX(79px);
+			}
+
+			input[id="nav3"]:checked~.Nav .n3 {
+				color: #6e5eff;
+			}
+
+			input[id="nav3"]:checked~.Nav .boxSh {
+				transform: translateX(153px);
+			}
+
+			.Search {
+				display: block;
+				border-style: none;
+
+				width: 244px;
+				height: 48px;
+				background-color: #e4ebf5;
+				border-radius: 10px;
+				box-shadow: 5px 5px 10px #ccc inset,
+					-5px -5px 10px white inset;
+				float: left;
+				margin-top: 40px;
+				margin-left: 7px;
+
+				color: #b9bfcf;
+				text-align: left;
+				text-indent: 2em;
+				line-height: 48px;
+
+				outline: none;
+			}
+
+			.Search:focus {
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+			}
+
+			.button3_1 {
+				width: 48px;
+				height: 48px;
+				background-color: #e4ebf5;
+				border-radius: 24px;
+				box-shadow: 5px 5px 10px #ccc,
+					-5px -5px 10px white;
+
+				text-align: center;
+				float: left;
+				margin-top: 35px;
+			}
+
+			.bb1 {
+				margin-left: 7px;
+			}
+
+			.bb2,
+			.bb3 {
+				margin-left: 50px;
+			}
+
+			.button3_1:active {
+				box-shadow: 5px 5px 10px #ccc inset,
+					-5px -5px 10px white inset;
+			}
+
+			.strip {
+				width: 244px;
+				height: 12px;
+				border-radius: 6px;
+				float: left;
+				box-shadow: 0px 2px 4px #ccc inset,
+					0px -2px 4px white inset;
+
+				margin-top: 49px;
+				margin-left: 7px;
+				position: relative;
+			}
+			.strip2 {
+				width: 122px;
+				height: 12px;
+				border-radius: 6px;
+				background-color: #6a51f7;
+				float: left;
+				/* box-shadow: 0px 2px 4px #ccc inset,
+					0px -2px 4px white inset; */
+			
+				position: absolute;
+			}
+			.Sdot{
+				width: 24px;
+				height: 24px;
+				background-color: white;
+				box-shadow: 0px 2px 4px #ccc;
+				
+				border-radius: 12px;
+				margin-top: -6px;
+				position: absolute;
+				right: -14px;
+				
+				float: left;
+			}
+			.SSdot{
+				width: 10px;
+				height: 10px;
+				border-radius: 5px;
+				box-shadow: 0px 2px 4px #ccc inset,
+					0px -2px 4px white inset;
+				
+				position: absolute;
+				top:7px;
+				left:7px;
+				background-color: #9ca1be;
+			}
+
+
+			img {
+				margin-top: 13px;
+
+				width: 22px;
+				height: 22px;
+			}
+
+
+
+
+			input {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box2">
+				<div class="box3 bx1">
+
+					<input type="checkbox" name="switch_1" id="switch1">
+					<label for="switch1" class="switch s1">
+						<div class="dot dt1"></div>
+					</label>
+
+					<input type="checkbox" name="switch_2" id="switch2">
+					<label for="switch2" class="switch s2">
+						<div class="dot dt2"></div>
+					</label>
+
+					<input type="checkbox" name="checkbox_1" id="checkbox1">
+					<label for="checkbox1" class="checkbox c1">
+						<div class="tr">
+
+						</div>
+					</label>
+
+					<input type="checkbox" name="checkbox_2" id="checkbox2">
+					<label for="checkbox2" class="checkbox c2">
+						<div class="tr">
+
+						</div>
+					</label>
+
+					<input type="radio" name="radio_1" id="radio1">
+					<label for="radio1" class="radio r1">
+						<div class="Rdot Rdt1"></div>
+					</label>
+
+					<input type="radio" name="radio_1" id="radio2">
+					<label for="radio2" class="radio r2">
+						<div class="Rdot Rdt2"></div>
+					</label>
+
+					<input type="button" value="Button1" class="button btn1">
+					<input type="button" value="Button2" class="button btn2">
+				</div>
+
+
+				<div class="box3 bx2">
+					<div class="clock">
+						<div class="clock2">
+							<div class="clock3">
+								<div class="clockDot"></div>
+								<div class="Mh"></div>
+								<div class="Hh"></div>
+								<div class="Sh"></div>
+								<div class="sign si1"></div>
+								<div class="sign si2"></div>
+								<div class="sign si3"></div>
+								<div class="sign si4"></div>
+							</div>
+						</div>
+					</div>
+					<div class="block">
+						<img src="./images/plus.png" alt="">
+						Neumorphic Design
+						<img src="./images/plus.png" alt="">
+					</div>
+
+					<input type="checkbox" name="checkbox2 " id="">
+					<div class="Play">
+						<div class="stop"></div>
+						<label class="Play1"></label>
+
+						<div class="wave wave1"></div>
+						<div class="wave wave2"></div>
+					</div>
+
+
+				</div>
+
+				<div class="box3 bx3">
+					<input type="radio" name="nav" id="nav1">
+					<input type="radio" name="nav" id="nav2">
+					<input type="radio" name="nav" id="nav3">
+					<div class="Nav">
+
+						<label for="nav1" class="nav n1">Tab 1</label>
+						<label for="nav2" class="nav n2">Tab 2</label>
+						<label for="nav3" class="nav n3">Tab 3</label>
+						<div class="boxSh">
+
+						</div>
+					</div>
+
+
+					<input class="Search ss1" type="text" id="tex1" placeholder="Search" />
+					<input class="Search ss2" type="text" id="tex2" placeholder="trpe anything" />
+					<!-- <div class="Search ss1">Search</div>
+					<div class="Search ss2">trpe anything</div> -->
+
+					<div class="button3_1 bb1"><img src="./images/plus.png" alt=""></div>
+					<div class="button3_1 bb2"><img src="./images/plus.png" alt=""></div>
+					<div class="button3_1 bb3"><img src="./images/plus.png" alt=""></div>
+
+					<div class="strip">
+						<div class="strip2">
+							<div class="Sdot">
+								<div class="SSdot">
+							
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

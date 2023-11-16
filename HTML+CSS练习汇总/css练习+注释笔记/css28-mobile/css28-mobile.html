@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			@font-face {
+				font-family: 'iconfont';
+				src: url('iconfont.woff2?t=1697597539730') format('woff2'),
+					url('iconfont.woff?t=1697597539730') format('woff'),
+					url('iconfont.ttf?t=1697597539730') format('truetype');
+			}
+
+			.iconfont {
+				font-family: "iconfont" !important;
+				font-size: 16px;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			.box {
+				width: 640px;
+				border: 1px solid #ccc;
+
+				display: flex;
+				flex-wrap: wrap;
+				align-content: flex-start;
+				padding-bottom: 100px;
+			}
+
+			.box1 {
+				width: 640px;
+				height: 38px;
+				display: flex;
+
+				background-color: black;
+
+				justify-content: space-evenly;
+			}
+
+			.massage {
+				display: flex;
+				width: 200px;
+				height: 38px;
+				background-color: black;
+				color: white;
+
+				font-size: 22px;
+				align-items: center;
+				justify-content: start;
+			}
+
+			.massage span {
+				font-size: 22px;
+			}
+
+			.time {
+				width: 200px;
+				height: 38px;
+				display: flex;
+
+				background-color: black;
+				color: white;
+				/* justify-self: center; */
+				/* align-self: center; */
+
+				align-items: center;
+				justify-content: center;
+			}
+
+			.block {
+				width: 200px;
+				height: 38px;
+			}
+
+			/* ----------------------box2---------------------------------- */
+			.box2 {
+				width: 640px;
+				height: 94px;
+				background-color: #dc4c56;
+			}
+
+			.nav1 {
+				display: flex;
+				width: 640px;
+				height: 94px;
+				/* background-color: #de5a63; */
+				justify-content: space-around;
+				align-items: center;
+
+				font-size: 36px;
+				color: white;
+			}
+
+			.sp {
+				text-align: center;
+				width: 3em;
+				flex-grow: 1;
+			}
+
+			.sp2 {
+				flex-grow: 3;
+			}
+
+			.sp3 span {
+				font-size: 48px;
+			}
+
+			/* ----------------------box3---------------------------------- */
+			.box3 {
+				width: 640px;
+				/* height: 289px; */
+				height: 393px;
+				/* background-color: #f07b84; */
+				background: url(./Passion.png) no-repeat center;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: flex-end;
+				justify-content: center;
+			}
+
+			.avatar1 {
+
+				width: 248px;
+				height: 248px;
+				display: flex;
+				border-radius: 124px;
+				background-color: #e6626e;
+
+				align-items: center;
+				justify-content: center;
+			}
+
+			.avatar2 {
+				width: 228px;
+				height: 228px;
+				/* background-color: #fff; */
+				background-color: #fceff1;
+				border-radius: 114px;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			/* ----------------------box4---------------------------------- */
+			.box4 {
+				width: 640px;
+				height: 94px;
+				/* background-color: #e26476; */
+				display: flex;
+				font-size: 26px;
+				color: white;
+
+				align-items: center;
+				justify-content: center;
+			}
+
+			.box4 span {
+				line-height: 94px;
+				text-align: center;
+				width: 190px;
+				font-size: 30px;
+				border-top: 1px solid #d6a5aa;
+				/* display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-wrap: nowrap; */
+			}
+
+			.box4 span .iconfont {
+				border-top: 0px;
+			}
+
+
+			/* ---------------------box5-------------------------------- */
+			.box5 {
+				width: 640px;
+				height: 356px;
+				background-color: white;
+
+				display: flex;
+
+				/* flex-grow: 1; */
+
+				flex-wrap: wrap;
+				/* flex-direction: column; */
+
+				/* 基于排列 垂直方向 */
+				align-content: space-between;
+
+				/* 基于排列 水平方向 */
+				justify-content: space-evenly;
+
+
+			}
+
+			.item {
+				width: 90px;
+				height: 135px;
+				display: flex;
+				flex-wrap: wrap;
+				/* flex-direction: column; */
+				justify-content: center;
+				/* align-items: center; */
+				margin: 10px 35px;
+
+			}
+
+			.item span {
+				font-size: 26px;
+
+			}
+
+
+			.item1 {
+				width: 90px;
+				height: 90px;
+				background-color: #f88f6f;
+				border-radius: 45px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.item1 span {
+				font-size: 42px;
+				color: white;
+			}
+
+			.itm8 span {
+				color: #8393ca;
+			}
+
+			.itm2 {
+				background-color: #4dc95e;
+			}
+
+			.itm3 {
+				background-color: #2499f6;
+			}
+
+			.itm4 {
+				background-color: #f56778;
+			}
+
+			.itm5 {
+				background-color: #a56de5;
+			}
+
+			.itm6 {
+				background-color: #f4604a;
+			}
+
+			.itm7 {
+				background-color: #44c8c7;
+			}
+
+			.itm8 {
+				width: 86px;
+				height: 86px;
+				background-color: white;
+				border: 2px solid #8393ca;
+			}
+
+
+			.serrated {
+				width: 640px;
+				height: 10px;
+				margin-top: -10px;
+				background: url(images/1_03_03.png) repeat;
+				/* position: sticky; */
+				/* top:-10px; */
+			}
+
+			.serD {
+				background: url(images/D1_06.png) repeat;
+				margin-top: 0px;
+				/* margin-bottom: -10px; */
+			}
+
+			/* ----------------------box6---------------------------------- */
+			.box6 {
+				width: 640px;
+				height: 157px;
+				background-color: #e5e5e5;
+
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				align-items: baseline;
+			}
+
+			.function {
+				width: 80px;
+				height: 147px;
+				display: flex;
+
+				flex-direction: column;
+				/* flex-wrap: wrap; */
+				/* align-items: center; */
+				/* justify-content: space-evenly; */
+				font-size: 17px;
+				align-items: center;
+				justify-content: space-evenly;
+				/* align-content: space-around; */
+
+				color: #666666;
+			}
+
+			.function1 {
+				width: 80px;
+				height: 80px;
+				/* background-color: #ccc;s */
+
+				display: flex;
+
+				align-items: center;
+				justify-content: center;
+
+
+			}
+
+			.function1 span {
+				font-size: 68px;
+			}
+
+			.func1 {
+				color: #fe99b8;
+			}
+
+			.func2 {
+				color: #ba8fff;
+			}
+
+			.func3 {
+				color: #6fde80;
+			}
+
+			.func4 {
+				color: #86dee9;
+			}
+
+			/* ----------------------box7---------------------------------- */
+			.box7 {
+				width: 640px;
+				height: 101px;
+				background-color: #787878;
+
+				display: flex;
+				justify-content: space-around;
+				border-top: 1px solid #ababab;
+				align-items: flex-end;
+
+				position: fixed;
+				/* z-index: 3; */
+				bottom: 0px;
+			}
+
+			.Nav {
+				width: 160px;
+				height: 96px;
+				background-color: #787878;
+
+				display: flex;
+				/* flex-wrap: wrap; */
+				/* align-content: center; */
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-evenly;
+
+				color: white;
+				font-size: 22px;
+
+
+				border-top: 1px solid #ababab;
+				border-right: 1px solid #ababab;
+				border-left: 1px solid #3f3f3f;
+			}
+
+			.NavIco {
+				width: 64px;
+				height: 64px;
+				/* background-color: #ccc; */
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.NavIco span {
+				font-size: 44px;
+			}
+
+			input[name="rad"]:checked+label {
+				border-top: 0px;
+				background-color: #ed5b65;
+
+				/* transform: translateY(-3px); */
+				margin-top: -3px;
+				height: 99px;
+			}
+
+			input {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1">
+				<div class="massage">
+					<span class="iconfont">&#xe60a;</span>
+					中国联通
+					<span class="iconfont">&#xe62d;</span>
+				</div>
+
+				<div class="time">PM14:20</div>
+				<div class="block"></div>
+			</div>
+			<div class="box2">
+				<div class="nav1">
+					<span class="sp sp1">未登录</span>
+					<span class="sp sp2">管家</span>
+					<span class="sp sp3">
+						<span class="iconfont">&#xe601;</span>
+					</span>
+				</div>
+			</div>
+
+			<div class="box3">
+				<div class="avatar1">
+					<div class="avatar2">
+						<img src="./images/1_03.png" alt="">
+					</div>
+				</div>
+
+				<div class="box4">
+					<span>
+						<span class="iconfont">&#xe6b4;</span>
+						缴物业费
+					</span>
+					<span class="iconfont">&#xe790;</span>
+					<span>
+						<span class="iconfont">&#xe619;</span>
+						社区快报
+					</span>
+				</div>
+
+
+			</div>
+
+
+
+			<div class="box5">
+				<div class="serrated serU"></div>
+				<div class="item">
+					<div class="item1">
+						<span class="iconfont">&#xe61d;</span>
+					</div>
+					<span>美容</span>
+				</div>
+
+
+				<div class="item">
+					<div class="item1 itm2">
+						<span class="iconfont">&#xe62f;</span>
+					</div>
+					<span>家政</span>
+				</div>
+
+
+				<div class="item">
+					<div class="item1  itm3">
+						<span class="iconfont">&#xe627;</span>
+					</div>
+					<span>疏通</span>
+				</div>
+
+				<div class="item">
+					<div class="item1  itm4">
+						<span class="iconfont">&#xe635;</span>
+					</div>
+					<span>维修</span>
+				</div>
+
+				<div class="item">
+					<div class="item1 itm5">
+						<span class="iconfont">&#xe620;</span>
+					</div>
+					<span>开锁</span>
+				</div>
+				<div class="item">
+					<div class="item1  itm6">
+						<span class="iconfont">&#xe61c;</span>
+					</div>
+					<span>外卖</span>
+				</div>
+
+				<div class="item">
+					<div class="item1  itm7">
+						<span class="iconfont">&#xe67d;</span>
+					</div>
+					<span>干洗</span>
+				</div>
+
+
+
+				<div class="item">
+					<div class="item1  itm8">
+						<span class="iconfont">&#xe73a;</span>
+					</div>
+					<span>更多</span>
+				</div>
+				<!-- <div class="serrated serD"></div> -->
+			</div>
+			<div class="box6">
+
+				<div class="serrated serD"></div>
+				<div class="function">
+					<div class="function1 func1">
+						<span class="iconfont">&#xe636;</span>
+					</div>
+					<span>12306</span>
+				</div>
+				<div class="function">
+					<div class="function1 func2">
+						<span class="iconfont">&#xe654;</span>
+					</div>
+					<span>违章查询</span>
+				</div>
+				<div class="function">
+					<div class="function1 func3">
+						<span class="iconfont">&#xe6b3;</span>
+					</div>
+					<span>工作推荐</span>
+				</div>
+				<div class="function">
+					<div class="function1 func4">
+						<span class="iconfont">&#xe600;</span>
+					</div>
+					<span>最新影讯</span>
+				</div>
+			</div>
+
+			<div class="box7">
+				<input type="radio" name="rad" id="rad1">
+
+				<label for="rad1" class="Nav">
+					<div class="NavIco">
+						<span class="iconfont">&#xe602;</span>
+					</div>
+					<span>邻居</span>
+				</label>
+
+				<input type="radio" name="rad" id="rad2">
+				<label for="rad2" class="Nav">
+					<div class="NavIco">
+						<span class="iconfont">&#xe609;</span>
+					</div>
+					<span>管家</span>
+				</label>
+
+				<input type="radio" name="rad" id="rad3">
+				<label for="rad3" class="Nav">
+					<div class="NavIco">
+						<span class="iconfont">&#xea8e;</span>
+					</div>
+					<span>商业</span>
+				</label>
+
+				<input type="radio" name="rad" id="rad4">
+				<label for="rad4" class="Nav">
+					<div class="NavIco">
+						<span class="iconfont">&#xe61b;</span>
+					</div>
+					<span>活动</span>
+				</label>
+
+			</div>
+		</div>
+	</body>
+</html>

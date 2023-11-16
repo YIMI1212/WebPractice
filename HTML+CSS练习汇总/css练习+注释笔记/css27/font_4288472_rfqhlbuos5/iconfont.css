@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4288472 */
+  src: url('iconfont.woff2?t=1697444703679') format('woff2'),
+       url('iconfont.woff?t=1697444703679') format('woff'),
+       url('iconfont.ttf?t=1697444703679') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo:before {
+  content: "\e651";
+}
+
+.icon-yinle:before {
+  content: "\e602";
+}
+
+.icon-shezhi-xianxing:before {
+  content: "\e8b7";
+}
+
+.icon-zanting:before {
+  content: "\e629";
+}
+
+.icon-wenjianjia:before {
+  content: "\e600";
+}
+
+.icon-gengduo:before {
+  content: "\e719";
+}
+
+.icon-tuichu:before {
+  content: "\e638";
+}
+
+.icon-appstore:before {
+  content: "\e792";
+}
+
+.icon-xiazai:before {
+  content: "\e856";
+}
+
+.icon-tupian:before {
+  content: "\e8ba";
+}
+
+.icon-shipin:before {
+  content: "\e63d";
+}
+
+.icon-w_wendang:before {
+  content: "\e676";
+}
+
+.icon-wendang:before {
+  content: "\e6cb";
+}
+
+.icon-cipan-L:before {
+  content: "\e633";
+}
+

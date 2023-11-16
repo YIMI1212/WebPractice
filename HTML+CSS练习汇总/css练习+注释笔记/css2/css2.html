@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.box {
+				width: 1258px;
+				height: 414px;
+			}
+
+			.box2 {
+				width: 314px;
+				height: 414px;
+				float: left;
+				text-align: center;
+			}
+
+			.item {
+				width: 80px;
+				height: 25px;
+				/* 盒子高等文本行高 实现上下居中*/
+				line-height: 25px;
+				background-color: #83c44e;
+				/* 边距 上下0px 左右相等 实现居中 */
+				margin: 0px auto;
+				margin-top: 23px;
+				text-align: center;
+				color: #fcfcfc;
+				font-size: 14px;
+			}
+
+			.p1 {
+				font-size: 18px;
+				text-align: center;
+				color: #2a282d;
+
+				margin-top: 44px;
+				/* margin-left: 87px; */
+				/* margin-left: ; */
+			}
+
+			.p2 {
+				font-size: 13px;
+				text-align: center;
+				color: #b1b2cd;
+
+				margin-top: 10px;
+			}
+
+			.p3 {
+				font-size: 16px;
+				text-align: center;
+				color: #e5602a;
+
+				margin-top: 23px;
+			}
+
+			.box2 img {
+
+				width: 142px;
+				height: 169px;
+				/* 把图片变成块级元素 使用margin:auto;实现居中  也可以使用文本居中*/
+				/* display: block;
+				margin: auto; */
+				margin-top: 15px;
+			}
+			/* 小盒子鼠标经过触发的效果 */
+			.box2:hover{
+				/* 盒子阴影  左右0px 向下10px 阴影发散20px 颜色 */
+				box-shadow: 0px 10px 20px #ccc;
+				/* 圆角 尺寸 */
+				border-radius: 20px;
+				/* 盒子上移 */
+				margin-top: -10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box2">
+				<h3 class="item">新品</h3>
+				<img src="./images/xiaomi1_03.gif">
+				<p class="p1">小米9 6GB+128GB</p>
+				<p class="p2">骁龙855，索尼4800万超广角微距三摄</p>
+				<p class="p3">2999元</p>
+			</div>
+			<div class="box2">
+				<h3 class="item">新品</h3>
+				<img src="./images/xiaomi2_06.gif">
+				<p class="p1">小米9 SE 6GB+64GB</p>
+				<p class="p2">索尼4800万超广角三摄,骁龙712</p>
+				<p class="p3">1999元</p>
+			</div>
+			<div class="box2">
+				<h3 class="item">新品</h3>
+				<img src="./images/xiaomi3_08.gif">
+				<p class="p1">Redmi Node 7 3GB+32GB</p>
+				<p class="p2">4800万拍照千元机，18个月超长质保</p>
+				<p class="p3">999元</p>
+			</div>
+			<div class="box2">
+				<h3 class="item">新品</h3>
+				<img src="./images/xiaomi4_05.gif">
+				<p class="p1">小米Play 4GB+64GB</p>
+				<p class="p2">5.84"小水滴全面屏，后置1200万AI</p>
+				<p class="p3">1099元</p>
+			</div>
+		</div>
+	</body>
+</html>

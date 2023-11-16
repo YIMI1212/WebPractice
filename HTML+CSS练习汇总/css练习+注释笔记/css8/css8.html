@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.box {
+				width: 433px;
+				height: 515px;
+				text-align: center;
+				background-color: #ebecf0;
+			}
+
+			.p1 {
+				font-size: 32px;
+				color: #babecb;
+				line-height: 92px;
+				text-shadow: 1px  1px #fff;
+			}
+
+			.input {
+				width: 320px;
+				height: 50px;
+				background-color: #ebecf0;
+				border-radius: 50px;
+
+				box-shadow: 5px 5px 5px #ccc inset,
+					-5px -5px 5px white inset;
+
+				margin: 0 auto;
+				margin-top: 25px;
+				border: 0;
+
+				/* 取消输入框 */
+				outline: none;
+
+				/* 怪异盒子模型 */
+				padding-left: 17px;
+				box-sizing: border-box;
+
+				font-size: 15px;
+			}
+
+			.input::placeholder {
+				/* margin-left: 17px; 好像没有这个功能 */
+				/* position: 20px center; */
+				font-size: 15px;
+				color: #757575;
+
+			}
+
+			.button1 {
+				width: 320px;
+				height: 50px;
+				color: #b20a0d;
+				font-size: 16spx;
+				/* font-variant: ; */
+				font-weight: bold;
+				border-radius: 50px;
+
+				margin: 0 auto;
+
+				margin-top: 25px;
+				border: 0;
+				background-color: #ebecf0;
+				box-shadow: 10px 10px 20px #ccc,
+					-10px -10px 20px white;
+
+				background: url(./images/lock.png);
+				background-repeat: no-repeat;
+				background-position: 124px center;
+			}
+
+			/* .button1::before{
+				content: "";
+				background: url(images/lock.png) no-repeat center;
+			} */
+
+			.box1 {
+				width: 204px;
+				height: 48px;
+				margin: 0 auto;
+				margin-top: 32px;
+			}
+
+			.button {
+				width: 48px;
+				height: 48px;
+				margin: 0 10px;
+				border-radius: 8px;
+				border: 0;
+				background-color: #ebecf0;
+				background-position: center;
+
+				background-repeat: no-repeat;
+
+
+				float: left;
+				box-shadow: 10px 10px 20px #ccc,
+					-10px -10px 20px white;
+			}
+
+			.button:nth-child(1) {
+				background-image: url(./images/user.png);
+			}
+
+			.button:nth-child(2) {
+				background-image: url(./images/user.png);
+			}
+
+			.button:nth-child(3) {
+				background-image: url(./images/user.png);
+			}
+
+			
+
+			.box2 {
+				margin-top: 32px;
+				width: 320px;
+				height: 50px;
+				margin: 0 auto;
+				margin-top: 32px;
+			}
+
+			.down {
+				width: 256px;
+				height: 50px;
+				float: left;
+				margin-top: 0;
+			}
+
+			.button2 {
+				width: 48px;
+				height: 48px;
+
+
+				border-radius: 8px;
+				border: 0;
+				background-color: #fff;
+
+				box-shadow: 10px 10px 20px #ccc,
+					-10px -10px 20px white;
+
+				/* 复合写法 */
+				background: url(images/user.png) no-repeat center;
+			}
+			
+			.button:active {
+				box-shadow: 1px 1px 3px #ccc,
+					-1px -1px 3px white;
+			}
+			
+			.button1:active {
+				box-shadow: 1px 1px 3px #ccc,
+					-1px -1px 3px white;
+			}
+			
+			.button2:active {
+				box-shadow: 1px 1px 3px #ccc,
+					-1px -1px 3px white;
+			}
+			
+			.input:focus{
+				transition: 0.5s;
+				box-shadow: 2px 2px 2px #ccc inset,
+					-2px -2px 2px white inset;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h1 class="p1">Sign up</h1>
+			<input class="input" type="email" name="" id="" placeholder="Email Address">
+			<input class="input" type="password" name="" id="" placeholder="Password">
+			<input class="button1" type="button" value="Log in">
+
+			<div class="box1">
+				<input class="button" type="button" value="">
+				<input class="button" type="button" value="">
+				<input class="button" type="button" value="">
+			</div>
+
+			<div class="box2">
+				<input class="input down" type="email" name="" id="" placeholder="Email Address">
+				<input class="button2" type="button" value="">
+			</div>
+
+		</div>
+	</body>
+</html>

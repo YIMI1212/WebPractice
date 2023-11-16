@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		* {
+			margin: 0%;
+			padding: 0%;
+		}
+
+		body {
+			background-color: #f7f7f7;
+		}
+
+		.box1 {
+			display: flex;
+			justify-content: center;
+			background-color: #fff;
+			margin-bottom: 10px;
+			box-shadow: 0px 1px 2px #ccc;
+		}
+
+		.search {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 676px;
+			height: 74px;
+			border-radius: 37px;
+			background-color: #f0f0f0;
+		}
+
+		input[type="text"] {
+			width: 500px;
+			height: 74px;
+			border-style: none;
+			outline: none;
+			background-color: #f0f0f0;
+			margin-left: 40px;
+			/* display: flex;
+			align-items: center; */
+		}
+
+		input[type="text"]::placeholder {
+			line-height: 74px;
+			font-size: 22px;
+		}
+
+		/* ----------------------------------------box2------- */
+		.bx2ItemBox {
+			display: flex;
+			flex-wrap: wrap;
+			align-content: center;
+			justify-content:space-evenly;
+
+			background-color: #fff;
+			
+		/* 	box-sizing: border-box;
+			padding: 0px 5%; */
+
+		}
+
+		.bx2Item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			width: 100px;
+			height: 100px;
+
+			font-size: 25px;
+
+			margin: 25px 45px;
+		}
+
+		/* ----------------------------------------box3------- */
+		.box3 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 30px;
+		}
+
+	/* 	.box3 img:nth-child(1) {
+			margin-bottom: 30px;
+		} */
+
+		.menu {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			font-size: 30px;
+			box-sizing: border-box;
+			padding: 0px 5%;
+
+			margin-bottom: 30px;
+			margin-top: 30px;
+
+		}
+
+		.menuMore {
+			font-size: 25px;
+			color: #7b7b7b;
+
+		}
+
+		.bx3ItemBox {
+			display: flex;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			justify-content: flex-start;
+		}
+
+		.bx3Item {
+			margin: 0px 25px;
+			background-color: white;
+			border-radius: 15px;
+		}
+
+		.bx3ItemP1,
+		.bx3ItemP2,
+		.bx3ItemP3 {
+			margin: 10px 15px;
+		}
+
+		.bx3ItemP1 {
+			font-size: 26px;
+		}
+
+		.bx3ItemP2 {
+			font-size: 26px;
+			color: #ff6518;
+		}
+
+		.bx3ItemP3 {
+			font-size: 22px;
+			text-align: right;
+			margin-left: auto;
+			color: #a9a9a9;
+		}
+
+		/* ----------------------------------------box4------- */
+		.box4 {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 100px;
+			background-color: #fff;
+
+			position: sticky;
+			bottom: 0px;
+			margin-top: 30px;
+			box-shadow: 0px -2px 2px #ccc;
+
+		}
+
+		.nav {
+			display: flex;
+			flex-direction: column;
+			font-size: 20px;
+		}
+
+		.nav span {
+			margin-top: 5px;
+		}
+	</style>
+	<body>
+		<div class="box1">
+			<div class="search">
+				<img src="./images/搜索.png" alt="">
+				<input type="text" id="" placeholder="搜索内容" />
+			</div>
+		</div>
+
+		<div class="box2">
+			<div class="bx2ItemBox">
+				<div class="bx2Item">
+					<img src="./images/icon_rollup_coloured.png" alt="">
+					<span>美食</span>
+				</div>
+				<div class="bx2Item">
+					<img src="./images/icon_doughnut_colour.png" alt="">
+					<span>甜点</span>
+				</div>
+				<div class="bx2Item">
+					<img src="./images/icon_milk_coloured.png" alt="">
+					<span>牛奶</span>
+				</div>
+				<div class="bx2Item">
+					<img src="./images/icon_salad_coloured.png" alt="">
+					<span>蔬菜</span>
+				</div>
+				<div class="bx2Item">
+					<img src="./images/icon_coffee_coloured.png" alt="">
+					<span>茶</span>
+				</div>
+				<div class="bx2Item">
+					<img src="./images/icon_burger_coloured.png" alt="">
+					<span>快餐</span>
+				</div>
+				<div class="bx2Item">
+					<img src="./images/icon_juice_coloured.png" alt="">
+					<span>饮料</span>
+				</div>
+				<div class="bx2Item">
+					<img src="./images/icon_lobster_coloure.png" alt="">
+					<span>海鲜</span>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class="box3">
+			<img src="./images/美食自助餐.png" alt="">
+
+			<div class="menu">
+				<span>美食</span>
+				<div class="menuMore">
+					更多 >>
+				</div>
+			</div>
+			<div class="bx3ItemBox">
+				<div class="bx3Item">
+					<img src="./images/图层 2.png" alt="">
+					<p class="bx3ItemP1">美味水果拼盘</p>
+					<p class="bx3ItemP2">￥288</p>
+					<p class="bx3ItemP3">3524人已买</p>
+				</div>
+				<div class="bx3Item">
+					<img src="./images/图层 3.png" alt="">
+					<p class="bx3ItemP1">部队火锅双人餐</p>
+					<p class="bx3ItemP2">￥288</p>
+					<p class="bx3ItemP3">3524人已买</p>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="box4">
+			<div class="nav">
+				<img src="./images/zhuyehuise.png" alt="">
+				<span>主页</span>
+			</div>
+			<div class="nav">
+				<img src="./images/MMOrder 主页icon2-1.png" alt="">
+				<span>店铺</span>
+			</div>
+			<div class="nav">
+				<img src="./images/MMOrder 主页icon3-1.png" alt="">
+				<span>订单</span>
+			</div>
+			<div class="nav">
+				<img src="./images/MMOrder 主页icon4-1.png" alt="">
+				<span>我的</span>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.p1{
+				font-size: 12px;font-weight: bold;
+			}
+			.son a{
+				color: red;
+			}
+			.son1>a{color: red;}
+			.son1+div{color: green;}
+			.son1~div{color: yellow;}
+			
+			a:link{color: #FF0000;text-decoration: none;}
+			a:visited{color: #00FF00;text-decoration: none;}
+			a:hover{color: FF00FF;text-decoration: underline;}
+			a:active{color: #0000FF;text-decoration: underline;}
+			input[type="text"]:focus{background: #0000ff;}
+			li:first-child{color: #F00;}
+			li:last-child{color: #F00;}
+			ul li:nth-child(odd){background: #ccc;}
+			ui li:nth_child(2n+1){border-left: 2px solid red;}
+			
+			ul li:nth-child(even){background: #ccc;}
+			ui li:nth_child(2n){border-left: 2px solid red;}
+			
+			ui li:nth_child(3n){border-left: 2px solid red;}
+			input[name="love[]"]:checked+label{color: blue;background: red;}
+			
+			p[class]{color: green;}
+			p[qq]{color: red;}
+			
+			.t2::before{content: '123';}
+			.t2::after{content: '123';}
+		</style>
+		
+	</head>
+	<body>
+		<div class="son">
+			<a href="aaaa">xxxx</a>
+		</div>
+		<p class="p1">这是一个段落</p>
+		<div class="father">
+			<div class="son1">
+				<a href="#">son1</a>
+				<div class="grandson">
+					<a>ccc</a>grandson</div>
+			</div>
+			<div class="son2">son2</div>
+			<div class="son3">son3</div>
+		</div>
+		
+		<div class="text">
+			<div>DIV元素</div>
+			<p>p元素	</p>
+			<p>p元素2</p>
+		</div>
+		
+		<input type="text" name="" id="" value="" />
+		<input type="checkbox" name="love[]" id="book" value="book" />
+		<label for="book">书</label>
+		<input type="checkbox" name="love[]" id="music" value="music" />
+		<label for="music">音乐</label>
+		<input type="checkbox" name="love[]" id="movie" value="movie" />
+		<label for="movie">电影</label>
+		
+		
+		<p class="a">测试数据1</p>
+		<p class="qq">测试数据2</p>
+		
+		<p class="t2">test</p>
+	</body>
+</html>

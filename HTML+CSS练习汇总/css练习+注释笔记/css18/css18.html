@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			.box {
+				width: 222px;
+				height: 466px;
+				background-color: #4183b0;
+				position: relative;
+			}
+
+			.box2 {
+				width: 60px;
+				height: 60px;
+				background-color: #97cd97;
+				border-radius: 30px;
+				position: absolute;
+
+				box-sizing: border-box;
+				padding: 21px 21px;
+
+				top: 46px;
+				left: 100px;
+
+				transition: 0.3s;
+
+				z-index: 2;
+			}
+
+			.line {
+				width: 18px;
+				height: 2px;
+				background-color: white;
+				border-radius: 2px;
+				transition: 0.3s;
+			}
+
+			.line:nth-child(2) {
+				margin: 5px 0px;
+			}
+
+			.sec {
+				z-index: 1;
+			}
+
+			.box2 img {
+				width: 40px;
+				height: 40px;
+			}
+
+			.box3 {
+				/* width: 132px; */
+				width: 127px;
+				height: 16px;
+
+				position: absolute;
+				/* left: -87px; */
+				left: -92px;
+				top: 82px;
+
+				transition: 0.5s;
+				opacity: 0;
+			}
+
+			.box3:nth-child(2) {
+				top: 142px;
+			}
+
+			.box3:nth-child(3) {
+				top: 202px;
+			}
+
+			.box3:nth-child(4) {
+				top: 260px;
+			}
+
+			.box3:nth-child(5) {
+				top: 322px;
+			}
+
+			.p1 {
+				width: 92px;
+				font-size: 16px;
+				line-height: 16px;
+
+				float: left;
+				color: white;
+				/* left: -87px; */
+			}
+
+			.box3_bg {
+				width: 16px;
+				height: 16px;
+				/* float: right; */
+				background: url(img/cd-sprite-1.svg) no-repeat left;
+				position: absolute;
+				background-position: -32px;
+				/* top: 82px; */
+				left: 109px;
+				z-index: 3;
+			}
+
+			.box3:nth-child(2) .box3_bg {
+				background-position: -64px;
+			}
+
+			.box3:nth-child(3) .box3_bg {
+				background-position: -48px;
+			}
+
+			.box3:nth-child(4) .box3_bg {
+				background-position: 0px;
+			}
+
+			.box3:nth-child(5) .box3_bg {
+				background-position: -16px;
+			}
+
+			/* .box2:hover~.sec {
+				height: 360px;
+			} */
+
+			.p1:hover {
+				/* left: -92px; */
+				transition: 0.5s;
+				margin-left: -5px;
+				border-right: 3px solid #009582;
+			}
+
+			input[name="chk"]:checked~.box2 .line:nth-child(1) {
+				transform: translateY(7px) rotate(45deg);
+			}
+
+			input[name="chk"]:checked~.box2 .line:nth-child(2) {
+				opacity: 0;
+			}
+
+			input[name="chk"]:checked~.box2 .line:nth-child(3) {
+				transform: translateY(-7px) rotate(-45deg);
+			}
+
+			input[name="chk"]:checked~.sec {
+				height: 360px;
+			}
+
+			input[name="chk"]:checked~.sec .box3 {
+				left: -87px;
+				transition-delay: 0.1s;
+				opacity: 100;
+			}
+
+			.sec .box3:nth-child(2) {
+				transition-delay: 0.15s;
+			}
+
+			.sec .box3:nth-child(3) {
+				transition-delay: 0.2s;
+			}
+
+			.sec .box3:nth-child(4) {
+				transition-delay: 0.25s;
+			}
+
+			.sec .box3:nth-child(5) {
+				transition-delay: 0.3s;
+			}
+
+			input {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<input type="checkbox" name="chk" id="chk1">
+			<label for="chk1" class="box2">
+				<!-- <img src="./img/plus.png" alt=""> -->
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</label>
+			<div class="box2 sec">
+				<div class="box3">
+					<p class="p1">Home</p>
+					<div class="box3_bg"></div>
+				</div>
+				<div class="box3">
+					<p class="p1">News</p>
+					<div class="box3_bg"></div>
+				</div>
+				<div class="box3">
+					<p class="p1">Services</p>
+					<div class="box3_bg"></div>
+				</div>
+				<div class="box3">
+					<p class="p1">Store</p>
+					<div class="box3_bg"></div>
+				</div>
+				<div class="box3">
+					<p class="p1">Contact</p>
+					<div class="box3_bg"></div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

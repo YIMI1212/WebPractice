@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.box {
+				width: 150px;
+				height: 300px;
+			}
+
+			.box2_1 {
+				width: 80px;
+				height: 120px;
+				float: left;
+				/* margin: 0 auto; */
+
+				/* background-size: 300px 150px; */
+				background: url(./light-switch.png) no-repeat;
+				/* background-position: -80px; */
+				/* background-repeat: round; */
+				/* background-position: -80px; */
+			}
+
+			/* 			.box2_2{
+				width: 80px;
+				height: 120px;
+				float: left;
+				
+			} */
+
+			.box2_3 {
+				width: 150px;
+				height: 150px;
+				float: left;
+				background: url(lightbulb.png) no-repeat;
+				
+				background-position: -150px;
+			}
+
+			/* .box2_1:active {
+				background-position: -80px;
+			} */
+
+			/* .box2_1:active+.box2_3 {
+				background-position: -150px;
+			} */
+			input[name="chk1"]:checked ~ .box2_3 {
+				background-position: 0px;
+			}
+			input[name="chk1"]:checked ~ .box2 .box2_1{
+				background-position: -80px;
+			}
+			input{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<input type="checkbox" name="chk1" id="chk">
+			<label for="chk" class="box2">
+				<div class="box2_1"></div>
+			</label>
+
+			<!-- <div class="box2_2"></div> -->
+			<!-- <input type="checkbox" name="rad" id="radd2"> -->
+
+			<div class="box2_3"></div>
+
+		</div>
+	</body>
+</html>

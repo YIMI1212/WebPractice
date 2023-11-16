@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				background-image: url(./images/back.jpg);
+				background-size: cover;
+			}
+
+			.box {
+				width: 799px;
+				height: 439px;
+
+				margin: 0 auto;
+				/* margin-top: 323px; */
+				border-radius: 3px;
+			}
+
+			.box h1 {
+				color: #f3f3f3;
+				margin-top: 107px;
+				font-size: 52px;
+				line-height: 214px;
+			}
+
+			.box2_1 {
+				width: 340px;
+				height: 439px;
+				background-color: #e06965;
+				float: left;
+				border-radius: 3px;
+				text-align: center;
+			}
+
+			.box2_1 img {
+				margin-top: 40px;
+			}
+
+			.box2_1 h2 {
+				font-size: 17px;
+				color: #fffcff;
+				line-height: 53px;
+			}
+
+			.p2 {
+				font-size: 13px;
+				color: #fffcff;
+
+				text-align: left;
+				margin-left: 44px;
+				margin-top: 23px;
+			}
+
+			.p2:nth-child(3) {
+				margin-top: 99px;
+			}
+
+
+			.box2_2 {
+				width: 459px;
+				height: 439px;
+				background-color: white;
+				float: left;
+				/* text-align: center; */
+			}
+
+			.box2_2 span {
+				font-size: 19px;
+				color: #d4d8db;
+				line-height: 99px;
+
+
+			}
+
+			.box2_2 span:nth-child(1) {
+				color: #e06965;
+				margin-left: 40px;
+			}
+
+			.input {
+				width: 385px;
+				height: 35px;
+				border-color: rgba(0, 0, 0, 0);
+				border-bottom-color: #cecfd3;
+
+
+				margin-left: 40px;
+
+				margin-top: 19px;
+				font-size: 11px;
+				color: #e7eaf3;
+				
+				/* 取消平铺 */
+				background-repeat: no-repeat;
+				background-position: 360px center;
+				/* 取消输入框 */
+				outline: none;
+			}
+			/* 更改placeholder的颜色 */
+			.input::placeholder {
+				color: #cecfd3;
+			}
+
+			.input:nth-child(4) {
+				background-image: url(./images/user.png);
+			}
+
+			.input:nth-child(6) {
+				background-image: url(./images/lock.png);
+			}
+
+			.button {
+				width: 75px;
+				height: 36px;
+				background-color: #fffcff;
+				color: #e06965;
+				border: 2px solid #e06965;
+				border-radius: 18px;
+
+				margin-left: 40px;
+				margin-top: 90px;
+			}
+
+			.list {
+
+				/* 使用园，而非实心点 */
+				/* list-style: circle; */
+				/* 将圆放在li内 */
+				/* list-style-position: inside; */
+				/* 取消前置标点 */
+				list-style: none;
+			}
+
+			.list li {
+				font-size: 13px;
+				color: #fffcff;
+
+				text-align: left;
+				margin-left: 36px;
+				margin-top: 23px;
+			}
+
+			.list li:nth-child(1) {
+				margin-top: 99px;
+			}
+
+			/* .list li::marker{
+				font-size: 30px;
+			} */
+			/* 伪元素 放在前面 */
+			.list li::before {
+				/* 内容是必须项 */
+				content: "";
+				/* 画空心圆 */
+				width: 10px;
+				height: 10px;
+				
+				margin-right: 10px;
+				border: 2px solid white;
+				border-radius: 12px;
+				float: left;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h1>Hello! Welcome to DouZhi-IT!</h1>
+			<div class="box2_1">
+				<img src="./images/logo.png" alt="">
+				<h2>Welcome</h2>
+				<ul class="list">
+					<li>Simcly create your calendar</li>
+					<li>Add content for each days</li>
+					<li>Share it to the world(become a rockstar)</li>
+				</ul>
+				<!-- <p class="p2">Simcly create your calendar</p>
+				<p class="p2"></p>
+				<p class="p2"></p> -->
+			</div>
+			<div class="box2_2">
+				<span>Login </span><span>/</span><span> Sign Up</span>
+				<input class="input" type="text" placeholder="Your Name">
+				<input class="input" type="email" placeholder="Email">
+				<input class="input" type="password" placeholder="Password">
+				<input class="button" type="button" value="LOGIN">
+			</div>
+		</div>
+	</body>
+</html>

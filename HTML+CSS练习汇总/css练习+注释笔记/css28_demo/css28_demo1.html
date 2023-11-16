@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			/* 扩展 */
+			.demo {
+				width: 400px;
+				height: 100px;
+				border: 1px solid #c3c3c3;
+				display: flex;
+			}
+
+			.demo div {
+				flex-basis: 100px;
+			}
+
+			.demo div:nth-child(1) {
+				flex-grow: 1;
+			}
+
+			.demo div:nth-child(2) {
+				flex-grow: 3;
+			}
+
+			/* 收缩 */
+			.demo2 {
+				width: 350px;
+				height: 100px;
+				border: 1px solid #c3c3c3;
+				display: flex;
+			}
+
+			.demo2 div {
+				flex-basis: 100px;
+			}
+
+			.demo2 div:nth-child(1) {
+				flex-shrink: 5;
+			}
+
+			/* flex */
+			.demo3 {
+				display: flex;
+				width: 400px;
+				height: 100px;
+			}
+
+			.demo3 div:nth-child(1) {
+				flex: 1 1 400px;
+			}
+
+			.demo3 div:nth-child(2) {
+				flex: 1 2 400px;
+			}
+
+			.demo3 div:nth-child(3) {
+				flex: 1 2 400px;
+			}
+
+			/* flex-direction */
+
+			.demo4 {
+				display: flex;
+				flex-direction: row;
+				flex-direction: row-reverse;
+				/* flex-direction: column; */
+				/* flex-direction: column-reverse; */
+			}
+
+			.demo4 li {
+				width: 100px;
+				height: 100px;
+				list-style: none;
+				border: 1px solid #ccc;
+			}
+
+			/* flex-wrap */
+			.demo5 {
+				width: 200px;
+				height: 200px;
+				display: flex;
+				flex-wrap: nowrap;
+				flex-wrap: wrap;
+				/* flex-wrap: wrap-reverse; */
+			}
+
+			.demo5 li {
+				width: 50px;
+				height: 50px;
+				list-style: none;
+				border: 1px solid #ccc;
+			}
+			/* flex-flow */
+			.demo6{
+				width: 200px;
+				height: 200px;
+				display: flex;
+				flex-flow: column wrap-reverse; 
+			}
+			
+			.demo6 li {
+				width: 50px;
+				height: 50px;
+				list-style: none;
+				border: 1px solid #ccc;
+			}
+			
+			.demo7{
+				width: 200px;
+				height: 200px;
+				display: flex;
+				border: 1px solid red;
+				flex-flow: row wrap;
+				flex-flow: column wrap;
+				align-content: stretch;
+				align-content: center;
+				align-content: flex-start;
+				align-content: flex-end;
+				align-content: space-between;
+				/* align-content: space-around; */
+			}
+			
+			.demo7 li {
+				width: 50px;
+				height: 50px;
+				list-style: none;
+				border: 1px solid #ccc;
+			}
+			
+			.demo8{
+				width: 400px;
+				height: 200px;
+				display: flex;
+				border: 1px solid red;
+				padding: 0;
+				/* align-items: stretch; */
+				/* align-items: baseline; */
+				/* align-items: center; */
+				/* align-items: flex-start; */
+				/* align-items: flex-end; */
+			}
+			.demo8 li{
+				width: 50px;
+				height: 50px;
+				list-style: none;
+				border: 1px solid #ccc;
+			}
+			
+			.demo9{
+				width: 200px;
+				height: 200px;
+				display: flex;
+				border: 1px solid red;
+				padding: 0;
+			}
+			.demo9 li{
+				width: 50px;
+				height: 50px;
+				list-style: none;
+				border: 1px solid #ccc;
+			}
+			.demo9 li:nth-child(3){
+				align-self: auto;
+				align-self: stretch;
+				align-self: center;
+				align-self: baseline;
+				align-self: flex-start;
+				align-self: flex-end;
+			}
+			
+			.demo10{
+				width: 400px;
+				height: 200px;
+				padding: 0%;
+				border: 1px solid red;
+				display: flex;
+				justify-content: center;
+				justify-content: flex-start;
+				justify-content: flex-end;
+				/* justify-content: space-between; */
+				/* justify-content: space-around; */
+			}
+			
+			.demo10 li{
+				width: 50px;
+				height: 50px;
+				list-style: none;
+				border: 1px solid #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="demo">
+			<div style="background-color: coral;"></div>
+			<div style="background-color: lightblue;"></div>
+		</div>
+
+		<div class="demo2">
+			<div style="background-color: coral;"></div>
+			<div style="background-color: lightblue;"></div>
+			<div style="background-color: green;"></div>
+			<div style="background-color: red;"></div>
+		</div>
+
+		<div class="demo3">
+			<div style="background-color: red;"></div>
+			<div style="background-color: green;"></div>
+			<div style="background-color: blue;"></div>
+		</div>
+
+		<ul class="demo4">
+			<li style="background-color: red;"></li>
+			<li style="background-color: green;"></li>
+			<li style="background-color: blue;"></li>
+		</ul>
+
+		<ul class="demo5">
+			<li style="background-color: coral;"></li>
+			<li style="background-color: lightblue;"></li>
+			<li style="background-color: khaki;"></li>
+			<li style="background-color: pink;"></li>
+			<li style="background-color: lightgray;"></li>
+			<li style="background-color: lightgreen;"></li>
+		</ul>
+		
+		<ul class="demo6">
+			<li style="background-color: coral;"></li>
+			<li style="background-color: lightblue;"></li>
+			<li style="background-color: khaki;"></li>
+			<li style="background-color: pink;"></li>
+			<li style="background-color: lightgray;"></li>
+			<li style="background-color: lightgreen;"></li>
+		</ul>
+		
+		<ul class="demo7">
+			<li style="background-color: coral;"></li>
+			<li style="background-color: lightblue;"></li>
+			<li style="background-color: khaki;"></li>
+			<li style="background-color: pink;"></li>
+			<li style="background-color: lightgray;"></li>
+			<li style="background-color: lightgreen;"></li>
+		</ul>
+		
+		<ul class="demo8">
+			<li style="background-color: coral;"></li>
+			<li style="background-color: lightblue;"></li>
+			<li style="background-color: khaki;"></li>
+			<li style="background-color: pink;"></li>
+			<li style="background-color: lightgray;"></li>
+			<li style="background-color: lightgreen;"></li>
+		</ul>
+		
+		<ul class="demo9">
+			<li style="background-color: coral;"></li>
+			<li style="background-color: lightblue;"></li>
+			<li style="background-color: khaki;"></li>
+			<li style="background-color: pink;"></li>
+			<li style="background-color: lightgray;"></li>
+			<li style="background-color: lightgreen;"></li>
+		</ul>
+		
+		<ul class="demo10">
+			<li style="background-color: coral;"></li>
+			<li style="background-color: lightblue;"></li>
+			<li style="background-color: khaki;"></li>
+			<li style="background-color: pink;"></li>
+		</ul>
+		
+		
+	</body>
+</html>

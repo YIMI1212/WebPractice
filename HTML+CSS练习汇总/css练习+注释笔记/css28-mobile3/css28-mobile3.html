@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			.Box {
+				width: 640px;
+				height: 1136px;
+				background-color: #f3f3f3;
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+			}
+
+			/* ---------------------------------box1----------- */
+			.box1 {
+				height: 38px;
+				width: 640px;
+				background-color: #ffad37;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				position: relative;
+			}
+
+			.message,
+			.time,
+			.elec {
+				width: 200px;
+				color: white;
+				font-size: 24px;
+				display: flex;
+				align-items: center;
+
+				box-sizing: border-box;
+
+				display: flex;
+				align-items: center;
+			}
+
+			.message img:nth-child(1),
+			.message img:nth-child(2) {
+				position: absolute;
+				left: 2px;
+			}
+
+			.message {
+				/* box-sizing: border-box; */
+				padding-left: 77px;
+			}
+
+			.time {
+				justify-content: center;
+			}
+
+			.elec {
+				padding-right: 4px;
+				justify-content: flex-end;
+			}
+
+			/* ---------------------------------box2----------- */
+			.box2 {
+				height: 88px;
+				width: 640px;
+				display: flex;
+
+				align-items: center;
+				justify-content: space-between;
+				background-color: #ffad37;
+			}
+
+			.back,
+			.Title,
+			.empty {
+				width: 2em;
+				margin: 0px 2em;
+			}
+
+			.Title {
+				color: white;
+				font-size: 34px;
+			}
+
+			/* ---------------------------------box3----------- */
+			.box3 {
+				/* height: 360px; */
+				width: 640px;
+
+				display: flex;
+				flex-wrap: wrap;
+				align-content: center;
+				justify-content: space-around;
+				color: white;
+			}
+			.box3S,
+			.box4S,
+			.box5S,
+			.box6S {
+				width: 640px;
+				display: flex;
+				justify-content: start;
+			}
+
+			.box3 p,
+			.box4 p,
+			.box5 p,
+			.box6 p {
+				margin-top: 10px;
+				margin-right: 520px;
+				color: #585b62;
+				font-size: 24px;
+
+			}
+			.box3S{
+				/* height: 302px; */
+				flex-wrap: wrap;
+				align-content: space-between;
+				justify-content: space-evenly;
+			}
+
+			.bx3Item {
+				width: 200px;
+				height: 146px;
+				font-size: 26px;
+				margin:5px 5px;
+				display: flex;
+				/* align-items: stretch; */
+				
+				flex-direction: column;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+
+			.bx3Item span {
+				margin: 4px 10px;
+			}
+
+			.bx3ItemS {
+				width: 70px;
+				height: 70px;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				/* margin-top: 15px; */
+				margin-left: auto;
+				margin-bottom: 10px;
+				margin-right: 10px;
+				/* margin: 0px 0px; */
+			}
+
+			.b3Itm1 {
+				background-color: #36d4a6;
+			}
+
+			.b3Itm2 {
+				background-color: #fcb53f;
+			}
+
+			.b3Itm3 {
+				background-color: #6068fd;
+			}
+
+			.b3Itm4 {
+				background-color: #29b3ff;
+			}
+
+			.b3Itm5 {
+				background-color: #a273ff;
+			}
+
+			.b3Itm6 {
+				background-color: #ff6666;
+			}
+
+			/* ---------------------------------box4----------- */
+			.box4 {
+				/* height: 200px; */
+				width: 640px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-content: center;
+			}
+
+			
+
+			.box4S {
+				/* height: 148px; */
+				background-color: white;
+			}
+
+			.bx4Item {
+				width: 212px;
+				height: 148px;
+				background-color: #fff;
+				border: 1px solid #e5e5e5;
+
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-content: center;
+
+				font-size: 26px;
+				color: #909090;
+			}
+
+			.bx4ItemS {
+				width: 80px;
+				height: 80px;
+				border-radius: 40px;
+				border: 1px solid #dedede;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				margin: 10px 64px;
+			}
+
+			.bx4IsLsat {
+				background-color: #dbdfe5;
+			}
+
+			/* ---------------------------------box5----------- */
+			.box5 {
+				/* height: 180px; */
+				width: 640px;
+
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				/* align-items: center; */
+				align-content: center;
+			}
+
+			.box5S {
+				/* height: 133px; */
+				background-color: white;
+				box-sizing: border-box;
+				padding-left: 20px;
+
+				display: flex;
+				align-items: center;
+			}
+
+			.bx5Item {
+				width: 200px;
+				height: 133px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 26px;
+				margin: 0px 10px;
+			}
+
+			.bx5Item span {
+				margin-left: 10px;
+			}
+
+			.bx5ItemS {
+				width: 56px;
+				height: 56px;
+				border-radius: 28px;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.bx5Item:nth-child(1) .bx5ItemS {
+				background-color: #68cb37;
+			}
+
+			.bx5Item:nth-child(2) .bx5ItemS {
+				background-color: #a178d4;
+			}
+
+			/* ---------------------------------box6----------- */
+			.box6 {
+				/* height: 160px; */
+				width: 640px;
+
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				/* align-items: center; */
+				align-content: center;
+			}
+
+			.box6S {
+				/* height: 118px; */
+				background-color: white;
+				display: flex;
+				align-items: center;
+			}
+
+			.bx6Item {
+				width: 110px;
+				height: 118px;
+				font-size: 26px;
+				margin: 0px 35px;
+
+				display: flex;
+				flex-wrap: wrap;
+				/* align-items: center; */
+				align-content: center;
+				justify-content: center;
+			}
+
+			.bx6ItemS {
+				width: 52px;
+				height: 52px;
+				margin: 0px 25px;
+				border-radius: 5px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				background-color: #56d5f5;
+			}
+
+			/* ---------------------------------box7----------- */
+
+			.box7 {
+				height: 115px;
+				width: 640px;
+				
+				display: flex;
+				justify-content: space-around;
+				align-items: flex-end;
+				position: fixed;
+				bottom: 0px;
+
+				/* border-top: 1px solid #e5e5e5; */
+			}
+
+			.nav,
+			.nav2 {
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.nav {
+				border-top: 1px solid #c5c5c5;
+				height: 97px;
+				width: 254px;
+				height: 97px;
+				font-size: 28px;
+				color: #808080;
+				background-color: #f0f0f0;
+			}
+
+			.nav span {
+				margin: 0px 10px;
+				margin-bottom: 10px;
+			}
+
+			.nav2 {
+				width: 132px;
+				height: 131px;
+				border-top-left-radius: 16px;
+				border-top-right-radius: 16px;
+				/* border-top: 1px solid #c5c5c5; */
+				/* border-left: 1px solid #c5c5c5; */
+				/* border-right: 1px solid #c5c5c5; */
+				/* background-color: #efefef; */
+				background: #efefef url(28_3_images/圆角矩形渐变.png) no-repeat center;
+				margin-top: -157px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="Box">
+			<div class="box1">
+				<div class="message">
+					<img src="./28_3_images/tc.png" alt="">
+					<img src="./28_3_images/Dots Off.png" alt="">
+					Carrier&nbsp;
+					<img src="./28_3_images/Off.png" alt="">
+				</div>
+				<div class="time">
+					4:34 PM
+				</div>
+				<div class="elec">
+					<img src="./28_3_images/Rotation Lock.png" alt="">
+					&nbsp; 100% &nbsp;
+					<img src="./28_3_images/Battery.png" alt="">
+				</div>
+			</div>
+			<!-- ---------------------------------box2----------- -->
+			<div class="box2">
+				<div class="back">
+					<img src="./28_3_images/Back _ Icon.png" alt="">
+				</div>
+				<div class="Title">
+					主页
+				</div>
+				<div class="empty">
+
+				</div>
+			</div>
+			<!-- ---------------------------------box3----------- -->
+			<div class="box3">
+				<p>信息管理</p>
+				<div class="box3S">
+					<div class="bx3Item b3Itm1">
+						<span>销售策略</span>
+						<div class="bx3ItemS">
+							<img src="./28_3_images/Icon1.png" alt="">
+						</div>
+					</div>
+					<div class="bx3Item b3Itm2">
+						<span>销售计划</span>
+						<div class="bx3ItemS">
+							<img src="./28_3_images/Icon2.png" alt="">
+						</div>
+					</div>
+					<div class="bx3Item b3Itm3">
+						<span>销售统计</span>
+						<div class="bx3ItemS">
+							<img src="./28_3_images/Icon3.png" alt="">
+						</div>
+					</div>
+					<div class="bx3Item b3Itm4">
+						<span>病例报告</span>
+						<div class="bx3ItemS">
+							<img src="./28_3_images/Icon4.png" alt="">
+						</div>
+					</div>
+					<div class="bx3Item b3Itm5">
+						<span>健康信息</span>
+						<div class="bx3ItemS">
+							<img src="./28_3_images/Icon5.png" alt="">
+						</div>
+					</div>
+					<div class="bx3Item b3Itm6">
+						<span>工资单</span>
+						<div class="bx3ItemS">
+							<img src="./28_3_images/Icon6.png" alt="">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- ---------------------------------box4----------- -->
+			<div class="box4">
+				<p>计划统计</p>
+
+				<div class="box4S">
+					<div class="bx4Item">
+						<div class="bx4ItemS">
+							<img src="./28_3_images/Stats.png" alt="">
+						</div>
+						<span>销售保单</span>
+					</div>
+					<div class="bx4Item">
+						<div class="bx4ItemS">
+							<img src="./28_3_images/Writing Doc.png" alt="">
+						</div>
+						<span>出栏计划</span>
+					</div>
+					<div class="bx4Item">
+						<div class="bx4ItemS bx4IsLsat">
+							<img src="./28_3_images/增加.png" alt="">
+						</div>
+						<span>新增</span>
+					</div>
+				</div>
+
+
+			</div>
+			<!-- ---------------------------------box5----------- -->
+			<div class="box5">
+				<p>用车申请</p>
+
+				<div class="box5S">
+					<div class="bx5Item">
+						<div class="bx5ItemS">
+							<img src="./28_3_images/Car.png" alt="">
+						</div>
+						<span>用车申请</span>
+					</div>
+					<div class="bx5Item">
+						<div class="bx5ItemS">
+							<img src="./28_3_images/新增2.png" alt="">
+						</div>
+						<span>新增</span>
+					</div>
+				</div>
+
+			</div>
+			<!-- ---------------------------------box6----------- -->
+			<div class="box6">
+				<p>协同办公</p>
+
+				<div class="box6S">
+					<div class="bx6Item">
+						<div class="bx6ItemS">
+							<img src="./28_3_images/OA.png" alt="">
+						</div>
+						<span>办公OA</span>
+					</div>
+				</div>
+
+			</div>
+			<!-- ---------------------------------box7----------- -->
+			<div class="box7">
+				<div class="nav">
+					<div class="navImg">
+						<img src="./28_3_images/新闻.png" alt="">
+					</div>
+					<span>新闻</span>
+				</div>
+				<div class="nav2">
+					<div class="navImg">
+						<img src="./28_3_images/box7Home.png" alt="">
+					</div>
+					<!-- <span></span> -->
+				</div>
+				<div class="nav">
+					<div class="navImg">
+						<img src="./28_3_images/更多.png" alt="">
+					</div>
+					<span>更多</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

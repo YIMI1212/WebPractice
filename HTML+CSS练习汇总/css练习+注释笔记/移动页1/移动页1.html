@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			body {
+				background-color: #f6f6f6;
+			}
+
+			.box {
+				background-color: #f6f6f6;
+			}
+
+			/* ------------------------------------------------box1-------------------------------------- */
+			.box1 {
+
+				display: flex;
+				justify-content: space-between;
+				/* align-items: center; */
+				background-color: #fff;
+			}
+
+			.time,
+			.elec {
+				height: 120px;
+				display: flex;
+				align-items: center;
+			}
+
+			.elec {
+				margin-right: 30px;
+			}
+
+			.elec img {
+				margin: 0px 8px;
+			}
+
+			.time {
+				margin-left: 3em;
+				font-size: 30px;
+				/* text-indent: 3em; */
+			}
+
+			/* ------------------------------------------------box2-------------------------------------- */
+			.box2 {
+
+				border-bottom: 1px solid #f6f6f6;
+				display: flex;
+				justify-content: space-between;
+				/* margin: 0px 2em; */
+				background-color: #fff;
+			}
+
+			.emity2,
+			.title,
+			.back {
+				height: 140px;
+				display: flex;
+				align-items: center;
+				width: 33%;
+			}
+
+			.back {
+				justify-content: flex-start;
+				margin-left: 2em;
+			}
+
+			.title {
+
+				justify-content: center;
+				font-size: 40px;
+			}
+
+			/* ------------------------------------------------box3-------------------------------------- */
+			.box3 {
+
+				display: flex;
+
+				border-bottom: 2px solid #eaeaea;
+				background-color: #fff;
+			}
+
+			.home,
+			.list {
+				height: 120px;
+				width: 50%;
+				/* margin: 0px auto; */
+
+				display: flex;
+				flex-direction: column;
+				/* flex-wrap: wrap; */
+				/* align-content: center; */
+				justify-content: space-between;
+				align-items: center;
+
+				color: #999999;
+				font-size: 42px;
+			}
+
+			.line {
+				width: 48px;
+				height: 10px;
+				background-color: transparent;
+				border-radius: 5px;
+				/* margin-top: auto; */
+				/* margin: 0px auto; */
+			}
+
+			input[name="rad_1"] {
+				display: none;
+			}
+
+			input[name="rad_1"]:checked~label {
+				color: #000;
+			}
+
+			input[name="rad_1"]:checked~.line {
+				background-color: #ff4646;
+			}
+
+			/* ------------------------------------------------box4-------------------------------------- */
+			.box4 {
+				margin-top: 40px;
+				display: flex;
+				/* justify-content: space-between; */
+				justify-content: center;
+			}
+			.box4_itemBox{
+				display: flex;
+				/* justify-content: center; */
+				width: 1125px;
+				/* width: 85%; */
+				display: flex;
+				overflow-x: auto;
+			}
+
+			.imgBox {
+				width: 1035px;
+				height: 575px;
+
+				position: relative;
+
+				display: flex;
+				justify-content: center;
+				
+				margin: 0px 20px;
+			}
+
+			.imgBox img:nth-child(2) {
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+			}
+
+			.imgBox span {
+				color: white;
+				font-size: 44px;
+				position: absolute;
+				bottom: 44px;
+				/* margin: 0px auto; */
+				width: 20em;
+			}
+
+			/* ------------------------------------------------box5-------------------------------------- */
+
+			.box5 {
+				display: flex;
+				justify-content: center;
+
+				margin-top: 40px;
+			}
+
+			.box5_itemBox {
+				width: 1125px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
+			}
+
+			.item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 15px 15px;
+				position: relative;
+			}
+
+			.item span {
+				position: absolute;
+				top: 45px;
+				left: 47px;
+				font-size: 40px;
+				color: white;
+			}
+
+			/* ------------------------------------------------box6-------------------------------------- */
+			.box6 {
+				display: flex;
+				justify-content: center;
+				margin-top: 60px;
+			}
+
+			.box6 img {
+				margin: 0px 8px;
+			}
+
+			.box6_P1,
+			.box6_P2 {
+
+				display: flex;
+				/* width: 30%; */
+				display: flex;
+				align-items: center;
+				justify-content: ;
+			}
+
+			.box6_P1 {
+				margin-left: auto;
+				margin-right: 300px;
+				font-size: 42px;
+				justify-content: flex-start;
+			}
+
+			.box6_P2 {
+				margin-left: 300px;
+				margin-right: auto;
+				color: #999999;
+				font-size: 32px;
+				justify-content: flex-end;
+			}
+
+			/* ------------------------------------------------box7-------------------------------------- */
+			.box7 {
+				display: flex;
+				justify-content: center;
+
+
+				margin-top: 40px;
+				margin-bottom: 40px;
+			}
+
+			.box7_itemBox {
+				width: 1035px;
+				border-radius: 15px;
+				background-color: #fff;
+
+				display: flex;
+				flex-direction: column;
+			}
+
+			.Nav {
+				display: flex;
+
+			}
+
+			.nav {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+				font-size: 36px;
+				margin: 0px 30px;
+				margin-top: 38px;
+				color: #666666;
+			}
+
+			.radLine {
+				width: 48px;
+				height: 8px;
+				border-radius: 4px;
+				margin-top: 16px;
+				background-color: transparent;
+			}
+
+			input[name="rad"]:checked~.box7_itemRad {
+				color: #000;
+			}
+
+			input[name="rad"]:checked~.radLine {
+				background-color: #f16c66;
+			}
+
+			input[name="rad"] {
+				display: none;
+			}
+
+			.box7_item {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				height: 226px;
+				width: 950px;
+				border-bottom: 1px solid #ededed;
+			}
+
+			.box7 img {
+				width: 120px;
+				height: 120px;
+				border-radius: 60px;
+
+				margin-left: 45px;
+			}
+
+			.detail {
+				display: flex;
+				flex-wrap: wrap;
+				/* flex-direction: row; */
+				width: 60%;
+				margin-left: 30px;
+
+			}
+
+			.detail span:nth-child(1) {
+				font-size: 40px;
+			}
+
+			.Integral {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				color: #a97537;
+				margin-right: 30%;
+				width: 104px;
+				height: 40px;
+				font-size: 26px;
+				border: 2px solid #e3c39e;
+				border-radius: 8px;
+
+				margin-left: 20px;
+			}
+
+			.detail span:nth-child(3) {
+				color: #999999;
+				font-size: 32px;
+			}
+
+			input[type="checkbox"] {
+				display: none;
+			}
+
+			.btn {
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 185px;
+				height: 78px;
+				border-radius: 39px;
+				border: 2px solid #e3c39e;
+				color: #a97537;
+				font-size: 36px;
+
+			}
+
+			input[name="chk_1"]:checked~.btn {
+				background-color: #f6f6f6;
+				color: #c2c2c2;
+				border: 2px solid transparent;
+			}
+
+			input[name="chk_2"]:checked~.btn {
+				background-color: #f6f6f6;
+				color: #c2c2c2;
+				border: 2px solid transparent;
+			}
+
+			input[name="chk_3"]:checked~.btn {
+				background-color: #f6f6f6;
+				color: #c2c2c2;
+				border: 2px solid transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!-- ----------------------------------------box1-------------------------------------------------- -->
+			<div class="box1">
+				<div class="time">
+					9:41
+				</div>
+				<div class="emity">
+
+				</div>
+				<div class="elec">
+					<img src="./img/SketchPnge6ff8f8e36f08718b479c82da00d7083ba2d1605dc669a17c50702c8f6321c27.png"
+						alt="">
+					<img src="./img/SketchPng67f26c839bae614bea4451cd446c3dc23ef1c09e4a790efd929362dd19bccab5.png"
+						alt="">
+					<img src="./img/SketchPng95f52ac007d32e1d7f4603ab0ab260e66ae2e1c7d7ac959840f2ee0dcae60353.png"
+						alt="">
+				</div>
+			</div>
+			<!-- ----------------------------------------box2-------------------------------------------------- -->
+			<div class="box2">
+				<div class="back">
+					<img src="./img/SketchPng6a11cc49eecc14ec9de2fb08b3e9611a524b528bcec00be4b4d62364a7f3cf82.png"
+						alt="">
+				</div>
+				<div class="title">
+					Title
+				</div>
+				<div class="emity2">
+
+				</div>
+			</div>
+			<!-- ----------------------------------------box3-------------------------------------------------- -->
+			<div class="box3">
+				<div class="home">
+					<input type="radio" name="rad_1" id="rad3_1">
+					<div class="emityline"></div>
+					<label for="rad3_1">首页</label>
+					<div class="line"></div>
+				</div>
+
+				<div class="list">
+					<input type="radio" name="rad_1" id="rad3_2">
+					<div class="emityline"></div>
+					<label for="rad3_2">排行榜</label>
+					<div class="line"></div>
+				</div>
+			</div>
+			<!-- ----------------------------------------box4-------------------------------------------------- -->
+			<div class="box4">
+				
+				
+				<div class="box4_itemBox">
+					
+					<div class="box4_item">
+						<!-- <img src="./img/SketchPng376d2aa9fd5dad37bd9699285914ac4b9d3a73e6a6ec2af95153d345ea26e601.png" alt=""> -->
+						<div class="imgBox">
+							<img src="./img/SketchPng10dcbcbd30513d5b782eb28d1aec8099be3ec74f05d5fe8960a35d21d6ed8e18.png"
+								alt="">
+							<img src="./img/SketchPng5bbd2898dc0feac2aa860f75b20017edfb8f8e3fe2ce5b9c6a5bbe8607a7d307.png"
+								alt="">
+							<span>2022年中国-东盟博览会和中国-东盟商务与投资峰会广西领导小组第一次会议召开</span>
+						</div>
+						<!-- <img src="./img/SketchPngecbb24a0874592663c05d4f5fc49b05ca4750b5ca5f68786ab715a6e9ceb878e.png" alt=""> -->
+					</div>
+					<div class="box4_item">
+						
+						<div class="imgBox">
+							<img src="./img/SketchPng10dcbcbd30513d5b782eb28d1aec8099be3ec74f05d5fe8960a35d21d6ed8e18.png"
+								alt="">
+							<img src="./img/SketchPng5bbd2898dc0feac2aa860f75b20017edfb8f8e3fe2ce5b9c6a5bbe8607a7d307.png"
+								alt="">
+							<span>2022年中国-东盟博览会和中国-东盟商务与投资峰会广西领导小组第一次会议召开</span>
+						</div>
+						
+					</div>
+					<div class="box4_item">
+						
+						<div class="imgBox">
+							<img src="./img/SketchPng10dcbcbd30513d5b782eb28d1aec8099be3ec74f05d5fe8960a35d21d6ed8e18.png"
+								alt="">
+							<img src="./img/SketchPng5bbd2898dc0feac2aa860f75b20017edfb8f8e3fe2ce5b9c6a5bbe8607a7d307.png"
+								alt="">
+							<span>2022年中国-东盟博览会和中国-东盟商务与投资峰会广西领导小组第一次会议召开</span>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			<!-- ----------------------------------------box5-------------------------------------------------- -->
+			<div class="box5">
+				<div class="box5_itemBox">
+					<div class="item">
+						<img src="./img/0c0ba43d692441319fb71b2534663fac_mergeImage.png" alt="">
+						<span>我要报名</span>
+					</div>
+
+					<div class="item">
+						<img src="./img/63ca7a0b38d544c1ac27df6eeaddc026_mergeImage.png" alt="">
+						<span>我的心愿</span>
+					</div>
+
+					<div class="item">
+						<img src="./img/1988b2d9ed3d4548876a041e080aa974_mergeImage.png" alt="">
+						<span>我要兑换</span>
+					</div>
+
+					<div class="item">
+						<img src="./img/ca9e3d508af14f8dabb3930685ec86f0_mergeImage.png" alt="">
+						<span>志愿团队</span>
+					</div>
+
+					<div class="item">
+						<img src="./img/9a3ff53a2ec34ec2a6d99cd9267f4bca_mergeImage.png" alt="">
+						<span>排行榜</span>
+					</div>
+
+					<div class="item">
+						<img src="./img/0f0affb202de452eb454ef260fcb68e5_mergeImage.png" alt="">
+						<span>企业展示</span>
+					</div>
+				</div>
+
+
+
+
+			</div>
+			<!-- ----------------------------------------box6-------------------------------------------------- -->
+			<div class="box6">
+				<div class="box6_P1">
+					<img src="./img/a90ffc913f5c4301b490febe65478125_mergeImage.png" alt="">
+					<p>今日任务</p>
+				</div>
+				<div class="box6_P2">
+					<p>查看更多</p>
+					<img src="./img/SketchPng258b54011b6eefdcbead4ce108dd71e6f968d0a74bf6e0144b7195359e2190af.png"
+						alt="">
+				</div>
+			</div>
+			<!-- ----------------------------------------box7-------------------------------------------------- -->
+			<div class="box7">
+
+				<div class="box7_itemBox">
+
+					<div class="Nav">
+						<div class="nav">
+							<input type="radio" name="rad" id="rad1">
+							<div class="emityline"></div>
+							<label for="rad1" class="box7_itemRad">共情任务</label>
+							<div class="radLine"></div>
+						</div>
+
+						<div class="nav">
+							<input type="radio" name="rad" id="rad2">
+							<div class="emityline"></div>
+							<label for="rad2" class="box7_itemRad">日常任务</label>
+							<div class="radLine"></div>
+						</div>
+
+
+					</div>
+
+					<div class="box7_item">
+						<img src="./img/f7745c06c4b94b2e9e4e5af9064726c5_mergeImage.png" alt="">
+						<div class="detail">
+							<span>践行一盔一戴</span>
+							<div class="Integral">+2积分</div>
+							<span>坚持一盔一戴，践行文明交通</span>
+						</div>
+						<input type="checkbox" name="chk_1" id="chk1">
+						<label for="chk1" class="btn">去打卡</label>
+					</div>
+
+					<div class="box7_item">
+						<img src="./img/3c419ca58ae44fe682bf774be290573d_mergeImage.png"">
+						<div class=" detail">
+						<span>垃圾分类投放</span>
+						<div class="Integral">+2积分</div>
+						<span>坚持垃圾分类，推动生态文明建设</span>
+					</div>
+					<input type="checkbox" name="chk_2" id="chk2">
+					<label for="chk2" class="btn">去打卡</label>
+				</div>
+
+				<div class="box7_item">
+					<img src="./img/31c95c1c2ef848df9561b8145b12f687_mergeImage.png" alt="">
+					<div class="detail">
+						<span>节约用水用电</span>
+						<div class="Integral">+2积分</div>
+						<span>坚持垃圾分类，推动生态文明建设</span>
+					</div>
+					<input type="checkbox" name="chk_3" id="chk3">
+					<label for="chk3" class="btn">去打卡</label>
+				</div>
+
+
+			</div>
+		</div>
+
+		</div>
+	</body>
+</html>

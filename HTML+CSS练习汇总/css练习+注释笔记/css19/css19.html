@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.box {
+				width: 729px;
+				height: 435px;
+				background-color: #ccc;
+				margin: 0 auto;
+				
+				position: relative;
+
+				overflow: hidden;
+			}
+
+			.box1 {
+				width: 640px;
+				height: 320px;
+				margin: 0 auto;
+				margin-top: 21px;
+
+
+				overflow: hidden;
+			}
+
+			.box2 {
+				width: 620px;
+				height: 95px;
+				margin-left: 50px;
+			}
+
+			.box2_2 {
+				width: 100px;
+				height: 50px;
+
+				border: 3px solid #a3a3a5;
+
+				float: left;
+				margin: 21px 9px;
+			}
+
+			.boxImg{
+				width: 640px;
+				height: 320px;
+				/* float: left; */
+				position: absolute;
+				top: 21px;
+				left: 41px;
+				
+				
+				transition: 0.1s linear;
+				transform: scale(1.2);
+				opacity: 0;
+			}
+
+			.image{
+				width: 640px;
+				height: 320px;
+
+			}
+
+			.box2_2 img {
+				width: 100px;
+				height: 50px;
+			}
+
+			input[id="rad1"]:checked~.box1 .boxImg:nth-child(1) {	
+				transform: scale(1);
+				opacity: 100;
+			}
+
+			input[id="rad2"]:checked~.box1 .boxImg:nth-child(2) {
+				transform: scale(1);
+				opacity: 100;
+			}
+
+			input[id="rad3"]:checked~.box1 .boxImg:nth-child(3) {
+				transform: scale(1);
+				opacity: 100;
+			}
+
+			input[id="rad4"]:checked~.box1 .boxImg:nth-child(4) {
+				transform: scale(1);
+				opacity: 100;
+			}
+
+			input[id="rad5"]:checked~.box1 .boxImg:nth-child(5) {
+				transform: scale(1);
+				opacity: 100;
+			}
+
+			input {
+				display: none;
+			}
+			@keyframes a {
+				0%{
+					transform: scale(1);
+				}
+				50%{
+					transform: scale(1.2);
+					opacity: 0;
+				}
+				100%{
+					transform: scale(1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<input type="radio" name="rad" id="rad1">
+			<input type="radio" name="rad" id="rad2">
+			<input type="radio" name="rad" id="rad3">
+			<input type="radio" name="rad" id="rad4">
+			<input type="radio" name="rad" id="rad5">
+			<div class="box1">
+				<div class="boxImg"><img class="image" src="./Snipaste_2023-10-11_14-03-08.png" alt=""></div>
+				<div class="boxImg"><img class="image" src="./Snipaste_2023-10-11_14-34-32.png" alt=""></div>
+				<div class="boxImg"><img class="image" src="./Snipaste_2023-10-11_14-34-53.png" alt=""></div>
+				<div class="boxImg"><img class="image" src="./Snipaste_2023-10-11_14-35-16.png" alt=""></div>
+				<div class="boxImg"><img class="image" src="./Snipaste_2023-10-11_14-35-40.png" alt=""></div>
+			</div>
+
+			<div class="box2">
+				<label for="rad1" class="box2_2">
+					<img src="./Snipaste_2023-10-11_14-03-08.png" alt="">
+				</label>
+
+				<label for="rad2" class="box2_2">
+					<img src="./Snipaste_2023-10-11_14-34-32.png" alt="">
+				</label>
+
+				<label for="rad3" class="box2_2">
+					<img src="./Snipaste_2023-10-11_14-34-53.png" alt="">
+				</label>
+
+				<label for="rad4" class="box2_2">
+					<img src="./Snipaste_2023-10-11_14-35-16.png" alt="">
+				</label>
+
+				<label for="rad5" class="box2_2">
+					<img src="./Snipaste_2023-10-11_14-35-40.png" alt="">
+				</label>
+			</div>
+
+		</div>
+	</body>
+</html>

@@ -1,0 +1,163 @@
+{
+  "id": "4291652",
+  "name": "css28-mobile",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2868",
+      "name": "电影票",
+      "font_class": "dianyingpiao",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "201226",
+      "name": "3.1首页",
+      "font_class": "31shouye",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "201692",
+      "name": "3.1 好友",
+      "font_class": "31haoyou",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "274601",
+      "name": "clTags",
+      "font_class": "cltags",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "577338",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e73a",
+      "unicode_decimal": 59194
+    },
+    {
+      "icon_id": "592049",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e790",
+      "unicode_decimal": 59280
+    },
+    {
+      "icon_id": "658907",
+      "name": "洗衣机",
+      "font_class": "xiyiji",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "765370",
+      "name": "美容",
+      "font_class": "shouye",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "880385",
+      "name": "书签",
+      "font_class": "label",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "1044261",
+      "name": "管道疏通",
+      "font_class": "guandaoshutong",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "1163362",
+      "name": "铁路",
+      "font_class": "tielu",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "1256479",
+      "name": "信号",
+      "font_class": "xinhao",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "5140599",
+      "name": "维修",
+      "font_class": "weixiu",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "5603490",
+      "name": "家政服务",
+      "font_class": "jiazhengfuwu",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "5737022",
+      "name": "商业-29",
+      "font_class": "shangye-",
+      "unicode": "ea8e",
+      "unicode_decimal": 60046
+    },
+    {
+      "icon_id": "6301055",
+      "name": "禁止",
+      "font_class": "jinzhi",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "7057563",
+      "name": "网络",
+      "font_class": "xinhao1",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "7708044",
+      "name": "开锁",
+      "font_class": "kaisuo",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "9297205",
+      "name": "外卖",
+      "font_class": "waimai",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "15485416",
+      "name": "岗位选择",
+      "font_class": "gangweixuanze",
+      "unicode": "e6b3",
+      "unicode_decimal": 59059
+    },
+    {
+      "icon_id": "15628590",
+      "name": "物业管理",
+      "font_class": "wuyeguanli",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "16746108",
+      "name": "私人管家",
+      "font_class": "sirenguanjia",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}

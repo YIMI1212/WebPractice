@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0%;
+				padding: 0%;
+			}
+
+			.box {
+				width: 947px;
+				height: 474px;
+				background-color: #f4f5f9;
+				overflow: hidden;
+			}
+
+			.box2 {
+				width: 600px;
+				height: 321px;
+				background-color: #ffffff;
+				box-shadow: 1px 1px 3px #ccc;
+				border-radius: 10px;
+
+				margin-top: 74px;
+				margin-left: 160px;
+			}
+
+			/* 不能重名 容易共同使用 超出i隐藏 */
+			.bxU {
+				width: 600px;
+				height: 60px;
+				box-shadow: 1px 1px 3px #ccc;
+
+				background-color: white;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				margin-bottom: 2px;
+			}
+
+			.live {
+				width: 65px;
+				height: 30px;
+				background-color: #fbebec;
+				color: #dd234a;
+				/* border-style: none; */
+				border-radius: 5px;
+				float: left;
+				margin-top: 16px;
+				margin-left: 16px;
+
+
+			}
+
+			.live2 {
+				width: 3em;
+				font-weight: bold;
+				/* text-align: center; */
+				line-height: 30px;
+				/* margin-left: 1em; */
+				margin: 0px auto;
+				/* float: left; */
+
+			}
+
+			.live2::before {
+				content: "";
+				width: 6px;
+				height: 6px;
+				/* border: 2px solid #dd234a; */
+				border-radius: 3px;
+				margin-top: 12px;
+				margin-right: 5px;
+				float: left;
+				background-color: #dd234a;
+				s
+			}
+
+			.Pbox {
+				width: 200px;
+				height: 60px;
+				float: left;
+				text-align: center;
+				margin-left: 120px;
+
+
+			}
+
+			.Pbox img {
+				width: 25px;
+				height: 25px;
+				margin-top: 20px;
+				margin-left: 20px;
+			}
+
+			.p1 {
+
+				float: right;
+				margin-right: 60px;
+				text-align: center;
+				line-height: 65px;
+				font-weight: bold;
+			}
+
+			.Rimg {
+				width: 20px;
+				height: 20px;
+
+				margin-top: 20px;
+				margin-right: 20px;
+				float: right;
+			}
+
+
+
+			.bxD {
+				width: 600px;
+				height: 259px;
+				box-shadow: 1px 1px 3px #ccc;
+				background-color: white;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+
+			}
+
+			.box3 {
+				height: 258px;
+				width: 200px;
+				float: left;
+			}
+
+			.boximg1 {
+				width: 130px;
+				height: 130px;
+				border-radius: 65px;
+				background-color: #f6f7f9;
+
+				float: left;
+				margin-top: 37px;
+				margin-left: 30px;
+
+
+			}
+
+			.boximg2 {
+				width: 100px;
+				height: 100px;
+				background-color: white;
+				border-radius: 50px;
+				margin: 15px 15px;
+				float: left;
+
+				box-shadow: 0px 2px 3px #ccc;
+			}
+
+			.boximg2 img {
+				width: 60px;
+				height: 60px;
+				margin: 20px 20px;
+			}
+
+			.bimg2 img {
+				width: 60px;
+				height: 60px;
+				/* margin: 20px 20px; */
+				margin-top: 22px;
+				margin-left: 22px;
+			}
+
+			.boximgT {
+				width: 200px;
+				font-size: 20px;
+				text-align: center;
+				line-height: 20px;
+				float: left;
+				margin-top: 13px;
+
+				font-weight: bold;
+
+			}
+
+			.time {
+				line-height: 12px;
+				font-size: 12px;
+				text-align: center;
+
+				margin-top: 37px;
+			}
+
+			.time span {
+				font-weight: bold;
+			}
+
+			.score {
+				line-height: 35px;
+				font-size: 35px;
+				font-weight: bold;
+				text-align: center;
+				color: #d7d7d7;
+
+				margin-top: 22px;
+			}
+
+			.score .s1span {
+				color: #6848f1;
+			}
+
+			.score .s1span2 {
+				color: black;
+			}
+
+			.score2 {
+				line-height: 12px;
+				font-size: 12px;
+				color: #b1967b;
+				font-weight: bold;
+				text-align: center;
+				margin-top: 20px;
+			}
+
+			.umpire {
+				font-size: 12px;
+				line-height: 12px;
+				text-align: center;
+				color: #9d9191;
+				margin-top: 22px;
+			}
+
+			.umpire span {
+				color: black;
+				font-weight: bold;
+
+			}
+
+			.Mbox {
+				width: 160px;
+				height: 31px;
+				text-align: center;
+
+				margin: 12px 20px;
+			}
+
+			.mbox {
+				width: 46px;
+				height: 31px;
+				background-color: #f8f8f8;
+				border: 1px solid #ccc;
+				float: left;
+				text-align: center;
+				font-weight: bold;
+				line-height: 31px;
+				color: #818286;
+			}
+
+			.mbox:nth-child(3) {
+				/* margin: 0px auto; */
+				float: right;
+			}
+
+			.mbox:nth-child(2) {
+				margin: 0px 8px;
+			}
+
+			.buttonD {
+				width: 124px;
+				height: 41px;
+				background-color: #623de5;
+				border-radius: 6px;
+				color: white;
+				font-size: 12px;
+				line-height: 41px;
+				/* font-weight: bold; */
+
+				/* margin-left: 38px; */
+				/* margin-bottom: -20px; */
+				box-shadow: 0px 2px 3px #ccc;
+
+				position: absolute;
+				left: 38px;
+				bottom: -16px;
+				/* z-index: 2; */
+			}
+
+			.bx3_2 {
+				/* overflow: ; */
+				position: relative;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box2">
+				<div class="bxU">
+
+					<!-- <input class="button" type="button" value="直播"> -->
+					<div class="live">
+						<div class="live2">直播</div>
+					</div>
+
+					<div class="Pbox">
+						<img src="./images/images/images/UI_img_03.png" alt="">
+						<p class="p1">英超联赛</p>
+					</div>
+
+					<img class="Rimg" src="./images/images/images/UI_star_03.png" alt="">
+					<img class="Rimg" src="./images/images/images/UI_clock_05.png" alt="">
+
+				</div>
+
+				<div class="bxD">
+					<div class="box3 bx3_1">
+						<div class="boximg1">
+							<div class="boximg2">
+								<img src="./images/images/24-比分UI_03.png" alt="">
+							</div>
+						</div>
+						<p class="boximgT">西汉姆</p>
+					</div>
+					<div class="box3 bx3_2">
+						<p class="time">8月12日<span>19:00</span></p>
+
+						<p class="score">
+							<span class="s1span">2</span> :
+							<span class="s1span2">0</span>
+						</p>
+
+						<p class="score2">72'</p>
+						<p class="umpire">裁判: <span>约瑟夫·希克斯</span></p>
+						<div class="Mbox">
+							<div class="mbox">
+								1.48
+							</div>
+							<div class="mbox">
+								4.98
+							</div>
+							<div class="mbox">
+								8.24
+							</div>
+						</div>
+						<input class="buttonD" type="button" value="下注">
+					</div>
+
+
+
+
+					<div class="box3 bx3_3">
+						<div class="boximg1">
+							<div class="boximg2 bimg2">
+								<img src="./images/images/images/UI_02_05.png" alt="">
+							</div>
+						</div>
+						<p class="boximgT">切尔西</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
